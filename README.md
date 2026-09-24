@@ -1,0 +1,2 @@
+# slog
+static html
