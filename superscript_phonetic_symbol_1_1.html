@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词音标Ruby生成器</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 8px 0;
+            font-family: system-ui, sans-serif;
+        }
+        body {
+            padding: 16px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .wrap-item {
+            margin-bottom:14px;
+        }
+        label {
+            font-weight: 500;
+            display:block;
+            margin-bottom:4px;
+        }
+        textarea {
+            width:100%;
+            padding:10px;
+            font-size:14px;
+            border:1px solid #ccc;
+            border-radius:6px;
+        }
+        #previewArea {
+            border:1px solid #ccc;
+            border-radius:6px;
+            padding:12px;
+            min-height:120px;
+            font-size:18px;
+        }
+        ruby {
+            font-size:1em;
+        }
+        rt {
+            font-size:0.8em;
+            color:#b45309;
+        }
+        button {
+            padding:7px 14px;
+            cursor:pointer;
+            border:none;
+            border-radius:4px;
+            background:#409eff;
+            color:#fff;
+            margin-right:8px;
+        }
+        button:hover {
+            background:#337ecc;
+        }
+        .toggle-btn {
+            background:#67c23a;
+        }
+        .toggle-btn:hover {
+            background:#529b2e;
+        }
+        .mode-group{
+            margin:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 输入文本域 -->
+    <div class="wrap-item">
+        <label>输入文本（格式：Amendment[əˈmendmənt] forbids[fərˈbɪdz]）
+            <button class="toggle-btn" onclick="toggleInput()">显示/隐藏输入框</button>
+        </label>
+        <textarea id="inputText" rows="5" placeholder="在这里粘贴带单词+[音标]的文本" oninput="processText()"></textarea>
+        <!-- 段落模式切换单选 -->
+        <div class="mode-group">
+            <label>
+                <input type="radio" name="paraMode" value="emptyLine" checked onchange="processText()"> 空行分段（连续空行分隔段落，文章模式）
+            </label>
+            <label>
+                <input type="radio" name="paraMode" value="singleLine" onchange="processText()"> 单行分段（每次换行即为新段落，单词列表模式）
+            </label>
+        </div>
+    </div>
+
+    <!-- 源代码文本域：默认隐藏 -->
+    <div class="wrap-item" id="sourceWrap">
+        <label>Ruby源代码
+            <button class="toggle-btn" onclick="toggleSource()">显示/隐藏源码框</button>
+        </label>
+        <textarea id="sourceCode" rows="6"></textarea>
+    </div>
+
+    <!-- 预览区域 -->
+    <div class="wrap-item">
+        <label>预览效果</label>
+        <div id="previewArea"></div>
+    </div>
+
+    <!-- 操作按钮 -->
+    <div>
+        <button onclick="copySource()">复制源代码</button>
+        <button onclick="clearAll()">清空全部</button>
+    </div>
+
+<script>
+    // DOM
+    const inputText = document.getElementById('inputText');
+    const sourceCode = document.getElementById('sourceCode');
+    const sourceWrap = document.getElementById('sourceWrap');
+    const previewArea = document.getElementById('previewArea');
+
+    // 源码区域默认隐藏
+    sourceWrap.style.display = 'none';
+
+    // 切换输入框显示隐藏
+    function toggleInput(){
+        const el = inputText;
+        el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+    // 切换源码框显示隐藏
+    function toggleSource(){
+        sourceWrap.style.display = sourceWrap.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // 核心处理函数：两种分段模式切换 + 支持带连字符单词
+    function processText(){
+        const raw = inputText.value;
+        if(!raw.trim()){
+            sourceCode.value = '';
+            previewArea.innerHTML = '';
+            return;
+        }
+        // 获取选中的段落模式
+        const mode = document.querySelector('input[name="paraMode"]:checked').value;
+        let paragraphs;
+        if(mode === "emptyLine"){
+            // 模式1：空行分段（连续空白换行分割段落，文章模式）
+            paragraphs = raw.split(/\n\s*\n/);
+        }else{
+            // 模式2：单行分段，单个换行就切分段落
+            paragraphs = raw.split('\n');
+        }
+
+        let sourceHtml = '';
+        let previewHtml = '';
+
+        for(const para of paragraphs){
+            const paraTrim = para.trim();
+            if(!paraTrim) continue;
+            // 正则：支持带连字符复合单词 state-of-the-art[xxx]
+            const converted = paraTrim.replace(/([\w-]+)\[([^\]]+)\]/g, '<ruby>$1<rt>$2</rt></ruby>');
+            const pLine = `<p>${converted}</p>`;
+            sourceHtml += pLine + '\n';
+            previewHtml += pLine;
+        }
+        sourceCode.value = sourceHtml;
+        previewArea.innerHTML = previewHtml;
+    }
+
+    // 复制源码到剪贴板
+    async function copySource(){
+        const txt = sourceCode.value;
+        if(!txt){
+            alert("源码为空");
+            return;
+        }
+        try{
+            await navigator.clipboard.writeText(txt);
+            alert("复制成功！");
+        }catch(e){
+            sourceCode.select();
+            document.execCommand('copy');
+            alert("复制成功！");
+        }
+    }
+
+    // 清空全部
+    function clearAll(){
+        inputText.value = '';
+        sourceCode.value = '';
+        previewArea.innerHTML = '';
+    }
+</script>
+</body>
+</html>
