@@ -1,0 +1,630 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>x_new_conception_4_lesson06_ruby</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  	font-size: 1.5rem;
+ 	top: 0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h2><a name="ruby" class="md-header-anchor"></a><span>Ruby</span></h2><style>
+  p { font-size: 20px;}
+  p rt { color: #b45309; font-size: 0.8em;}
+</style>
+<p>The <ruby>sporting<rt>ˈspɔːrtɪŋ</rt></ruby> <ruby>spirit<rt>ˈspɪrɪt</rt></ruby>.
+<ruby>How<rt>haʊ</rt></ruby> does the <ruby>writer<rt>ˈraɪtər</rt></ruby> <ruby>describe<rt>dɪˈskraɪb</rt></ruby> <ruby>sport<rt>spɔːrt</rt></ruby> at the <ruby>international<rt>ˌɪntərˈnæʃnəl</rt></ruby> <ruby>level<rt>ˈlevl</rt></ruby>?</p>
+<p>I am <ruby>always<rt>ˈɔːlweɪz</rt></ruby> <ruby>amazed<rt>əˈmeɪzd</rt></ruby> when I <ruby>hear<rt>hɪr</rt></ruby> <ruby>people<rt>ˈpiːpl</rt></ruby> <ruby>saying<rt>ˈseɪɪŋ</rt></ruby> that <ruby>sport<rt>spɔːrt</rt></ruby> <ruby>creates<rt>kriˈeɪts</rt></ruby> <ruby>goodwill<rt>ˌɡʊdˈwɪl</rt></ruby> between the <ruby>nations<rt>ˈneɪʃnz</rt></ruby>, and that if only the <ruby>common<rt>ˈkɑːmən</rt></ruby> <ruby>peoples<rt>ˈpiːplz</rt></ruby> of the world could <ruby>meet<rt>miːt</rt></ruby> one another at <ruby>football<rt>ˈfʊtbɔːl</rt></ruby> or <ruby>cricket<rt>ˈkrɪkɪt</rt></ruby>, they would have no <ruby>inclination<rt>ˌɪnklɪˈneɪʃn</rt></ruby> to <ruby>meet<rt>miːt</rt></ruby> on the <ruby>battlefield<rt>ˈbætlfiːld</rt></ruby>. <ruby>Even<rt>ˈiːvn</rt></ruby> if one didn't <ruby>know<rt>noʊ</rt></ruby> from <ruby>concrete<rt>ˈkɑːnkriːt</rt></ruby> <ruby>examples<rt>ɪɡˈzæmplz</rt></ruby> (the 1936 <ruby>Olympic<rt>əˈlɪmpɪk</rt></ruby> <ruby>Games<rt>ɡeɪmz</rt></ruby>, for instance) that <ruby>international<rt>ˌɪntərˈnæʃnəl</rt></ruby> <ruby>sporting<rt>ˈspɔːrtɪŋ</rt></ruby> <ruby>contests<rt>ˈkɑːntests</rt></ruby> <ruby>lead<rt>liːd</rt></ruby> to <ruby>orgies<rt>ˈɔːrdʒiz</rt></ruby> of <ruby>hatred<rt>ˈheɪtrɪd</rt></ruby>, one could <ruby>deduce<rt>dɪˈduːs</rt></ruby> it from <ruby>general<rt>ˈdʒenərəl</rt></ruby> <ruby>principles<rt>ˈprɪnsəplz</rt></ruby>.</p>
+<p><ruby>Nearly<rt>ˈnɪrli</rt></ruby> all the <ruby>sports<rt>spɔːrts</rt></ruby> <ruby>practised<rt>ˈpræktɪst</rt></ruby> <ruby>nowadays<rt>ˈnaʊədeɪz</rt></ruby> are <ruby>competitive<rt>kəmˈpetətɪv</rt></ruby>. You <ruby>play<rt>pleɪ</rt></ruby> to <ruby>win<rt>wɪn</rt></ruby>, and the <ruby>game<rt>ɡeɪm</rt></ruby> has <ruby>little<rt>ˈlɪtl</rt></ruby> <ruby>meaning<rt>ˈmiːnɪŋ</rt></ruby> unless you <ruby>do<rt>duː</rt></ruby> your <ruby>utmost<rt>ˈʌtmoʊst</rt></ruby> to <ruby>win<rt>wɪn</rt></ruby>. On the <ruby>village<rt>ˈvɪlɪdʒ</rt></ruby> <ruby>green<rt>ɡriːn</rt></ruby>, where you <ruby>pick<rt>pɪk</rt></ruby> up <ruby>sides<rt>saɪdz</rt></ruby> and no <ruby>feeling<rt>ˈfiːlɪŋ</rt></ruby> of <ruby>local<rt>ˈloʊkl</rt></ruby> <ruby>patriotism<rt>ˈpeɪtriətɪzəm</rt></ruby> is <ruby>involved<rt>ɪnˈvɑːlvd</rt></ruby>, it is <ruby>possible<rt>ˈpɑːsəbl</rt></ruby> to <ruby>play<rt>pleɪ</rt></ruby> <ruby>simply<rt>ˈsɪmpli</rt></ruby> for the <ruby>fun<rt>fʌn</rt></ruby> and <ruby>exercise<rt>ˈeksərsaɪz</rt></ruby>: but as soon as the question of <ruby>prestige<rt>preˈstiːʒ</rt></ruby> <ruby>arises<rt>əˈraɪzɪz</rt></ruby>, as soon as you <ruby>feel<rt>fiːl</rt></ruby> that you and some <ruby>larger<rt>ˈlɑːrdʒər</rt></ruby> <ruby>unit<rt>ˈjuːnɪt</rt></ruby> will be <ruby>disgraced<rt>dɪsˈɡreɪst</rt></ruby> if you <ruby>lose<rt>luːz</rt></ruby>, the most <ruby>savage<rt>ˈsævɪdʒ</rt></ruby> <ruby>combative<rt>kəmˈbætɪv</rt></ruby> <ruby>instincts<rt>ˈɪnstɪŋkts</rt></ruby> are <ruby>aroused<rt>əˈraʊzd</rt></ruby>. <ruby>Anyone<rt>ˈeniwʌn</rt></ruby> who has <ruby>played<rt>pleɪd</rt></ruby> <ruby>even<rt>ˈiːvn</rt></ruby> in a <ruby>school<rt>skuːl</rt></ruby> <ruby>football<rt>ˈfʊtbɔːl</rt></ruby> <ruby>match<rt>mætʃ</rt></ruby> <ruby>knows<rt>noʊz</rt></ruby> this. At the <ruby>international<rt>ˌɪntərˈnæʃnəl</rt></ruby> <ruby>level<rt>ˈlevl</rt></ruby>, <ruby>sport<rt>spɔːrt</rt></ruby> is <ruby>frankly<rt>ˈfræŋkli</rt></ruby> <ruby>mimic<rt>ˈmɪmɪk</rt></ruby> <ruby>warfare<rt>ˈwɔːrfer</rt></ruby>.</p>
+<p>But the <ruby>significant<rt>sɪɡˈnɪfɪkənt</rt></ruby> <ruby>thing<rt>θɪŋ</rt></ruby> is not the <ruby>behaviour<rt>bɪˈheɪvjər</rt></ruby> of the <ruby>players<rt>ˈpleɪərz</rt></ruby> but the <ruby>attitude<rt>ˈætɪtuːd</rt></ruby> of the <ruby>spectators<rt>ˈspekteɪtərz</rt></ruby>: and, behind the <ruby>spectators<rt>ˈspekteɪtərz</rt></ruby>, of the <ruby>nations<rt>ˈneɪʃnz</rt></ruby> who <ruby>work<rt>wɜːrk</rt></ruby> themselves into <ruby>furies<rt>ˈfjʊriz</rt></ruby> over these <ruby>absurd<rt>əbˈsɜːrd</rt></ruby> <ruby>contests<rt>ˈkɑːntests</rt></ruby>, and <ruby>seriously<rt>ˈsɪriəsli</rt></ruby> <ruby>believe<rt>bɪˈliːv</rt></ruby> – at any rate for <ruby>short<rt>ʃɔːrt</rt></ruby> <ruby>periods<rt>ˈpɪriədz</rt></ruby> – that <ruby>running<rt>ˈrʌnɪŋ</rt></ruby>, <ruby>jumping<rt>ˈdʒʌmpɪŋ</rt></ruby> and <ruby>kicking<rt>ˈkɪkɪŋ</rt></ruby> a <ruby>ball<rt>bɔːl</rt></ruby> are <ruby>tests<rt>tests</rt></ruby> of <ruby>national<rt>ˈnæʃnəl</rt></ruby> <ruby>virtue<rt>ˈvɜːrtʃuː</rt></ruby>.</p><p><span>按英文新闻句处理规则处理这则 Orwell 的随笔（含 3 段正文）。</span></p><h2><a name="标题--提问句" class="md-header-anchor"></a><span>标题 + 提问句</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>The sporting[ˈspɔːrtɪŋ] spirit[ˈspɪrɪt].</span>
+<span>How[haʊ] does the writer[ˈraɪtər] describe[dɪˈskraɪb] sport[spɔːrt] at the international[ˌɪntərˈnæʃnəl] level[ˈlevl]?</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>sporting spirit：体育精神</span></li><li><span>at the international level：在国际层面</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>体育精神。作者是如何描述国际层面的体育的？</span></p><hr /><h2><a name="第-1-段" class="md-header-anchor"></a><span>第 1 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>I am always[ˈɔːlweɪz] amazed[əˈmeɪzd] when I hear[hɪr] people[ˈpiːpl] saying[ˈseɪɪŋ] that sport[spɔːrt] creates[kriˈeɪts] goodwill[ˌɡʊdˈwɪl] between the nations[ˈneɪʃnz], and that if only the common[ˈkɑːmən] peoples[ˈpiːplz] of the world could meet[miːt] one another at football[ˈfʊtbɔːl] or cricket[ˈkrɪkɪt], they would have no inclination[ˌɪnklɪˈneɪʃn] to meet[miːt] on the battlefield[ˈbætlfiːld]. Even[ˈiːvn] if one didn&#39;t know[noʊ] from concrete[ˈkɑːnkriːt] examples[ɪɡˈzæmplz] (the 1936 Olympic[əˈlɪmpɪk] Games[ɡeɪmz], for instance) that international[ˌɪntərˈnæʃnəl] sporting[ˈspɔːrtɪŋ] contests[ˈkɑːntests] lead[liːd] to orgies[ˈɔːrdʒiz] of hatred[ˈheɪtrɪd], one could deduce[dɪˈduːs] it from general[ˈdʒenərəl] principles[ˈprɪnsəplz].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>create goodwill between the nations：在国家之间缔造友好情谊</span></li><li><span>the common peoples：普通民众</span></li><li><span>meet one another：彼此见面</span></li><li><span>have no inclination to do sth：无意做某事</span></li><li><span>concrete examples：具体事例</span></li><li><span>the 1936 Olympic Games：1936年奥运会</span></li><li><span>for instance：例如</span></li><li><span>international sporting contests：国际体育赛事</span></li><li><span>lead to orgies of hatred：引发仇恨狂潮、导致仇恨泛滥</span></li><li><span>deduce from general principles：从一般原则推断</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>我总感到惊讶，因为常听人说体育能在国家之间缔造友好情谊，只要各国普通民众能在足球或板球赛场上彼此交手，他们就不会有在战场上兵戎相见的念头。即便不从具体事例（比如1936年奥运会）得知国际体育赛事会引发仇恨的狂潮，人们也能从一般原则中推断出这一点。</span></p><hr /><h2><a name="第-2-段" class="md-header-anchor"></a><span>第 2 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Nearly[ˈnɪrli] all the sports[spɔːrts] practised[ˈpræktɪst] nowadays[ˈnaʊədeɪz] are competitive[kəmˈpetətɪv]. You play[pleɪ] to win[wɪn], and the game[ɡeɪm] has little[ˈlɪtl] meaning[ˈmiːnɪŋ] unless you do[duː] your utmost[ˈʌtmoʊst] to win[wɪn]. On the village[ˈvɪlɪdʒ] green[ɡriːn], where you pick[pɪk] up sides[saɪdz] and no feeling[ˈfiːlɪŋ] of local[ˈloʊkl] patriotism[ˈpeɪtriətɪzəm] is involved[ɪnˈvɑːlvd], it is possible[ˈpɑːsəbl] to play[pleɪ] simply[ˈsɪmpli] for the fun[fʌn] and exercise[ˈeksərsaɪz]: but as soon as the question of prestige[preˈstiːʒ] arises[əˈraɪzɪz], as soon as you feel[fiːl] that you and some larger[ˈlɑːrdʒər] unit[ˈjuːnɪt] will be disgraced[dɪsˈɡreɪst] if you lose[luːz], the most savage[ˈsævɪdʒ] combative[kəmˈbætɪv] instincts[ˈɪnstɪŋkts] are aroused[əˈraʊzd]. Anyone[ˈeniwʌn] who has played[pleɪd] even[ˈiːvn] in a school[skuːl] football[ˈfʊtbɔːl] match[mætʃ] knows[noʊz] this. At the international[ˌɪntərˈnæʃnəl] level[ˈlevl], sport[spɔːrt] is frankly[ˈfræŋkli] mimic[ˈmɪmɪk] warfare[ˈwɔːrfer].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>nearly all：几乎所有</span></li><li><span>play to win：为取胜而比赛</span></li><li><span>do your utmost to win：竭尽全力取胜</span></li><li><span>on the village green：在乡村绿茵场上</span></li><li><span>pick up sides：临时分队、随便组队</span></li><li><span>local patriotism：乡土情结、地方荣誉感</span></li><li><span>be involved：牵涉其中</span></li><li><span>play for the fun and exercise：为乐趣和锻炼而玩</span></li><li><span>as soon as：一旦……就</span></li><li><span>the question of prestige：声誉/面子问题</span></li><li><span>be disgraced：蒙羞、丢脸</span></li><li><span>savage combative instincts：野蛮好斗的本能</span></li><li><span>be aroused：被激起</span></li><li><span>school football match：校际足球赛</span></li><li><span>mimic warfare：模拟战争、仿真的战争</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>如今几乎所有体育运动都是竞技性的。你为取胜而比赛，若不尽全力争取胜利，比赛便几乎失去了意义。在乡村的绿茵场上，随意分队、不掺杂任何乡土荣誉感时，人们可以纯粹为了乐趣和锻炼而比赛；可一旦涉及声誉问题，一旦你感到自己或所属的更大群体输了会蒙羞，最野蛮的好斗本能就会被激发出来。任何哪怕参加过一场校际足球赛的人都知道这一点。在国际层面，体育坦率地说就是模拟的战争。</span></p><hr /><h2><a name="第-3-段" class="md-header-anchor"></a><span>第 3 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>But the significant[sɪɡˈnɪfɪkənt] thing[θɪŋ] is not the behaviour[bɪˈheɪvjər] of the players[ˈpleɪərz] but the attitude[ˈætɪtuːd] of the spectators[ˈspekteɪtərz]: and, behind the spectators[ˈspekteɪtərz], of the nations[ˈneɪʃnz] who work[wɜːrk] themselves into furies[ˈfjʊriz] over these absurd[əbˈsɜːrd] contests[ˈkɑːntests], and seriously[ˈsɪriəsli] believe[bɪˈliːv] – at any rate for short[ʃɔːrt] periods[ˈpɪriədz] – that running[ˈrʌnɪŋ], jumping[ˈdʒʌmpɪŋ] and kicking[ˈkɪkɪŋ] a ball[bɔːl] are tests[tests] of national[ˈnæʃnəl] virtue[ˈvɜːrtʃuː].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>the significant thing：关键之处</span></li><li><span>the behaviour of the players：球员的表现/行为</span></li><li><span>the attitude of the spectators：观众的态度</span></li><li><span>work oneself into a fury：使自己陷入狂怒、勃然大怒</span></li><li><span>over these absurd contests：为这些荒诞的比赛</span></li><li><span>at any rate：无论如何、至少</span></li><li><span>for short periods：在短期内</span></li><li><span>seriously believe：真心相信</span></li><li><span>tests of national virtue：对国家美德的检验</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>但重要的并非球员的表现，而是观众的态度；以及观众背后那些国家——它们为这些荒诞的比赛而陷入狂怒，并真心相信——至少在短期内——跑步、跳跃和踢球是对国家美德的检验。</span></p></div>
+</body>
+</html>
