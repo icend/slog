@@ -12,4 +12,4 @@
 - [x_news_bbc_0926_1](x_news_bbc_0926_1.html)
 - [No_Premier_League_appetite_to_strip_Man_City_of_titles_-_but_threat_remains](No_Premier_League_appetite_to_strip_Man_City_of_titles_-_but_threat_remains.html)
 - [x_new_conception_4_lesson06_ruby](x_new_conception_4_lesson06_ruby.html)
-
+- [a_fitness_girl_in_a_gym_setting](a_fitness_girl_in_a_gym_setting_ruby.html)
