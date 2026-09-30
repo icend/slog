@@ -1,0 +1,681 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>x_reuters_florence_ruby</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h2><a name="ruby" class="md-header-anchor"></a><span>Ruby</span></h2><style>
+  p { font-size: 20px;}
+  p rt { color: #b45309; font-size: 0.8em;}
+</style>
+<p>Florence Pugh <ruby>says<rt>sez</rt></ruby> '<ruby>East<rt>iːst</rt></ruby> of <ruby>Eden<rt>ˈiːdn</rt></ruby>' <ruby>series<rt>ˈsɪriːz</rt></ruby> <ruby>finds<rt>faɪndz</rt></ruby> <ruby>humanity<rt>hjuːˈmænəti</rt></ruby> in Steinbeck'<ruby>s<rt>ˈstaɪnbɛks</rt></ruby> 'monster'[ˈmɑːnstər], Cathy.</p>
+<p><ruby>LONDON<rt>ˈlʌndən</rt></ruby>, Sept 29 (<ruby>Reuters<rt>ˈrɔɪtərz</rt></ruby>) - Florence Pugh <ruby>says<rt>sez</rt></ruby> the <ruby>new<rt>nuː</rt></ruby> <ruby>adaptation<rt>ˌædæpˈteɪʃn</rt></ruby> of "<ruby>East<rt>iːst</rt></ruby> of <ruby>Eden<rt>ˈiːdn</rt></ruby>" <ruby>invites<rt>ɪnˈvaɪts</rt></ruby> <ruby>audiences<rt>ˈɔːdiənsɪz</rt></ruby> to <ruby>view<rt>vjuː</rt></ruby> Cathy, one of <ruby>American<rt>əˈmerɪkən</rt></ruby> literature'<ruby>s<rt>ˈlɪtərətʃərz</rt></ruby> most <ruby>notorious<rt>noʊˈtɔːriəs</rt></ruby> <ruby>villains<rt>ˈvɪlənz</rt></ruby>, under a more <ruby>sympathetic<rt>ˌsɪmpəˈθetɪk</rt></ruby> <ruby>light<rt>laɪt</rt></ruby>.</p>
+<p>The <ruby>actor<rt>ˈæktər</rt></ruby>, who <ruby>plays<rt>pleɪz</rt></ruby> Cathy in the seven-part <ruby>limited<rt>ˈlɪmɪtɪd</rt></ruby> <ruby>series<rt>ˈsɪriːz</rt></ruby>, <ruby>said<rt>sed</rt></ruby> the <ruby>adaptation<rt>ˌædæpˈteɪʃn</rt></ruby> <ruby>adds<rt>ædz</rt></ruby> <ruby>context<rt>ˈkɑːntekst</rt></ruby> to a <ruby>character<rt>ˈkærəktər</rt></ruby> whom <ruby>author<rt>ˈɔːθər</rt></ruby> John Steinbeck <ruby>famously<rt>ˈfeɪməsli</rt></ruby> <ruby>described<rt>dɪˈskraɪbd</rt></ruby> as a "<ruby>psychic<rt>ˈsaɪkɪk</rt></ruby> <ruby>monster<rt>ˈmɑːnstər</rt></ruby>" with a "<ruby>malformed<rt>ˌmælˈfɔːrmd</rt></ruby> <ruby>soul<rt>soʊl</rt></ruby>". "She can <ruby>still<rt>stɪl</rt></ruby> <ruby>make<rt>meɪk</rt></ruby> <ruby>terrible<rt>ˈterəbl</rt></ruby> <ruby>decisions<rt>dɪˈsɪʒnz</rt></ruby> and <ruby>face<rt>feɪs</rt></ruby> <ruby>awful<rt>ˈɔːfl</rt></ruby> <ruby>consequences<rt>ˈkɑːnsəkwənsɪz</rt></ruby>, but there can <ruby>also<rt>ˈɔːlsoʊ</rt></ruby> be an <ruby>understanding<rt>ˌʌndərˈstændɪŋ</rt></ruby> of her <ruby>history<rt>ˈhɪstəri</rt></ruby> and her <ruby>past<rt>pæst</rt></ruby> which <ruby>makes<rt>meɪks</rt></ruby> her the <ruby>way<rt>weɪ</rt></ruby> that she is," the <ruby>Academy<rt>əˈkædəmi</rt></ruby> <ruby>Award<rt>əˈwɔːrd</rt></ruby> <ruby>nominee<rt>ˌnɑːmɪˈniː</rt></ruby> <ruby>said<rt>sed</rt></ruby>.</p>
+<p><ruby>Written<rt>ˈrɪtn</rt></ruby> by Zoe Kazan, who co-<ruby>showruns<rt>koʊˈʃoʊrʌnz</rt></ruby> the <ruby>series<rt>ˈsɪriːz</rt></ruby> <ruby>alongside<rt>əˈlɔːŋsaɪd</rt></ruby> Jeb Stuart, the <ruby>adaptation<rt>ˌædæpˈteɪʃn</rt></ruby> <ruby>revisits<rt>ˌriːˈvɪzɪts</rt></ruby> Steinbeck'<ruby>s<rt>ˈstaɪnbɛks</rt></ruby> multi-<ruby>generational<rt>ˌmʌltiˌdʒenəˈreɪʃənl</rt></ruby> <ruby>saga<rt>ˈsɑːɡə</rt></ruby>, with a <ruby>renewed<rt>rɪˈnuːd</rt></ruby> <ruby>focus<rt>ˈfoʊkəs</rt></ruby> on Cathy.</p>
+<p>Kazan <ruby>said<rt>sed</rt></ruby> the <ruby>adaptation<rt>ˌædæpˈteɪʃn</rt></ruby> <ruby>challenges<rt>ˈtʃælɪndʒɪz</rt></ruby> <ruby>viewers<rt>ˈvjuːərz</rt></ruby> to <ruby>look<rt>lʊk</rt></ruby> <ruby>beyond<rt>biˈjɔːnd</rt></ruby> <ruby>simple<rt>ˈsɪmpl</rt></ruby> <ruby>notions<rt>ˈnoʊʃnz</rt></ruby> of <ruby>good<rt>ɡʊd</rt></ruby> and <ruby>evil<rt>ˈiːvl</rt></ruby>.</p>
+<p>"We <ruby>wanted<rt>ˈwɑːntɪd</rt></ruby> our <ruby>audience<rt>ˈɔːdiəns</rt></ruby> to be <ruby>able<rt>ˈeɪbl</rt></ruby> to <ruby>identify<rt>aɪˈdentɪfaɪ</rt></ruby> with every <ruby>single<rt>ˈsɪŋɡl</rt></ruby> <ruby>character<rt>ˈkærəktər</rt></ruby>, the ones that are <ruby>good<rt>ɡʊd</rt></ruby> on the <ruby>surface<rt>ˈsɜːrfɪs</rt></ruby> and the ones that are <ruby>evil<rt>ˈiːvl</rt></ruby> on the <ruby>surface<rt>ˈsɜːrfɪs</rt></ruby>," she <ruby>said<rt>sed</rt></ruby>. "Because if we <ruby>think<rt>θɪŋk</rt></ruby> about <ruby>people<rt>ˈpiːpl</rt></ruby> that are <ruby>evil<rt>ˈiːvl</rt></ruby> or <ruby>bad<rt>bæd</rt></ruby> as being not <ruby>human<rt>ˈhjuːmən</rt></ruby>, we don't <ruby>learn<rt>lɜːrn</rt></ruby> <ruby>anything<rt>ˈeniθɪŋ</rt></ruby> about <ruby>ourselves<rt>aʊərˈselvz</rt></ruby>."</p>
+<p>Kazan <ruby>said<rt>sed</rt></ruby> she has <ruby>felt<rt>felt</rt></ruby> a <ruby>deep<rt>diːp</rt></ruby> <ruby>connection<rt>kəˈnekʃn</rt></ruby> to "<ruby>East<rt>iːst</rt></ruby> of <ruby>Eden<rt>ˈiːdn</rt></ruby>" since <ruby>reading<rt>ˈriːdɪŋ</rt></ruby> the <ruby>novel<rt>ˈnɑːvl</rt></ruby> <ruby>aged<rt>eɪdʒd</rt></ruby> 15, <ruby>describing<rt>dɪˈskraɪbɪŋ</rt></ruby> it as a <ruby>story<rt>ˈstɔːri</rt></ruby> that "<ruby>grabbed<rt>ɡræbd</rt></ruby> me by the <ruby>throat<rt>θroʊt</rt></ruby> and wouldn't <ruby>let<rt>let</rt></ruby> <ruby>go<rt>ɡoʊ</rt></ruby>" with its <ruby>exploration<rt>ˌekspləˈreɪʃn</rt></ruby> of how <ruby>people<rt>ˈpiːpl</rt></ruby> <ruby>carry<rt>ˈkæri</rt></ruby> their family'<ruby>s<rt>ˈfæməliz</rt></ruby> <ruby>past<rt>pæst</rt></ruby> into the <ruby>future<rt>ˈfjuːtʃər</rt></ruby>.</p>
+<p><ruby>Asked<rt>æskt</rt></ruby> whether the novel'<ruby>s<rt>ˈnɑːvlz</rt></ruby> <ruby>focus<rt>ˈfoʊkəs</rt></ruby> on <ruby>inheritance<rt>ɪnˈherɪtəns</rt></ruby> and <ruby>reckoning<rt>ˈrekənɪŋ</rt></ruby> with the <ruby>past<rt>pæst</rt></ruby> <ruby>resonated<rt>ˈrezəneɪtɪd</rt></ruby> <ruby>personally<rt>ˈpɜːrsənəli</rt></ruby>, Kazan <ruby>pointed<rt>ˈpɔɪntɪd</rt></ruby> to her own <ruby>family<rt>ˈfæməli</rt></ruby> <ruby>history<rt>ˈhɪstəri</rt></ruby>. Her <ruby>grandfather<rt>ˈɡrænfɑːðər</rt></ruby>, <ruby>filmmaker<rt>ˈfɪlmˌmeɪkər</rt></ruby> Elia Kazan, <ruby>remains<rt>rɪˈmeɪnz</rt></ruby> a <ruby>controversial<rt>ˌkɑːntrəˈvɜːrʃl</rt></ruby> <ruby>figure<rt>ˈfɪɡjər</rt></ruby> after <ruby>naming<rt>ˈneɪmɪŋ</rt></ruby> <ruby>former<rt>ˈfɔːrmər</rt></ruby> <ruby>colleagues<rt>ˈkɑːliːɡz</rt></ruby> with <ruby>Communist<rt>ˈkɑːmjənɪst</rt></ruby> <ruby>Party<rt>ˈpɑːrti</rt></ruby> <ruby>ties<rt>taɪz</rt></ruby> before a <ruby>congressional<rt>kənˈɡreʃənl</rt></ruby> <ruby>committee<rt>kəˈmɪti</rt></ruby> during the <ruby>McCarthy<rt>məˈkɑːrθi</rt></ruby> <ruby>era<rt>ˈɪrə</rt></ruby>. He <ruby>also<rt>ˈɔːlsoʊ</rt></ruby> <ruby>directed<rt>dəˈrektɪd</rt></ruby> the 1955 <ruby>adaptation<rt>ˌædæpˈteɪʃn</rt></ruby> of the <ruby>novel<rt>ˈnɑːvl</rt></ruby>, <ruby>starring<rt>ˈstɑːrɪŋ</rt></ruby> James Dean.</p>
+<p><ruby>Describing<rt>dɪˈskraɪbɪŋ</rt></ruby> her <ruby>connection<rt>kəˈnekʃn</rt></ruby> to the <ruby>material<rt>məˈtɪriəl</rt></ruby> as both "baggage"[ˈbæɡɪdʒ] and a "gift"[ɡɪft], Kazan <ruby>said<rt>sed</rt></ruby> she <ruby>hoped<rt>hoʊpt</rt></ruby> the <ruby>series<rt>ˈsɪriːz</rt></ruby> would <ruby>prompt<rt>prɑːmpt</rt></ruby> <ruby>audiences<rt>ˈɔːdiənsɪz</rt></ruby> to <ruby>reflect<rt>rɪˈflekt</rt></ruby> on their own <ruby>families<rt>ˈfæməliz</rt></ruby> rather than hers.</p>
+<p>"I don't <ruby>want<rt>wɑːnt</rt></ruby> <ruby>anyone<rt>ˈeniwʌn</rt></ruby> <ruby>walking<rt>ˈwɔːkɪŋ</rt></ruby> <ruby>away<rt>əˈweɪ</rt></ruby> from this <ruby>thinking<rt>ˈθɪŋkɪŋ</rt></ruby>, Zoe Kazan, Elia Kazan," she <ruby>said<rt>sed</rt></ruby>. "We <ruby>want<rt>wɑːnt</rt></ruby> <ruby>people<rt>ˈpiːpl</rt></ruby> <ruby>walking<rt>ˈwɔːkɪŋ</rt></ruby> <ruby>away<rt>əˈweɪ</rt></ruby> from this (to <ruby>think<rt>θɪŋk</rt></ruby>) ... 'My <ruby>father<rt>ˈfɑːðər</rt></ruby>, my <ruby>son<rt>sʌn</rt></ruby>, the <ruby>things<rt>θɪŋz</rt></ruby> that I've <ruby>done<rt>dʌn</rt></ruby>'."</p>
+<p>For "Challengers"[ˈtʃælɪndʒərz] <ruby>star<rt>stɑːr</rt></ruby> Mike Faist, who <ruby>plays<rt>pleɪz</rt></ruby> Charles Trask in the <ruby>series<rt>ˈsɪriːz</rt></ruby>, Steinbeck'<ruby>s<rt>ˈstaɪnbɛks</rt></ruby> <ruby>story<rt>ˈstɔːri</rt></ruby> has <ruby>endured<rt>ɪnˈdʊrd</rt></ruby> because it <ruby>reflects<rt>rɪˈflekts</rt></ruby> <ruby>fundamental<rt>ˌfʌndəˈmentl</rt></ruby> <ruby>truths<rt>truːθs</rt></ruby> about <ruby>human<rt>ˈhjuːmən</rt></ruby> <ruby>morality<rt>məˈræləti</rt></ruby>. "We <ruby>go<rt>ɡoʊ</rt></ruby> <ruby>back<rt>bæk</rt></ruby> to these <ruby>classics<rt>ˈklæsɪks</rt></ruby> to <ruby>poke<rt>poʊk</rt></ruby> at them <ruby>again<rt>əˈɡen</rt></ruby>, and that's a <ruby>good<rt>ɡʊd</rt></ruby> <ruby>thing<rt>θɪŋ</rt></ruby>," he <ruby>said<rt>sed</rt></ruby>.</p>
+<p>Stuart <ruby>echoed<rt>ˈekoʊd</rt></ruby> Faist'<ruby>s<rt>faɪsts</rt></ruby> <ruby>sentiment<rt>ˈsentɪmənt</rt></ruby>, <ruby>saying<rt>ˈseɪɪŋ</rt></ruby> <ruby>readers<rt>ˈriːdərz</rt></ruby> can <ruby>return<rt>rɪˈtɜːrn</rt></ruby> to "<ruby>East<rt>iːst</rt></ruby> of <ruby>Eden<rt>ˈiːdn</rt></ruby>" <ruby>throughout<rt>θruːˈaʊt</rt></ruby> their <ruby>lives<rt>laɪvz</rt></ruby> and <ruby>discover<rt>dɪˈskʌvər</rt></ruby> <ruby>new<rt>nuː</rt></ruby> <ruby>meanings<rt>ˈmiːnɪŋz</rt></ruby> as their own <ruby>experiences<rt>ɪkˈspɪriənsɪz</rt></ruby> <ruby>evolve<rt>ɪˈvɑːlv</rt></ruby>.</p>
+<p>"I <ruby>lost<rt>lɔːst</rt></ruby> an <ruby>adult<rt>əˈdʌlt</rt></ruby> <ruby>son<rt>sʌn</rt></ruby>, so <ruby>later<rt>ˈleɪtər</rt></ruby> in <ruby>life<rt>laɪf</rt></ruby> ... I <ruby>read<rt>red</rt></ruby> it as if I had <ruby>never<rt>ˈnevər</rt></ruby> <ruby>read<rt>red</rt></ruby> '<ruby>East<rt>iːst</rt></ruby> of <ruby>Eden<rt>ˈiːdn</rt></ruby>' before," he <ruby>told<rt>toʊld</rt></ruby> <ruby>Reuters<rt>ˈrɔɪtərz</rt></ruby>. "That's just the <ruby>cool<rt>kuːl</rt></ruby> <ruby>thing<rt>θɪŋ</rt></ruby> about Steinbeck'<ruby>s<rt>ˈstaɪnbɛks</rt></ruby> <ruby>writing<rt>ˈraɪtɪŋ</rt></ruby>."</p>
+<p>"<ruby>East<rt>iːst</rt></ruby> of <ruby>Eden<rt>ˈiːdn</rt></ruby>" will be <ruby>released<rt>rɪˈliːst</rt></ruby> on <ruby>Netflix<rt>ˈnetflɪks</rt></ruby> on <ruby>Thursday<rt>ˈθɜːrzdeɪ</rt></ruby>, <ruby>October<rt>ɑːkˈtoʊbər</rt></ruby> 1.</p><h2><a name="标题句" class="md-header-anchor"></a><span>标题句</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Florence Pugh says[sez] &#39;East[iːst] of Eden[ˈiːdn]&#39; series[ˈsɪriːz] finds[faɪndz] humanity[hjuːˈmænəti] in Steinbeck&#39;s[ˈstaɪnbɛks] &#39;monster&#39;[ˈmɑːnstər], Cathy.</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>find humanity in：在……中找到人性</span></li><li><span>East of Eden：《伊甸之东》</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>弗洛伦丝·皮尤称《伊甸之东》剧集在斯坦贝克的&quot;怪物&quot;凯西身上找到了人性。</span></p><hr /><h2><a name="第-2-段电头句）" class="md-header-anchor"></a><span>第 2 段（电头句）</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>LONDON[ˈlʌndən], Sept 29 (Reuters[ˈrɔɪtərz]) - Florence Pugh says[sez] the new[nuː] adaptation[ˌædæpˈteɪʃn] of &quot;East[iːst] of Eden[ˈiːdn]&quot; invites[ɪnˈvaɪts] audiences[ˈɔːdiənsɪz] to view[vjuː] Cathy, one of American[əˈmerɪkən] literature&#39;s[ˈlɪtərətʃərz] most notorious[noʊˈtɔːriəs] villains[ˈvɪlənz], under a more sympathetic[ˌsɪmpəˈθetɪk] light[laɪt].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>a new adaptation of：……的新改编版</span></li><li><span>invite audiences to view：引导观众以……视角看待</span></li><li><span>American literature：美国文学</span></li><li><span>notorious villains：臭名昭著的反派角色</span></li><li><span>under a more sympathetic light：以更同情的视角、在更同情的眼光下</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>路透社伦敦9月29日电——弗洛伦丝·皮尤表示，新版《伊甸之东》改编剧引导观众以更同情的视角看待凯西——美国文学中最臭名昭著的反派角色之一。</span></p><hr /><h2><a name="第-3-段" class="md-header-anchor"></a><span>第 3 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>The actor[ˈæktər], who plays[pleɪz] Cathy in the seven-part limited[ˈlɪmɪtɪd] series[ˈsɪriːz], said[sed] the adaptation[ˌædæpˈteɪʃn] adds[ædz] context[ˈkɑːntekst] to a character[ˈkærəktər] whom author[ˈɔːθər] John Steinbeck famously[ˈfeɪməsli] described[dɪˈskraɪbd] as a &quot;psychic[ˈsaɪkɪk] monster[ˈmɑːnstər]&quot; with a &quot;malformed[ˌmælˈfɔːrmd] soul[soʊl]&quot;. &quot;She can still[stɪl] make[meɪk] terrible[ˈterəbl] decisions[dɪˈsɪʒnz] and face[feɪs] awful[ˈɔːfl] consequences[ˈkɑːnsəkwənsɪz], but there can also[ˈɔːlsoʊ] be an understanding[ˌʌndərˈstændɪŋ] of her history[ˈhɪstəri] and her past[pæst] which makes[meɪks] her the way[weɪ] that she is,&quot; the Academy[əˈkædəmi] Award[əˈwɔːrd] nominee[ˌnɑːmɪˈniː] said[sed].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>seven-part limited series：七集限定剧</span></li><li><span>play a character：饰演某个角色</span></li><li><span>add context to：为……补充背景、增加语境</span></li><li><span>famously described as：被著名地、广为描述为</span></li><li><span>psychic monster：精神/心理怪物</span></li><li><span>malformed soul：扭曲的灵魂</span></li><li><span>make terrible decisions：做出可怕的决定</span></li><li><span>face awful consequences：面对可怕的后果</span></li><li><span>the Academy Award nominee：奥斯卡奖提名者</span></li><li><span>the way that she is：她之所以成为现在这个样子</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>在七集限定剧中饰演凯西的皮尤表示，改编为这一角色补充了背景——作者约翰·斯坦贝克曾著名地把凯西描述为一个&quot;精神怪物&quot;，有着&quot;扭曲的灵魂&quot;。&quot;她依然会做出可怕的决定、面对可怕的后果，但也可以……对她如何成为现在这个样子的历史和过往有所理解，&quot;这位奥斯卡奖提名者说。</span></p><hr /><h2><a name="第-4-段" class="md-header-anchor"></a><span>第 4 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Written[ˈrɪtn] by Zoe Kazan, who co-showruns[koʊˈʃoʊrʌnz] the series[ˈsɪriːz] alongside[əˈlɔːŋsaɪd] Jeb Stuart, the adaptation[ˌædæpˈteɪʃn] revisits[ˌriːˈvɪzɪts] Steinbeck&#39;s[ˈstaɪnbɛks] multi-generational[ˌmʌltiˌdʒenəˈreɪʃənl] saga[ˈsɑːɡə], with a renewed[rɪˈnuːd] focus[ˈfoʊkəs] on Cathy.</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>written by：由……编剧</span></li><li><span>co-showrun：联合担任剧集运作人</span></li><li><span>alongside：与……一起</span></li><li><span>revisit a saga：重述、再现某段传奇</span></li><li><span>multi-generational saga：多代人的家族传奇</span></li><li><span>a renewed focus on：重新聚焦于……</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>该剧由佐伊·卡赞编剧，她与杰布·斯图尔特共同担任剧集运作人。这一改编重述了斯坦贝克的多代家族传奇，并重新聚焦于凯西。</span></p><hr /><h2><a name="第-5-段" class="md-header-anchor"></a><span>第 5 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Kazan said[sed] the adaptation[ˌædæpˈteɪʃn] challenges[ˈtʃælɪndʒɪz] viewers[ˈvjuːərz] to look[lʊk] beyond[biˈjɔːnd] simple[ˈsɪmpl] notions[ˈnoʊʃnz] of good[ɡʊd] and evil[ˈiːvl].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>challenge sb to do sth：促使、激励某人做某事</span></li><li><span>look beyond：超越……去看、不局限于</span></li><li><span>simple notions of good and evil：简单的善恶观念</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>卡赞表示，这一改编促使观众超越简单的善恶观念去看待问题。</span></p><hr /><h2><a name="第-6-段" class="md-header-anchor"></a><span>第 6 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>&quot;We wanted[ˈwɑːntɪd] our audience[ˈɔːdiəns] to be able[ˈeɪbl] to identify[aɪˈdentɪfaɪ] with every single[ˈsɪŋɡl] character[ˈkærəktər], the ones that are good[ɡʊd] on the surface[ˈsɜːrfɪs] and the ones that are evil[ˈiːvl] on the surface[ˈsɜːrfɪs],&quot; she said[sed]. &quot;Because if we think[θɪŋk] about people[ˈpiːpl] that are evil[ˈiːvl] or bad[bæd] as being not human[ˈhjuːmən], we don&#39;t learn[lɜːrn] anything[ˈeniθɪŋ] about ourselves[aʊərˈselvz].&quot;</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>identify with：与……产生共鸣、认同</span></li><li><span>every single character：每一个角色</span></li><li><span>on the surface：表面上</span></li><li><span>think about sth as：把……视为</span></li><li><span>learn anything about ourselves：从中认识我们自己</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>&quot;我们希望观众能够认同每一个角色——那些表面善良的和表面邪恶的。&quot;她说，&quot;因为如果我们把邪恶或糟糕的人视为非人，我们就无法从中学到任何关于我们自己的东西。&quot;</span></p><hr /><h2><a name="第-7-段" class="md-header-anchor"></a><span>第 7 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Kazan said[sed] she has felt[felt] a deep[diːp] connection[kəˈnekʃn] to &quot;East[iːst] of Eden[ˈiːdn]&quot; since reading[ˈriːdɪŋ] the novel[ˈnɑːvl] aged[eɪdʒd] 15, describing[dɪˈskraɪbɪŋ] it as a story[ˈstɔːri] that &quot;grabbed[ɡræbd] me by the throat[θroʊt] and wouldn&#39;t let[let] go[ɡoʊ]&quot; with its exploration[ˌekspləˈreɪʃn] of how people[ˈpiːpl] carry[ˈkæri] their family&#39;s[ˈfæməliz] past[pæst] into the future[ˈfjuːtʃər].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>feel a deep connection to：与……产生深深的情感联结</span></li><li><span>aged 15：在15岁时</span></li><li><span>grab sb by the throat：扼住某人的喉咙、牢牢抓住某人</span></li><li><span>wouldn&#39;t let go：不肯放手</span></li><li><span>carry one&#39;s family&#39;s past into the future：把家庭的过往带入未来</span></li><li><span>its exploration of：其对……的探讨</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>卡赞说，自从15岁读到这部小说以来，她就与《伊甸之东》产生了深深的情感联结。她把它描述为一个&quot;一把扼住我喉咙、让我无法放手&quot;的故事，因为它探讨了人们如何把家庭的过往带入未来。</span></p><hr /><h2><a name="第-8-段" class="md-header-anchor"></a><span>第 8 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Asked[æskt] whether the novel&#39;s[ˈnɑːvlz] focus[ˈfoʊkəs] on inheritance[ɪnˈherɪtəns] and reckoning[ˈrekənɪŋ] with the past[pæst] resonated[ˈrezəneɪtɪd] personally[ˈpɜːrsənəli], Kazan pointed[ˈpɔɪntɪd] to her own family[ˈfæməli] history[ˈhɪstəri]. Her grandfather[ˈɡrænfɑːðər], filmmaker[ˈfɪlmˌmeɪkər] Elia Kazan, remains[rɪˈmeɪnz] a controversial[ˌkɑːntrəˈvɜːrʃl] figure[ˈfɪɡjər] after naming[ˈneɪmɪŋ] former[ˈfɔːrmər] colleagues[ˈkɑːliːɡz] with Communist[ˈkɑːmjənɪst] Party[ˈpɑːrti] ties[taɪz] before a congressional[kənˈɡreʃənl] committee[kəˈmɪti] during the McCarthy[məˈkɑːrθi] era[ˈɪrə]. He also[ˈɔːlsoʊ] directed[dəˈrektɪd] the 1955 adaptation[ˌædæpˈteɪʃn] of the novel[ˈnɑːvl], starring[ˈstɑːrɪŋ] James Dean.</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>focus on inheritance：聚焦于传承/继承</span></li><li><span>reckoning with the past：与过往清算、面对过往</span></li><li><span>resonate personally：引起个人共鸣</span></li><li><span>point to：指向、提到</span></li><li><span>family history：家族历史</span></li><li><span>remain a controversial figure：仍然是有争议的人物</span></li><li><span>name former colleagues：供出前同事</span></li><li><span>Communist Party ties：与共产党的联系</span></li><li><span>congressional committee：国会委员会</span></li><li><span>the McCarthy era：麦卡锡时代</span></li><li><span>direct the adaptation：执导改编版</span></li><li><span>starring：由……主演</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>当被问及这部小说对传承和与过往清算的聚焦是否引起她个人共鸣时，卡赞提到了她自己的家族历史。她的祖父、电影人伊利亚·卡赞在麦卡锡时代曾在美国国会委员会面前供出有共产党联系的前同事，至今仍是一个有争议的人物。他还执导了这部小说1955年的改编版，由詹姆斯·迪恩主演。</span></p><hr /><h2><a name="第-9-段" class="md-header-anchor"></a><span>第 9 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Describing[dɪˈskraɪbɪŋ] her connection[kəˈnekʃn] to the material[məˈtɪriəl] as both &quot;baggage&quot;[ˈbæɡɪdʒ] and a &quot;gift&quot;[ɡɪft], Kazan said[sed] she hoped[hoʊpt] the series[ˈsɪriːz] would prompt[prɑːmpt] audiences[ˈɔːdiənsɪz] to reflect[rɪˈflekt] on their own families[ˈfæməliz] rather than hers.</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>describe sth as：把……描述为</span></li><li><span>both … and …：既……又……</span></li><li><span>prompt sb to do sth：促使某人做某事</span></li><li><span>reflect on：反思、思考</span></li><li><span>rather than：而不是</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>卡赞把自己与这部作品的联结描述为既是&quot;包袱&quot;又是&quot;礼物&quot;。她说，她希望这部剧能促使观众反思自己的家庭，而不是她的家庭。</span></p><hr /><h2><a name="第-10-段" class="md-header-anchor"></a><span>第 10 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>&quot;I don&#39;t want[wɑːnt] anyone[ˈeniwʌn] walking[ˈwɔːkɪŋ] away[əˈweɪ] from this thinking[ˈθɪŋkɪŋ], Zoe Kazan, Elia Kazan,&quot; she said[sed]. &quot;We want[wɑːnt] people[ˈpiːpl] walking[ˈwɔːkɪŋ] away[əˈweɪ] from this (to think[θɪŋk]) ... &#39;My father[ˈfɑːðər], my son[sʌn], the things[θɪŋz] that I&#39;ve done[dʌn]&#39;.&quot;</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>walk away from：离开、走出</span></li><li><span>thinking …：心里想着……</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>她说：&quot;我不希望任何人看完这部剧后想到的是佐伊·卡赞、伊利亚·卡赞。我们希望人们看完后（想到的是）……&#39;我的父亲、我的儿子、我做过的那些事&#39;。&quot;</span></p><hr /><h2><a name="第-11-段" class="md-header-anchor"></a><span>第 11 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>For &quot;Challengers&quot;[ˈtʃælɪndʒərz] star[stɑːr] Mike Faist, who plays[pleɪz] Charles Trask in the series[ˈsɪriːz], Steinbeck&#39;s[ˈstaɪnbɛks] story[ˈstɔːri] has endured[ɪnˈdʊrd] because it reflects[rɪˈflekts] fundamental[ˌfʌndəˈmentl] truths[truːθs] about human[ˈhjuːmən] morality[məˈræləti]. &quot;We go[ɡoʊ] back[bæk] to these classics[ˈklæsɪks] to poke[poʊk] at them again[əˈɡen], and that&#39;s a good[ɡʊd] thing[θɪŋ],&quot; he said[sed].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>a star of：……的主演</span></li><li><span>has endured：经久不衰、历久弥新</span></li><li><span>reflect fundamental truths：反映基本真理</span></li><li><span>human morality：人类道德</span></li><li><span>go back to：回到、重读</span></li><li><span>poke at：戳、触及</span></li><li><span>that&#39;s a good thing：这是件好事</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>对于在该剧中饰演查尔斯·特拉斯克的《挑战者》主演迈克·费斯特来说，斯坦贝克的故事经久不衰，因为它反映了关于人类道德的基本真理。&quot;我们回到这些经典作品……再次去触碰它们，这是件好事，&quot;他说。</span></p><hr /><h2><a name="第-12-段" class="md-header-anchor"></a><span>第 12 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Stuart echoed[ˈekoʊd] Faist&#39;s[faɪsts] sentiment[ˈsentɪmənt], saying[ˈseɪɪŋ] readers[ˈriːdərz] can return[rɪˈtɜːrn] to &quot;East[iːst] of Eden[ˈiːdn]&quot; throughout[θruːˈaʊt] their lives[laɪvz] and discover[dɪˈskʌvər] new[nuː] meanings[ˈmiːnɪŋz] as their own experiences[ɪkˈspɪriənsɪz] evolve[ɪˈvɑːlv].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>echo one&#39;s sentiment：附和某人的看法</span></li><li><span>return to：重读、回到</span></li><li><span>throughout one&#39;s lives：在一生中</span></li><li><span>discover new meanings：发现新的含义</span></li><li><span>as one&#39;s experiences evolve：随着自身阅历的丰富</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>斯图尔特附和了费斯特的看法，表示读者可以在一生的不同阶段重读《伊甸之东》，随着自身阅历的丰富而发现新的含义。</span></p><hr /><h2><a name="第-13-段" class="md-header-anchor"></a><span>第 13 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>&quot;I lost[lɔːst] an adult[əˈdʌlt] son[sʌn], so later[ˈleɪtər] in life[laɪf] ... I read[red] it as if I had never[ˈnevər] read[red] &#39;East[iːst] of Eden[ˈiːdn]&#39; before,&quot; he told[toʊld] Reuters[ˈrɔɪtərz]. &quot;That&#39;s just the cool[kuːl] thing[θɪŋ] about Steinbeck&#39;s[ˈstaɪnbɛks] writing[ˈraɪtɪŋ].&quot;</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>lose an adult son：失去一个成年的儿子</span></li><li><span>later in life：在人生后半段</span></li><li><span>as if I had never read it before：仿佛从未读过它</span></li><li><span>the cool thing about：……妙就妙在、……了不起的地方</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>&quot;我失去过一个成年的儿子，所以在人生后半段……我再读它时，仿佛从未读过《伊甸之东》一样，&quot;他告诉路透社。&quot;这正是斯坦贝克写作妙不可言的地方。&quot;</span></p><hr /><h2><a name="第-14-段" class="md-header-anchor"></a><span>第 14 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>&quot;East[iːst] of Eden[ˈiːdn]&quot; will be released[rɪˈliːst] on Netflix[ˈnetflɪks] on Thursday[ˈθɜːrzdeɪ], October[ɑːkˈtoʊbər] 1.</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>be released on：在……（平台/日期）上线</span></li><li><span>on Netflix：在奈飞平台上</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>《伊甸之东》将于周四（10月1日）在奈飞平台上线。</span></p></div>
+</body>
+</html>
