@@ -15,3 +15,5 @@
 - [a_fitness_girl_in_a_gym_setting](a_fitness_girl_in_a_gym_setting_ruby.html)
 - [x_bbc_openai_ruby](x_bbc_openai_ruby.html)
 - [x_reuters_florence_ruby.html](x_reuters_florence_ruby.html)
+- [x_bbc_housing_crisis_ruby.html](x_bbc_housing_crisis_ruby.html)
+- [x_bbc_Kyivbridgehit_ruby.html](x_bbc_Kyivbridgehit_ruby.html)

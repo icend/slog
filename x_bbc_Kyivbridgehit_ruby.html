@@ -1,0 +1,651 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>x_bbc_Kyivbridgehit_ruby</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h2><a name="ruby" class="md-header-anchor"></a><span>Ruby</span></h2><style>
+  p { font-size: 20px;}
+  p rt { color: #AEADAE; font-size: 0.8em;}
+</style>
+<p><ruby>Kyiv<rt>ˈkjiːv</rt></ruby> <ruby>bridge<rt>brɪdʒ</rt></ruby> <ruby>hit<rt>hɪt</rt></ruby> in <ruby>further<rt>ˈfɜːrðər</rt></ruby> <ruby>Russian<rt>ˈrʌʃn</rt></ruby> <ruby>drone<rt>droʊn</rt></ruby> <ruby>attack<rt>əˈtæk</rt></ruby> as <ruby>German<rt>ˈdʒɜːrmən</rt></ruby> <ruby>chancellor<rt>ˈtʃænsələr</rt></ruby> <ruby>makes<rt>meɪks</rt></ruby> a <ruby>surprise<rt>sərˈpraɪz</rt></ruby> <ruby>visit<rt>ˈvɪzɪt</rt></ruby>.</p>
+<p><ruby>Major<rt>ˈmeɪdʒər</rt></ruby> <ruby>bridges<rt>ˈbrɪdʒɪz</rt></ruby> in <ruby>Kyiv<rt>ˈkjiːv</rt></ruby> have been <ruby>hit<rt>hɪt</rt></ruby> by <ruby>Russian<rt>ˈrʌʃn</rt></ruby> <ruby>drone<rt>droʊn</rt></ruby> <ruby>strikes<rt>straɪks</rt></ruby> for four <ruby>consecutive<rt>kənˈsekjətɪv</rt></ruby> <ruby>days<rt>deɪz</rt></ruby>, as <ruby>Moscow<rt>ˈmɑːskoʊ</rt></ruby> <ruby>ramps<rt>ræmps</rt></ruby> up <ruby>attacks<rt>əˈtæks</rt></ruby> on <ruby>critical<rt>ˈkrɪtɪkl</rt></ruby> <ruby>infrastructure<rt>ˈɪnfrəstrʌktʃər</rt></ruby> in Ukraine'<ruby>s<rt>juːˈkreɪnz</rt></ruby> <ruby>capital<rt>ˈkæpɪtl</rt></ruby>. Two <ruby>people<rt>ˈpiːpl</rt></ruby> were <ruby>injured<rt>ˈɪndʒərd</rt></ruby> when the <ruby>Pivnichnyi<rt>pɪvˈnɪtʃni</rt></ruby> (<ruby>Northern<rt>ˈnɔːrðərn</rt></ruby>) <ruby>Bridge<rt>brɪdʒ</rt></ruby> was <ruby>struck<rt>strʌk</rt></ruby> on <ruby>Sunday<rt>ˈsʌndeɪ</rt></ruby> <ruby>morning<rt>ˈmɔːrnɪŋ</rt></ruby> for the <ruby>second<rt>ˈsekənd</rt></ruby> <ruby>day<rt>deɪ</rt></ruby> in a <ruby>row<rt>roʊ</rt></ruby>, while the <ruby>Pivdennyi<rt>pɪvˈdenji</rt></ruby> (<ruby>Southern<rt>ˈsʌðərn</rt></ruby>) <ruby>Bridge<rt>brɪdʒ</rt></ruby> was <ruby>hit<rt>hɪt</rt></ruby> <ruby>multiple<rt>ˈmʌltɪpl</rt></ruby> <ruby>times<rt>taɪmz</rt></ruby> <ruby>earlier<rt>ˈɜːrliər</rt></ruby> in the <ruby>week<rt>wiːk</rt></ruby>. The <ruby>latest<rt>ˈleɪtɪst</rt></ruby> <ruby>attack<rt>əˈtæk</rt></ruby> came as <ruby>German<rt>ˈdʒɜːrmən</rt></ruby> <ruby>Chancellor<rt>ˈtʃænsələr</rt></ruby> Friedrich Merz <ruby>made<rt>meɪd</rt></ruby> a <ruby>surprise<rt>sərˈpraɪz</rt></ruby> <ruby>visit<rt>ˈvɪzɪt</rt></ruby> to <ruby>Kyiv<rt>ˈkjiːv</rt></ruby> in a <ruby>show<rt>ʃoʊ</rt></ruby> of <ruby>support<rt>səˈpɔːrt</rt></ruby> against Russia'<ruby>s<rt>ˈrʌʃəz</rt></ruby> <ruby>continuing<rt>kənˈtɪnjuːɪŋ</rt></ruby> full-<ruby>scale<rt>ˌfʊlˈskeɪl</rt></ruby> <ruby>invasion<rt>ɪnˈveɪʒn</rt></ruby>. Russia'<ruby>s<rt>ˈrʌʃəz</rt></ruby> <ruby>military<rt>ˈmɪləteri</rt></ruby> <ruby>said<rt>sed</rt></ruby> it would be <ruby>intensifying<rt>ɪnˈtensɪfaɪɪŋ</rt></ruby> <ruby>strikes<rt>straɪks</rt></ruby> on <ruby>Kyiv<rt>ˈkjiːv</rt></ruby> and other <ruby>Ukrainian<rt>juːˈkreɪniən</rt></ruby> <ruby>regions<rt>ˈriːdʒənz</rt></ruby>. It <ruby>earlier<rt>ˈɜːrliər</rt></ruby> <ruby>said<rt>sed</rt></ruby> it had <ruby>hit<rt>hɪt</rt></ruby> the two <ruby>bridges<rt>ˈbrɪdʒɪz</rt></ruby> <ruby>used<rt>juːzd</rt></ruby> to <ruby>transfer<rt>trænsˈfɜːr</rt></ruby> <ruby>Ukrainian<rt>juːˈkreɪniən</rt></ruby> <ruby>troops<rt>truːps</rt></ruby>. <ruby>Video<rt>ˈvɪdioʊ</rt></ruby> <ruby>footage<rt>ˈfʊtɪdʒ</rt></ruby> of Sunday'<ruby>s<rt>ˈsʌndeɪz</rt></ruby> <ruby>strike<rt>straɪk</rt></ruby>, <ruby>verified<rt>ˈverɪfaɪd</rt></ruby> by the BBC, <ruby>shows<rt>ʃoʊz</rt></ruby> <ruby>cars<rt>kɑːrz</rt></ruby> <ruby>moving<rt>ˈmuːvɪŋ</rt></ruby> on Pivnichnyi <ruby>Bridge<rt>brɪdʒ</rt></ruby> as a <ruby>drone<rt>droʊn</rt></ruby> <ruby>crashes<rt>ˈkræʃɪz</rt></ruby> into it before <ruby>exploding<rt>ɪkˈsploʊdɪŋ</rt></ruby>, <ruby>creating<rt>kriˈeɪtɪŋ</rt></ruby> a <ruby>ball<rt>bɔːl</rt></ruby> of <ruby>fire<rt>ˈfaɪər</rt></ruby>. A <ruby>cloud<rt>klaʊd</rt></ruby> of <ruby>black<rt>blæk</rt></ruby> <ruby>smoke<rt>smoʊk</rt></ruby> can be <ruby>seen<rt>siːn</rt></ruby> <ruby>rising<rt>ˈraɪzɪŋ</rt></ruby> above the <ruby>bridge<rt>brɪdʒ</rt></ruby>. <ruby>Other<rt>ˈʌðər</rt></ruby> <ruby>videos<rt>ˈvɪdioʊz</rt></ruby> and <ruby>pictures<rt>ˈpɪktʃərz</rt></ruby> have <ruby>emerged<rt>ɪˈmɜːrdʒd</rt></ruby> on <ruby>social<rt>ˈsoʊʃl</rt></ruby> <ruby>media<rt>ˈmiːdiə</rt></ruby> <ruby>showing<rt>ˈʃoʊɪŋ</rt></ruby> a <ruby>gaping<rt>ˈɡeɪpɪŋ</rt></ruby> <ruby>hole<rt>hoʊl</rt></ruby> in the <ruby>middle<rt>ˈmɪdl</rt></ruby> of a <ruby>traffic<rt>ˈtræfɪk</rt></ruby> <ruby>lane<rt>leɪn</rt></ruby> on the <ruby>bridge<rt>brɪdʒ</rt></ruby>.</p>
+<p><ruby>Kyiv<rt>ˈkjiːv</rt></ruby> <ruby>Mayor<rt>ˈmeɪər</rt></ruby> Vitali Klitschko <ruby>said<rt>sed</rt></ruby> two <ruby>people<rt>ˈpiːpl</rt></ruby> were <ruby>injured<rt>ˈɪndʒərd</rt></ruby> in the <ruby>latest<rt>ˈleɪtɪst</rt></ruby> <ruby>Russian<rt>ˈrʌʃn</rt></ruby> <ruby>attack<rt>əˈtæk</rt></ruby>. He <ruby>earlier<rt>ˈɜːrliər</rt></ruby> <ruby>said<rt>sed</rt></ruby> that the Pivnichnyi Bridge'<ruby>s<rt>brɪdʒɪz</rt></ruby> <ruby>roadway<rt>ˈroʊdweɪ</rt></ruby> was <ruby>hit<rt>hɪt</rt></ruby>. Kyiv'<ruby>s<rt>ˈkjiːvz</rt></ruby> eight <ruby>bridges<rt>ˈbrɪdʒɪz</rt></ruby> across the <ruby>wide<rt>waɪd</rt></ruby> <ruby>Dnipro<rt>dəˈniːproʊ</rt></ruby> <ruby>River<rt>ˈrɪvər</rt></ruby> <ruby>link<rt>lɪŋk</rt></ruby> the <ruby>western<rt>ˈwestərn</rt></ruby> (<ruby>right<rt>raɪt</rt></ruby>) and <ruby>eastern<rt>ˈiːstərn</rt></ruby> (<ruby>left<rt>left</rt></ruby>) <ruby>parts<rt>pɑːrts</rt></ruby>, and many of the capital'<ruby>s<rt>ˈkæpɪtlz</rt></ruby> <ruby>estimated<rt>ˈestɪmeɪtɪd</rt></ruby> three <ruby>million<rt>ˈmɪljən</rt></ruby> <ruby>residents<rt>ˈrezɪdənts</rt></ruby> <ruby>rely<rt>rɪˈlaɪ</rt></ruby> <ruby>heavily<rt>ˈhevɪli</rt></ruby> on the <ruby>metro<rt>ˈmetroʊ</rt></ruby> <ruby>lines<rt>laɪnz</rt></ruby> and <ruby>trains<rt>treɪnz</rt></ruby> to <ruby>travel<rt>ˈtrævl</rt></ruby> across the <ruby>city<rt>ˈsɪti</rt></ruby>. Some 500,000 <ruby>vehicles<rt>ˈviːɪklz</rt></ruby> <ruby>use<rt>juːz</rt></ruby> the <ruby>bridges<rt>ˈbrɪdʒɪz</rt></ruby> <ruby>every<rt>ˈevri</rt></ruby> <ruby>day<rt>deɪ</rt></ruby>. The two <ruby>struck<rt>strʌk</rt></ruby> <ruby>bridges<rt>ˈbrɪdʒɪz</rt></ruby> are <ruby>still<rt>stɪl</rt></ruby> <ruby>standing<rt>ˈstændɪŋ</rt></ruby> - but the <ruby>damage<rt>ˈdæmɪdʒ</rt></ruby> and <ruby>restrictions<rt>rɪˈstrɪkʃnz</rt></ruby> to <ruby>traffic<rt>ˈtræfɪk</rt></ruby> and <ruby>public<rt>ˈpʌblɪk</rt></ruby> <ruby>transport<rt>ˈtrænspɔːrt</rt></ruby> have <ruby>caused<rt>kɔːzd</rt></ruby> <ruby>gridlock<rt>ˈɡrɪdlɑːk</rt></ruby> in <ruby>parts<rt>pɑːrts</rt></ruby> of the <ruby>capital<rt>ˈkæpɪtl</rt></ruby> at <ruby>times<rt>taɪmz</rt></ruby>.</p>
+<p>"To <ruby>get<rt>ɡet</rt></ruby> from the <ruby>left<rt>left</rt></ruby> <ruby>bank<rt>bæŋk</rt></ruby> to the <ruby>right<rt>raɪt</rt></ruby> one and <ruby>back<rt>bæk</rt></ruby> - it's just <ruby>hell<rt>hel</rt></ruby>," <ruby>Kyiv<rt>ˈkjiːv</rt></ruby> <ruby>resident<rt>ˈrezɪdənt</rt></ruby> Roman <ruby>told<rt>toʊld</rt></ruby> the BBC on <ruby>Sunday<rt>ˈsʌndeɪ</rt></ruby>. <ruby>Large<rt>lɑːrdʒ</rt></ruby> <ruby>numbers<rt>ˈnʌmbərz</rt></ruby> of <ruby>commuters<rt>kəˈmjuːtərz</rt></ruby> <ruby>cross<rt>krɔːs</rt></ruby> the <ruby>river<rt>ˈrɪvər</rt></ruby>, <ruby>especially<rt>ɪˈspeʃəli</rt></ruby> on <ruby>weekdays<rt>ˈwiːkdeɪz</rt></ruby>. <ruby>Repair<rt>rɪˈper</rt></ruby> <ruby>teams<rt>tiːmz</rt></ruby> are <ruby>working<rt>ˈwɜːrkɪŋ</rt></ruby> to <ruby>fix<rt>fɪks</rt></ruby> the <ruby>damage<rt>ˈdæmɪdʒ</rt></ruby> and <ruby>officials<rt>əˈfɪʃlz</rt></ruby> <ruby>say<rt>seɪ</rt></ruby> they are <ruby>planning<rt>ˈplænɪŋ</rt></ruby> <ruby>temporary<rt>ˈtempəreri</rt></ruby> <ruby>pontoon<rt>pɑːnˈtuːn</rt></ruby> <ruby>bridges<rt>ˈbrɪdʒɪz</rt></ruby>, <ruby>ferry<rt>ˈferi</rt></ruby> <ruby>services<rt>ˈsɜːrvɪsɪz</rt></ruby> and <ruby>even<rt>ˈiːvn</rt></ruby> a <ruby>tunnel<rt>ˈtʌnl</rt></ruby> under the <ruby>river<rt>ˈrɪvər</rt></ruby> to <ruby>keep<rt>kiːp</rt></ruby> <ruby>Kyiv<rt>ˈkjiːv</rt></ruby> <ruby>connected<rt>kəˈnektɪd</rt></ruby>. Klitschko <ruby>also<rt>ˈɔːlsoʊ</rt></ruby> <ruby>said<rt>sed</rt></ruby> a <ruby>separate<rt>ˈseprət</rt></ruby> <ruby>Russian<rt>ˈrʌʃn</rt></ruby> <ruby>drone<rt>droʊn</rt></ruby> <ruby>strike<rt>straɪk</rt></ruby> had <ruby>damaged<rt>ˈdæmɪdʒd</rt></ruby> a <ruby>heating<rt>ˈhiːtɪŋ</rt></ruby> <ruby>main<rt>meɪn</rt></ruby>, <ruby>adding<rt>ˈædɪŋ</rt></ruby> that there would be a <ruby>temporary<rt>ˈtempəreri</rt></ruby> <ruby>lack<rt>læk</rt></ruby> of <ruby>hot<rt>hɑːt</rt></ruby> <ruby>water<rt>ˈwɔːtər</rt></ruby> in the north-<ruby>eastern<rt>ˌnɔːrθˈiːstərn</rt></ruby> <ruby>Desnyanskyi<rt>desˈnjɑːnskji</rt></ruby> <ruby>district<rt>ˈdɪstrɪkt</rt></ruby> as a <ruby>result<rt>rɪˈzʌlt</rt></ruby>. <ruby>Ukrainian<rt>juːˈkreɪniən</rt></ruby> <ruby>President<rt>ˈprezɪdənt</rt></ruby> Volodymyr Zelensky <ruby>said<rt>sed</rt></ruby> on <ruby>Sunday<rt>ˈsʌndeɪ</rt></ruby> <ruby>morning<rt>ˈmɔːrnɪŋ</rt></ruby> <ruby>Russian<rt>ˈrʌʃn</rt></ruby> <ruby>drones<rt>droʊnz</rt></ruby> had <ruby>also<rt>ˈɔːlsoʊ</rt></ruby> <ruby>attacked<rt>əˈtækt</rt></ruby> a <ruby>warehouse<rt>ˈwerhaʊs</rt></ruby> in the north-<ruby>eastern<rt>ˌnɔːrθˈiːstərn</rt></ruby> <ruby>region<rt>ˈriːdʒən</rt></ruby> of <ruby>Sumy<rt>ˈsuːmi</rt></ruby>, <ruby>killing<rt>ˈkɪlɪŋ</rt></ruby> one <ruby>person<rt>ˈpɜːrsn</rt></ruby>.</p><h2><a name="标题句" class="md-header-anchor"></a><span>标题句</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Kyiv[ˈkjiːv] bridge[brɪdʒ] hit[hɪt] in further[ˈfɜːrðər] Russian[ˈrʌʃn] drone[droʊn] attack[əˈtæk] as German[ˈdʒɜːrmən] chancellor[ˈtʃænsələr] makes[meɪks] a surprise[sərˈpraɪz] visit[ˈvɪzɪt].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>drone attack：无人机袭击</span></li><li><span>surprise visit：突访、突然到访</span></li><li><span>German chancellor：德国总理</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>在德国总理突访之际，基辅桥梁再遭俄罗斯无人机袭击。</span></p><hr /><h2><a name="第-2-段" class="md-header-anchor"></a><span>第 2 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Major[ˈmeɪdʒər] bridges[ˈbrɪdʒɪz] in Kyiv[ˈkjiːv] have been hit[hɪt] by Russian[ˈrʌʃn] drone[droʊn] strikes[straɪks] for four consecutive[kənˈsekjətɪv] days[deɪz], as Moscow[ˈmɑːskoʊ] ramps[ræmps] up attacks[əˈtæks] on critical[ˈkrɪtɪkl] infrastructure[ˈɪnfrəstrʌktʃər] in Ukraine&#39;s[juːˈkreɪnz] capital[ˈkæpɪtl]. Two people[ˈpiːpl] were injured[ˈɪndʒərd] when the Pivnichnyi[pɪvˈnɪtʃni] (Northern[ˈnɔːrðərn]) Bridge[brɪdʒ] was struck[strʌk] on Sunday[ˈsʌndeɪ] morning[ˈmɔːrnɪŋ] for the second[ˈsekənd] day[deɪ] in a row[roʊ], while the Pivdennyi[pɪvˈdenji] (Southern[ˈsʌðərn]) Bridge[brɪdʒ] was hit[hɪt] multiple[ˈmʌltɪpl] times[taɪmz] earlier[ˈɜːrliər] in the week[wiːk]. The latest[ˈleɪtɪst] attack[əˈtæk] came as German[ˈdʒɜːrmən] Chancellor[ˈtʃænsələr] Friedrich Merz made[meɪd] a surprise[sərˈpraɪz] visit[ˈvɪzɪt] to Kyiv[ˈkjiːv] in a show[ʃoʊ] of support[səˈpɔːrt] against Russia&#39;s[ˈrʌʃəz] continuing[kənˈtɪnjuːɪŋ] full-scale[ˌfʊlˈskeɪl] invasion[ɪnˈveɪʒn]. Russia&#39;s[ˈrʌʃəz] military[ˈmɪləteri] said[sed] it would be intensifying[ɪnˈtensɪfaɪɪŋ] strikes[straɪks] on Kyiv[ˈkjiːv] and other Ukrainian[juːˈkreɪniən] regions[ˈriːdʒənz]. It earlier[ˈɜːrliər] said[sed] it had hit[hɪt] the two bridges[ˈbrɪdʒɪz] used[juːzd] to transfer[trænsˈfɜːr] Ukrainian[juːˈkreɪniən] troops[truːps]. Video[ˈvɪdioʊ] footage[ˈfʊtɪdʒ] of Sunday&#39;s[ˈsʌndeɪz] strike[straɪk], verified[ˈverɪfaɪd] by the BBC, shows[ʃoʊz] cars[kɑːrz] moving[ˈmuːvɪŋ] on Pivnichnyi Bridge[brɪdʒ] as a drone[droʊn] crashes[ˈkræʃɪz] into it before exploding[ɪkˈsploʊdɪŋ], creating[kriˈeɪtɪŋ] a ball[bɔːl] of fire[ˈfaɪər]. A cloud[klaʊd] of black[blæk] smoke[smoʊk] can be seen[siːn] rising[ˈraɪzɪŋ] above the bridge[brɪdʒ]. Other[ˈʌðər] videos[ˈvɪdioʊz] and pictures[ˈpɪktʃərz] have emerged[ɪˈmɜːrdʒd] on social[ˈsoʊʃl] media[ˈmiːdiə] showing[ˈʃoʊɪŋ] a gaping[ˈɡeɪpɪŋ] hole[hoʊl] in the middle[ˈmɪdl] of a traffic[ˈtræfɪk] lane[leɪn] on the bridge[brɪdʒ].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>drone strikes：无人机打击</span></li><li><span>consecutive days：连续数日</span></li><li><span>ramp up attacks：加强、升级袭击</span></li><li><span>critical infrastructure：关键基础设施</span></li><li><span>for the second day in a row：连续第二天</span></li><li><span>multiple times：多次</span></li><li><span>a show of support：以示支持</span></li><li><span>full-scale invasion：全面入侵</span></li><li><span>intensifying strikes：加强打击</span></li><li><span>transfer troops：调动部队</span></li><li><span>video footage：视频画面</span></li><li><span>verified by：经……核实</span></li><li><span>crash into：撞向</span></li><li><span>a ball of fire：一个火球</span></li><li><span>a cloud of black smoke：一团黑烟</span></li><li><span>gaping hole：大洞、豁口</span></li><li><span>traffic lane：车道</span></li><li><span>on social media：在社交媒体上</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>基辅主要桥梁已连续四天遭到俄罗斯无人机袭击，莫斯科正加强对乌克兰首都关键基础设施的攻击。周日早晨，Pivnichnyi（北）大桥连续第二天遭到袭击，两人受伤；而 Pivdennyi（南）大桥本周早些时候已多次被击中。最新的袭击发生之际，德国总理弗里德里希·默茨突访基辅，以示对俄罗斯持续全面入侵的反对与支持乌克兰。俄罗斯军方表示，将加强对基辅和其他乌克兰地区的打击。军方早些时候称，已击中用于调动乌军部队的两座桥梁。BBC 已核实的一段周日袭击视频显示，汽车在 Pivnichnyi 大桥上行驶时，一架无人机撞上桥面后爆炸，形成一个火球。一团黑烟升腾到桥面上方。社交媒体上还出现了其他视频和图片，显示桥面一条车道上有一个大豁口。</span></p><hr /><h2><a name="第-3-段" class="md-header-anchor"></a><span>第 3 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Kyiv[ˈkjiːv] Mayor[ˈmeɪər] Vitali Klitschko said[sed] two people[ˈpiːpl] were injured[ˈɪndʒərd] in the latest[ˈleɪtɪst] Russian[ˈrʌʃn] attack[əˈtæk]. He earlier[ˈɜːrliər] said[sed] that the Pivnichnyi Bridge&#39;s[brɪdʒɪz] roadway[ˈroʊdweɪ] was hit[hɪt]. Kyiv&#39;s[ˈkjiːvz] eight bridges[ˈbrɪdʒɪz] across the wide[waɪd] Dnipro[dəˈniːproʊ] River[ˈrɪvər] link[lɪŋk] the western[ˈwestərn] (right[raɪt]) and eastern[ˈiːstərn] (left[left]) parts[pɑːrts], and many of the capital&#39;s[ˈkæpɪtlz] estimated[ˈestɪmeɪtɪd] three million[ˈmɪljən] residents[ˈrezɪdənts] rely[rɪˈlaɪ] heavily[ˈhevɪli] on the metro[ˈmetroʊ] lines[laɪnz] and trains[treɪnz] to travel[ˈtrævl] across the city[ˈsɪti]. Some 500,000 vehicles[ˈviːɪklz] use[juːz] the bridges[ˈbrɪdʒɪz] every[ˈevri] day[deɪ]. The two struck[strʌk] bridges[ˈbrɪdʒɪz] are still[stɪl] standing[ˈstændɪŋ] - but the damage[ˈdæmɪdʒ] and restrictions[rɪˈstrɪkʃnz] to traffic[ˈtræfɪk] and public[ˈpʌblɪk] transport[ˈtrænspɔːrt] have caused[kɔːzd] gridlock[ˈɡrɪdlɑːk] in parts[pɑːrts] of the capital[ˈkæpɪtl] at times[taɪmz].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>latest attack：最新一次袭击</span></li><li><span>rely heavily on：严重依赖</span></li><li><span>metro lines：地铁线路</span></li><li><span>an estimated three million：估计约300万</span></li><li><span>public transport：公共交通</span></li><li><span>cause gridlock：造成严重拥堵</span></li><li><span>at times：有时、不时</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>基辅市长维塔利·克利奇科表示，有两人在最新的俄罗斯袭击中受伤。他早些时候说，Pivnichnyi 大桥的车行道被击中。基辅横跨宽阔第聂伯河的八座桥梁，连接着西部（右岸）和东部（左岸），而这座首都估计约300万居民中，许多人严重依赖地铁和列车在城市中穿行。每天约有50万辆汽车使用这些桥梁。两座遭袭桥梁仍屹立不倒——但受损以及交通和公共交通所受的限制，不时造成首都部分地区的严重拥堵。</span></p><hr /><h2><a name="第-4-段" class="md-header-anchor"></a><span>第 4 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>&quot;To get[ɡet] from the left[left] bank[bæŋk] to the right[raɪt] one and back[bæk] - it&#39;s just hell[hel],&quot; Kyiv[ˈkjiːv] resident[ˈrezɪdənt] Roman told[toʊld] the BBC on Sunday[ˈsʌndeɪ]. Large[lɑːrdʒ] numbers[ˈnʌmbərz] of commuters[kəˈmjuːtərz] cross[krɔːs] the river[ˈrɪvər], especially[ɪˈspeʃəli] on weekdays[ˈwiːkdeɪz]. Repair[rɪˈper] teams[tiːmz] are working[ˈwɜːrkɪŋ] to fix[fɪks] the damage[ˈdæmɪdʒ] and officials[əˈfɪʃlz] say[seɪ] they are planning[ˈplænɪŋ] temporary[ˈtempəreri] pontoon[pɑːnˈtuːn] bridges[ˈbrɪdʒɪz], ferry[ˈferi] services[ˈsɜːrvɪsɪz] and even[ˈiːvn] a tunnel[ˈtʌnl] under the river[ˈrɪvər] to keep[kiːp] Kyiv[ˈkjiːv] connected[kəˈnektɪd]. Klitschko also[ˈɔːlsoʊ] said[sed] a separate[ˈseprət] Russian[ˈrʌʃn] drone[droʊn] strike[straɪk] had damaged[ˈdæmɪdʒd] a heating[ˈhiːtɪŋ] main[meɪn], adding[ˈædɪŋ] that there would be a temporary[ˈtempəreri] lack[læk] of hot[hɑːt] water[ˈwɔːtər] in the north-eastern[ˌnɔːrθˈiːstərn] Desnyanskyi[desˈnjɑːnskji] district[ˈdɪstrɪkt] as a result[rɪˈzʌlt]. Ukrainian[juːˈkreɪniən] President[ˈprezɪdənt] Volodymyr Zelensky said[sed] on Sunday[ˈsʌndeɪ] morning[ˈmɔːrnɪŋ] Russian[ˈrʌʃn] drones[droʊnz] had also[ˈɔːlsoʊ] attacked[əˈtækt] a warehouse[ˈwerhaʊs] in the north-eastern[ˌnɔːrθˈiːstərn] region[ˈriːdʒən] of Sumy[ˈsuːmi], killing[ˈkɪlɪŋ] one person[ˈpɜːrsn].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>the left bank / the right bank：左岸/右岸</span></li><li><span>large numbers of：大量的</span></li><li><span>cross the river：过河</span></li><li><span>on weekdays：在工作日</span></li><li><span>repair teams：维修队伍</span></li><li><span>fix the damage：修复受损</span></li><li><span>temporary pontoon bridges：临时浮桥</span></li><li><span>ferry services：渡轮服务</span></li><li><span>keep sth connected：保持……畅通、相连</span></li><li><span>a heating main：供暖主管道</span></li><li><span>a temporary lack of：暂时缺乏</span></li><li><span>hot water：热水</span></li><li><span>as a result：因此、结果</span></li><li><span>a warehouse：仓库</span></li><li><span>north-eastern region：东北部地区</span></li><li><span>kill one person：造成一人死亡</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>&quot;要从左岸到右岸再回来，简直像在地狱里。&quot;基辅居民罗曼周日在接受 BBC 采访时说。大量通勤者过河，尤其是在工作日。维修队正在修复受损设施，官员们表示，他们正计划架设临时浮桥、开通渡轮服务，甚至在河下修建一条隧道，以保持基辅的连通。克利奇科还说，另一次俄罗斯无人机袭击损坏了一条供暖主管道，因此东北部 Desnyanskyi 区将暂时缺乏热水。乌克兰总统泽连斯基周日早晨表示，俄罗斯无人机还袭击了苏梅东北部地区的一个仓库，造成一人死亡。</span></p><p>&nbsp;</p></div>
+</body>
+</html>
