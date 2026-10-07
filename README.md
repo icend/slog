@@ -17,3 +17,4 @@
 - [x_reuters_florence_ruby.html](x_reuters_florence_ruby.html)
 - [x_bbc_housing_crisis_ruby.html](x_bbc_housing_crisis_ruby.html)
 - [x_bbc_Kyivbridgehit_ruby.html](x_bbc_Kyivbridgehit_ruby.html)
+- [x_bbc_ChemistryNobelawarded_ruby.html](x_bbc_ChemistryNobelawarded_ruby.html)

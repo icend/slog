@@ -1,0 +1,654 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>x_bbc_ChemistryNobelawarded_ruby</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h2><a name="ruby" class="md-header-anchor"></a><span>Ruby</span></h2><style>
+  p { font-size: 20px;}
+  p rt { color: #AEADAE; font-size: 0.8em;}
+</style>
+<p><ruby>Chemistry<rt>ˈkemɪstri</rt></ruby> <ruby>Nobel<rt>noʊˈbel</rt></ruby> <ruby>awarded<rt>əˈwɔːrdɪd</rt></ruby> for <ruby>solving<rt>ˈsɑːlvɪŋ</rt></ruby> <ruby>mystery<rt>ˈmɪstəri</rt></ruby> of life'<ruby>s<rt>laɪfz</rt></ruby> <ruby>asymmetry<rt>eɪˈsɪmətri</rt></ruby>.</p>
+<p>The <ruby>Nobel<rt>noʊˈbel</rt></ruby> <ruby>Prize<rt>praɪz</rt></ruby> in <ruby>Chemistry<rt>ˈkemɪstri</rt></ruby> has been <ruby>awarded<rt>əˈwɔːrdɪd</rt></ruby> to <ruby>French<rt>frentʃ</rt></ruby> <ruby>scientist<rt>ˈsaɪəntɪst</rt></ruby> Henri B. Kagan and Japan'<ruby>s<rt>dʒəˈpænz</rt></ruby> Kenso Soai for <ruby>providing<rt>prəˈvaɪdɪŋ</rt></ruby> a <ruby>solution<rt>səˈluːʃn</rt></ruby> to the <ruby>chemical<rt>ˈkemɪkl</rt></ruby> <ruby>mystery<rt>ˈmɪstəri</rt></ruby> of life'<ruby>s<rt>laɪfz</rt></ruby> <ruby>asymmetry<rt>eɪˈsɪmətri</rt></ruby>. The <ruby>researchers<rt>ˈriːsɜːrtʃərz</rt></ruby> <ruby>discovered<rt>dɪˈskʌvərd</rt></ruby> how <ruby>nature<rt>ˈneɪtʃər</rt></ruby> <ruby>exclusively<rt>ɪkˈskluːsɪvli</rt></ruby> <ruby>makes<rt>meɪks</rt></ruby> the <ruby>correct<rt>kəˈrekt</rt></ruby> <ruby>version<rt>ˈvɜːrʒn</rt></ruby> of a <ruby>molecule<rt>ˈmɑːlɪkjuːl</rt></ruby> - rather than its <ruby>mirror<rt>ˈmɪrər</rt></ruby> <ruby>image<rt>ˈɪmɪdʒ</rt></ruby>. For example, <ruby>amino<rt>əˈmiːnoʊ</rt></ruby> <ruby>acid<rt>ˈæsɪd</rt></ruby> <ruby>molecules<rt>ˈmɑːlɪkjuːlz</rt></ruby>, the <ruby>building<rt>ˈbɪldɪŋ</rt></ruby> <ruby>blocks<rt>blɑːks</rt></ruby> of <ruby>proteins<rt>ˈproʊtiːnz</rt></ruby>, <ruby>exist<rt>ɪɡˈzɪst</rt></ruby> as two <ruby>forms<rt>fɔːrmz</rt></ruby> that are each other's <ruby>mirror<rt>ˈmɪrər</rt></ruby> <ruby>image<rt>ˈɪmɪdʒ</rt></ruby>. But <ruby>living<rt>ˈlɪvɪŋ</rt></ruby> <ruby>organisms<rt>ˈɔːrɡənɪzəmz</rt></ruby> on <ruby>Earth<rt>ɜːrθ</rt></ruby> only <ruby>function<rt>ˈfʌŋkʃn</rt></ruby> with one of those <ruby>forms<rt>fɔːrmz</rt></ruby>. The <ruby>Nobel<rt>noʊˈbel</rt></ruby> <ruby>laureates<rt>ˈlɔːriəts</rt></ruby> <ruby>answered<rt>ˈænsərd</rt></ruby> the <ruby>question<rt>ˈkwestʃn</rt></ruby>: why does <ruby>life<rt>laɪf</rt></ruby> <ruby>favour<rt>ˈfeɪvər</rt></ruby> just one of these <ruby>mirror<rt>ˈmɪrər</rt></ruby> <ruby>image<rt>ˈɪmɪdʒ</rt></ruby> <ruby>molecules<rt>ˈmɑːlɪkjuːlz</rt></ruby> over the <ruby>other<rt>ˈʌðər</rt></ruby>. In <ruby>organic<rt>ɔːrˈɡænɪk</rt></ruby> <ruby>chemistry<rt>ˈkemɪstri</rt></ruby>, this <ruby>property<rt>ˈprɑːpərti</rt></ruby> is <ruby>known<rt>noʊn</rt></ruby> as "chirality"[kaɪˈræləti], so <ruby>chiral<rt>ˈkaɪrəl</rt></ruby> <ruby>molecules<rt>ˈmɑːlɪkjuːlz</rt></ruby> have both <ruby>right<rt>raɪt</rt></ruby> and left-<ruby>handed<rt>ˌleftˈhændɪd</rt></ruby> <ruby>forms<rt>fɔːrmz</rt></ruby>. You can <ruby>think<rt>θɪŋk</rt></ruby> of them as <ruby>looking<rt>ˈlʊkɪŋ</rt></ruby> like our <ruby>hands<rt>hændz</rt></ruby> - not <ruby>identical<rt>aɪˈdentɪkl</rt></ruby>, but each a <ruby>mirror<rt>ˈmɪrər</rt></ruby> <ruby>image<rt>ˈɪmɪdʒ</rt></ruby> of the <ruby>other<rt>ˈʌðər</rt></ruby>. And while <ruby>nature<rt>ˈneɪtʃər</rt></ruby> <ruby>almost<rt>ˈɔːlmoʊst</rt></ruby> <ruby>exclusively<rt>ɪkˈskluːsɪvli</rt></ruby> <ruby>produces<rt>prəˈduːsɪz</rt></ruby> the <ruby>version<rt>ˈvɜːrʒn</rt></ruby> it <ruby>requires<rt>rɪˈkwaɪərz</rt></ruby> to <ruby>function<rt>ˈfʌŋkʃn</rt></ruby>, <ruby>chemical<rt>ˈkemɪkl</rt></ruby> <ruby>reactions<rt>riˈækʃnz</rt></ruby> in a <ruby>lab<rt>læb</rt></ruby> <ruby>usually<rt>ˈjuːʒuəli</rt></ruby> <ruby>create<rt>kriˈeɪt</rt></ruby> a 50-50 <ruby>mix<rt>mɪks</rt></ruby> of both left- and right-<ruby>handed<rt>ˈhændɪd</rt></ruby> <ruby>molecules<rt>ˈmɑːlɪkjuːlz</rt></ruby>. When it comes to <ruby>making<rt>ˈmeɪkɪŋ</rt></ruby> <ruby>drugs<rt>drʌɡz</rt></ruby>, this is <ruby>particularly<rt>pərˈtɪkjələrli</rt></ruby> <ruby>significant<rt>sɪɡˈnɪfɪkənt</rt></ruby>, because each <ruby>version<rt>ˈvɜːrʒn</rt></ruby> <ruby>behaves<rt>bɪˈheɪvz</rt></ruby> <ruby>differently<rt>ˈdɪfrəntli</rt></ruby> when it <ruby>interacts<rt>ˌɪntərˈækts</rt></ruby> with our <ruby>bodies<rt>ˈbɑːdiz</rt></ruby>. So, one might have disease-<ruby>fighting<rt>dɪˈziːzˌfaɪtɪŋ</rt></ruby> <ruby>properties<rt>ˈprɑːpərtiz</rt></ruby>, while the other <ruby>version<rt>ˈvɜːrʒn</rt></ruby> does <ruby>nothing<rt>ˈnʌθɪŋ</rt></ruby> or even <ruby>causes<rt>ˈkɔːzɪz</rt></ruby> <ruby>harm<rt>hɑːrm</rt></ruby>. The <ruby>development<rt>dɪˈveləpmənt</rt></ruby> of the <ruby>Thalidomide<rt>θəˈlɪdəmaɪd</rt></ruby> <ruby>drug<rt>drʌɡ</rt></ruby> is an <ruby>example<rt>ɪɡˈzæmpl</rt></ruby> of this. In the 1950s it was <ruby>prescribed<rt>prɪˈskraɪbd</rt></ruby> to <ruby>pregnant<rt>ˈpreɡnənt</rt></ruby> <ruby>women<rt>ˈwɪmɪn</rt></ruby> <ruby>suffering<rt>ˈsʌfərɪŋ</rt></ruby> with <ruby>morning<rt>ˈmɔːrnɪŋ</rt></ruby> <ruby>sickness<rt>ˈsɪknəs</rt></ruby>. But it is a <ruby>chiral<rt>ˈkaɪrəl</rt></ruby> <ruby>molecule<rt>ˈmɑːlɪkjuːl</rt></ruby> - the right-<ruby>handed<rt>ˌraɪtˈhændɪd</rt></ruby> <ruby>version<rt>ˈvɜːrʒn</rt></ruby> is an <ruby>effective<rt>ɪˈfektɪv</rt></ruby> <ruby>treatment<rt>ˈtriːtmənt</rt></ruby>, but the left-<ruby>hand<rt>ˌleftˈhænd</rt></ruby> is <ruby>toxic<rt>ˈtɑːksɪk</rt></ruby>.</p>
+<p>The <ruby>original<rt>əˈrɪdʒənl</rt></ruby> <ruby>drug<rt>drʌɡ</rt></ruby> <ruby>given<rt>ˈɡɪvn</rt></ruby> was a <ruby>mixture<rt>ˈmɪkstʃər</rt></ruby> of the two, and it was <ruby>later<rt>ˈleɪtər</rt></ruby> <ruby>discovered<rt>dɪˈskʌvərd</rt></ruby> that the <ruby>body<rt>ˈbɑːdi</rt></ruby> will <ruby>convert<rt>kənˈvɜːrt</rt></ruby> between the two. The <ruby>result<rt>rɪˈzʌlt</rt></ruby> was <ruby>thousands<rt>ˈθaʊzndz</rt></ruby> of <ruby>children<rt>ˈtʃɪldrən</rt></ruby>, <ruby>born<rt>bɔːrn</rt></ruby> to <ruby>women<rt>ˈwɪmɪn</rt></ruby> who <ruby>took<rt>tʊk</rt></ruby> the <ruby>drug<rt>drʌɡ</rt></ruby>, <ruby>developed<rt>dɪˈveləpt</rt></ruby> <ruby>severe<rt>sɪˈvɪr</rt></ruby> <ruby>disabilities<rt>ˌdɪsəˈbɪlətiz</rt></ruby>. <ruby>Speaking<rt>ˈspiːkɪŋ</rt></ruby> to the <ruby>Nobel<rt>noʊˈbel</rt></ruby> <ruby>Prize<rt>praɪz</rt></ruby> <ruby>press<rt>pres</rt></ruby> <ruby>conference<rt>ˈkɑːnfərəns</rt></ruby> this <ruby>morning<rt>ˈmɔːrnɪŋ</rt></ruby> over the <ruby>phone<rt>foʊn</rt></ruby>, Kenso Soai <ruby>said<rt>sed</rt></ruby>: "This is one of the most <ruby>exciting<rt>ɪkˈsaɪtɪŋ</rt></ruby> <ruby>days<rt>deɪz</rt></ruby> of my <ruby>life<rt>laɪf</rt></ruby>." By <ruby>solving<rt>ˈsɑːlvɪŋ</rt></ruby> the <ruby>mystery<rt>ˈmɪstəri</rt></ruby> of <ruby>chirality<rt>kaɪˈræləti</rt></ruby>, Henri Kagan and Kenso Soai <ruby>worked<rt>wɜːrkt</rt></ruby> out how to <ruby>design<rt>dɪˈzaɪn</rt></ruby> <ruby>chemical<rt>ˈkemɪkl</rt></ruby> <ruby>reactions<rt>riˈækʃnz</rt></ruby> to <ruby>produce<rt>prəˈduːs</rt></ruby> much more of the <ruby>desired<rt>dɪˈzaɪərd</rt></ruby> <ruby>version<rt>ˈvɜːrʒn</rt></ruby> of a <ruby>molecule<rt>ˈmɑːlɪkjuːl</rt></ruby>. Heiner Linke, <ruby>chair<rt>tʃer</rt></ruby> of the <ruby>Nobel<rt>noʊˈbel</rt></ruby> <ruby>Committee<rt>kəˈmɪti</rt></ruby> for <ruby>Chemistry<rt>ˈkemɪstri</rt></ruby>, <ruby>explained<rt>ɪkˈspleɪnd</rt></ruby>: "Henri Kagan and Kenso Soai have <ruby>provided<rt>prəˈvaɪdɪd</rt></ruby> a <ruby>solution<rt>səˈluːʃn</rt></ruby> to a <ruby>chemical<rt>ˈkemɪkl</rt></ruby> <ruby>mystery<rt>ˈmɪstəri</rt></ruby> that is over a <ruby>century<rt>ˈsentʃəri</rt></ruby> <ruby>old<rt>oʊld</rt></ruby>: how <ruby>homochirality<rt>ˌhoʊmoʊkaɪˈræləti</rt></ruby> - the <ruby>selective<rt>sɪˈlektɪv</rt></ruby> <ruby>production<rt>prəˈdʌkʃn</rt></ruby> of the <ruby>correct<rt>kəˈrekt</rt></ruby> <ruby>version<rt>ˈvɜːrʒn</rt></ruby> of a <ruby>molecule<rt>ˈmɑːlɪkjuːl</rt></ruby> - can <ruby>emerge<rt>ɪˈmɜːrdʒ</rt></ruby> <ruby>spontaneously<rt>spɑːnˈteɪniəsli</rt></ruby>. The <ruby>chemical<rt>ˈkemɪkl</rt></ruby> <ruby>reactions<rt>riˈækʃnz</rt></ruby> they have <ruby>developed<rt>dɪˈveləpt</rt></ruby> are <ruby>spectacular<rt>spekˈtækjələr</rt></ruby>." Henri Kagan, who is at Université[ˌjuːnɪverˈsiːteɪ] Paris-<ruby>Sud<rt>ˈpærɪs sjuːd</rt></ruby>, <ruby>first<rt>fɜːrst</rt></ruby> <ruby>discovered<rt>dɪˈskʌvərd</rt></ruby> a <ruby>new<rt>nuː</rt></ruby> <ruby>way<rt>weɪ</rt></ruby> of <ruby>manipulating<rt>məˈnɪpjuleɪtɪŋ</rt></ruby> <ruby>chemical<rt>ˈkemɪkl</rt></ruby> <ruby>reactions<rt>riˈækʃnz</rt></ruby> in 1986. This <ruby>allowed<rt>əˈlaʊd</rt></ruby> him to <ruby>create<rt>kriˈeɪt</rt></ruby> a <ruby>greater<rt>ˈɡreɪtər</rt></ruby> <ruby>excess<rt>ɪkˈses</rt></ruby> of one of the <ruby>mirror<rt>ˈmɪrər</rt></ruby> <ruby>images<rt>ˈɪmɪdʒɪz</rt></ruby> than had <ruby>previously<rt>ˈpriːviəsli</rt></ruby> been <ruby>thought<rt>θɔːt</rt></ruby> <ruby>possible<rt>ˈpɑːsəbl</rt></ruby>.</p>
+<p>Kenso Soai from <ruby>Tokyo<rt>ˈtoʊkioʊ</rt></ruby> <ruby>University<rt>ˌjuːnɪˈvɜːrsəti</rt></ruby> of <ruby>Science<rt>ˈsaɪəns</rt></ruby> <ruby>took<rt>tʊk</rt></ruby> the <ruby>next<rt>nekst</rt></ruby> <ruby>step<rt>step</rt></ruby> in 1995. He <ruby>published<rt>ˈpʌblɪʃt</rt></ruby> a <ruby>scientific<rt>ˌsaɪənˈtɪfɪk</rt></ruby> <ruby>paper<rt>ˈpeɪpər</rt></ruby> in the <ruby>journal<rt>ˈdʒɜːrnl</rt></ruby> <ruby>Nature<rt>ˈneɪtʃər</rt></ruby> <ruby>describing<rt>dɪˈskraɪbɪŋ</rt></ruby> the <ruby>first<rt>fɜːrst</rt></ruby> ever <ruby>chemical<rt>ˈkemɪkl</rt></ruby> <ruby>reaction<rt>riˈækʃn</rt></ruby> that had the <ruby>potential<rt>pəˈtenʃl</rt></ruby> to be <ruby>homochiral<rt>ˌhoʊmoʊˈkaɪrəl</rt></ruby> - <ruby>producing<rt>prəˈduːsɪŋ</rt></ruby> only the <ruby>desired<rt>dɪˈzaɪərd</rt></ruby> <ruby>version<rt>ˈvɜːrʒn</rt></ruby> of an <ruby>organic<rt>ɔːrˈɡænɪk</rt></ruby> <ruby>molecule<rt>ˈmɑːlɪkjuːl</rt></ruby>. In 2003, he <ruby>finally<rt>ˈfaɪnəli</rt></ruby> <ruby>succeeded<rt>səkˈsiːdɪd</rt></ruby> in <ruby>controlling<rt>kənˈtroʊlɪŋ</rt></ruby> a <ruby>reaction<rt>riˈækʃn</rt></ruby> in which only one of the two <ruby>possible<rt>ˈpɑːsəbl</rt></ruby> <ruby>mirror<rt>ˈmɪrər</rt></ruby> <ruby>images<rt>ˈɪmɪdʒɪz</rt></ruby> was <ruby>formed<rt>fɔːrmd</rt></ruby>. "Other than <ruby>life<rt>laɪf</rt></ruby> itself," the <ruby>Nobel<rt>noʊˈbel</rt></ruby> <ruby>Committee<rt>kəˈmɪti</rt></ruby> <ruby>said<rt>sed</rt></ruby> in a <ruby>statement<rt>ˈsteɪtmənt</rt></ruby>, "no one had <ruby>previously<rt>ˈpriːviəsli</rt></ruby> <ruby>achieved<rt>əˈtʃiːvd</rt></ruby> this <ruby>feat<rt>fiːt</rt></ruby>". At the <ruby>press<rt>pres</rt></ruby> <ruby>conference<rt>ˈkɑːnfərəns</rt></ruby> on <ruby>Wednesday<rt>ˈwenzdeɪ</rt></ruby>, Kenso Soai <ruby>praised<rt>preɪzd</rt></ruby> the "<ruby>many<rt>ˈmeni</rt></ruby>, <ruby>many<rt>ˈmeni</rt></ruby> <ruby>excellent<rt>ˈeksələnt</rt></ruby> <ruby>researchers<rt>ˈriːsɜːrtʃərz</rt></ruby>" in this <ruby>field<rt>fiːld</rt></ruby>. <ruby>Professor<rt>prəˈfesər</rt></ruby> Robert Mokaya, <ruby>president<rt>ˈprezɪdənt</rt></ruby> of the UK's <ruby>Royal<rt>ˈrɔɪəl</rt></ruby> <ruby>Society<rt>səˈsaɪəti</rt></ruby> of <ruby>Chemistry<rt>ˈkemɪstri</rt></ruby> <ruby>said<rt>sed</rt></ruby> it was a "<ruby>powerful<rt>ˈpaʊərfl</rt></ruby> <ruby>example<rt>ɪɡˈzæmpl</rt></ruby> of how <ruby>fundamental<rt>ˌfʌndəˈmentl</rt></ruby> <ruby>chemistry<rt>ˈkemɪstri</rt></ruby> can <ruby>underpin<rt>ˌʌndərˈpɪn</rt></ruby> <ruby>solutions<rt>səˈluːʃnz</rt></ruby> to some of the <ruby>biggest<rt>ˈbɪɡɪst</rt></ruby> <ruby>challenges<rt>ˈtʃælɪndʒɪz</rt></ruby> <ruby>facing<rt>ˈfeɪsɪŋ</rt></ruby> <ruby>society<rt>səˈsaɪəti</rt></ruby>". "<ruby>Different<rt>ˈdɪfrənt</rt></ruby> <ruby>isomers<rt>ˈaɪsəmərz</rt></ruby> (or <ruby>versions<rt>ˈvɜːrʒnz</rt></ruby> of <ruby>molecules<rt>ˈmɑːlɪkjuːlz</rt></ruby>) can have <ruby>completely<rt>kəmˈpliːtli</rt></ruby> <ruby>different<rt>ˈdɪfrənt</rt></ruby> <ruby>biological<rt>ˌbaɪəˈlɑːdʒɪkl</rt></ruby> and <ruby>physical<rt>ˈfɪzɪkl</rt></ruby> <ruby>effects<rt>ɪˈfekts</rt></ruby>, so they are <ruby>crucial<rt>ˈkruːʃl</rt></ruby> in <ruby>finding<rt>ˈfaɪndɪŋ</rt></ruby> <ruby>effective<rt>ɪˈfektɪv</rt></ruby> <ruby>medicines<rt>ˈmedɪsnz</rt></ruby> to <ruby>treat<rt>triːt</rt></ruby> all <ruby>sorts<rt>sɔːrts</rt></ruby> of <ruby>illnesses<rt>ˈɪlnəsɪz</rt></ruby>," he <ruby>added<rt>ˈædɪd</rt></ruby>. Prof Angus Davison, from the <ruby>University<rt>ˌjuːnɪˈvɜːrsəti</rt></ruby> of <ruby>Nottingham<rt>ˈnɑːtɪŋəm</rt></ruby>, <ruby>studies<rt>ˈstʌdiz</rt></ruby> the <ruby>biology<rt>baɪˈɑːlədʒi</rt></ruby> of <ruby>chirality<rt>kaɪˈræləti</rt></ruby> and <ruby>said<rt>sed</rt></ruby> that the Nobel-<ruby>winning<rt>noʊˈbelˌwɪnɪŋ</rt></ruby> <ruby>chemistry<rt>ˈkemɪstri</rt></ruby> could <ruby>help<rt>help</rt></ruby> <ruby>reveal<rt>rɪˈviːl</rt></ruby> how and why <ruby>life<rt>laɪf</rt></ruby> <ruby>favours<rt>ˈfeɪvərz</rt></ruby> "one-handedness"[ˌwʌnˈhændɪdnəs].</p>
+<p>"In <ruby>ways<rt>weɪz</rt></ruby> that we don't <ruby>yet<rt>jet</rt></ruby> <ruby>quite<rt>kwaɪt</rt></ruby> <ruby>understand<rt>ˌʌndərˈstænd</rt></ruby>, the <ruby>chirality<rt>kaɪˈræləti</rt></ruby> of the <ruby>basic<rt>ˈbeɪsɪk</rt></ruby> <ruby>building<rt>ˈbɪldɪŋ</rt></ruby> <ruby>blocks<rt>blɑːks</rt></ruby> of <ruby>life<rt>laɪf</rt></ruby> <ruby>ends<rt>endz</rt></ruby> up <ruby>making<rt>ˈmeɪkɪŋ</rt></ruby> <ruby>bodies<rt>ˈbɑːdiz</rt></ruby> that are themselves <ruby>also<rt>ˈɔːlsoʊ</rt></ruby> <ruby>chiral<rt>ˈkaɪrəl</rt></ruby>," he <ruby>told<rt>toʊld</rt></ruby> BBC <ruby>News<rt>nuːz</rt></ruby>. This was the <ruby>foundation<rt>faʊnˈdeɪʃn</rt></ruby>, he <ruby>explained<rt>ɪkˈspleɪnd</rt></ruby>, of our <ruby>hearts<rt>hɑːrts</rt></ruby> being on <ruby>left<rt>left</rt></ruby> <ruby>hand<rt>hænd</rt></ruby> <ruby>side<rt>saɪd</rt></ruby> of our <ruby>bodies<rt>ˈbɑːdiz</rt></ruby> and <ruby>snail<rt>sneɪl</rt></ruby> <ruby>shells<rt>ʃelz</rt></ruby> that <ruby>coil<rt>kɔɪl</rt></ruby> to the <ruby>right<rt>raɪt</rt></ruby>. Peter Somfai, a <ruby>member<rt>ˈmembər</rt></ruby> of the <ruby>Nobel<rt>noʊˈbel</rt></ruby> <ruby>Committee<rt>kəˈmɪti</rt></ruby> for <ruby>Chemistry<rt>ˈkemɪstri</rt></ruby>, <ruby>said<rt>sed</rt></ruby> the <ruby>research<rt>ˈriːsɜːrtʃ</rt></ruby> <ruby>awarded<rt>əˈwɔːrdɪd</rt></ruby> this year's <ruby>prize<rt>praɪz</rt></ruby> has <ruby>become<rt>bɪˈkʌm</rt></ruby> <ruby>part<rt>pɑːrt</rt></ruby> of "our <ruby>basic<rt>ˈbeɪsɪk</rt></ruby> <ruby>understanding<rt>ˌʌndərˈstændɪŋ</rt></ruby> of how <ruby>chemistry<rt>ˈkemɪstri</rt></ruby> <ruby>functions<rt>ˈfʌŋkʃnz</rt></ruby>". He <ruby>said<rt>sed</rt></ruby> <ruby>showing<rt>ˈʃoʊɪŋ</rt></ruby> how a <ruby>mirror<rt>ˈmɪrər</rt></ruby> <ruby>image<rt>ˈɪmɪdʒ</rt></ruby> is <ruby>created<rt>kriˈeɪtɪd</rt></ruby> is "<ruby>probably<rt>ˈprɑːbəbli</rt></ruby> the most <ruby>fundamental<rt>ˌfʌndəˈmentl</rt></ruby> <ruby>question<rt>ˈkwestʃn</rt></ruby> in <ruby>life<rt>laɪf</rt></ruby> - because <ruby>somehow<rt>ˈsʌmhaʊ</rt></ruby> that <ruby>happened<rt>ˈhæpənd</rt></ruby> four <ruby>billion<rt>ˈbɪljən</rt></ruby> <ruby>years<rt>jɪrz</rt></ruby> <ruby>ago<rt>əˈɡoʊ</rt></ruby> when <ruby>life<rt>laɪf</rt></ruby> was <ruby>created<rt>kriˈeɪtɪd</rt></ruby>. And <ruby>now<rt>naʊ</rt></ruby> we have, for the first <ruby>time<rt>taɪm</rt></ruby>, <ruby>mimicked<rt>ˈmɪmɪkt</rt></ruby> that in the <ruby>lab<rt>læb</rt></ruby>".</p><h2><a name="标题句" class="md-header-anchor"></a><span>标题句</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Chemistry[ˈkemɪstri] Nobel[noʊˈbel] awarded[əˈwɔːrdɪd] for solving[ˈsɑːlvɪŋ] mystery[ˈmɪstəri] of life&#39;s[laɪfz] asymmetry[eɪˈsɪmətri].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>Nobel Prize in Chemistry：诺贝尔化学奖</span></li><li><span>solve the mystery of：解开……之谜</span></li><li><span>life&#39;s asymmetry：生命的不对称性</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>诺贝尔化学奖颁发给解开生命不对称性之谜的研究。</span></p><hr /><h2><a name="第-2-段" class="md-header-anchor"></a><span>第 2 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>The Nobel[noʊˈbel] Prize[praɪz] in Chemistry[ˈkemɪstri] has been awarded[əˈwɔːrdɪd] to French[frentʃ] scientist[ˈsaɪəntɪst] Henri B. Kagan and Japan&#39;s[dʒəˈpænz] Kenso Soai for providing[prəˈvaɪdɪŋ] a solution[səˈluːʃn] to the chemical[ˈkemɪkl] mystery[ˈmɪstəri] of life&#39;s[laɪfz] asymmetry[eɪˈsɪmətri]. The researchers[ˈriːsɜːrtʃərz] discovered[dɪˈskʌvərd] how nature[ˈneɪtʃər] exclusively[ɪkˈskluːsɪvli] makes[meɪks] the correct[kəˈrekt] version[ˈvɜːrʒn] of a molecule[ˈmɑːlɪkjuːl] - rather than its mirror[ˈmɪrər] image[ˈɪmɪdʒ]. For example, amino[əˈmiːnoʊ] acid[ˈæsɪd] molecules[ˈmɑːlɪkjuːlz], the building[ˈbɪldɪŋ] blocks[blɑːks] of proteins[ˈproʊtiːnz], exist[ɪɡˈzɪst] as two forms[fɔːrmz] that are each other&#39;s mirror[ˈmɪrər] image[ˈɪmɪdʒ]. But living[ˈlɪvɪŋ] organisms[ˈɔːrɡənɪzəmz] on Earth[ɜːrθ] only function[ˈfʌŋkʃn] with one of those forms[fɔːrmz]. The Nobel[noʊˈbel] laureates[ˈlɔːriəts] answered[ˈænsərd] the question[ˈkwestʃn]: why does life[laɪf] favour[ˈfeɪvər] just one of these mirror[ˈmɪrər] image[ˈɪmɪdʒ] molecules[ˈmɑːlɪkjuːlz] over the other[ˈʌðər]. In organic[ɔːrˈɡænɪk] chemistry[ˈkemɪstri], this property[ˈprɑːpərti] is known[noʊn] as &quot;chirality&quot;[kaɪˈræləti], so chiral[ˈkaɪrəl] molecules[ˈmɑːlɪkjuːlz] have both right[raɪt] and left-handed[ˌleftˈhændɪd] forms[fɔːrmz]. You can think[θɪŋk] of them as looking[ˈlʊkɪŋ] like our hands[hændz] - not identical[aɪˈdentɪkl], but each a mirror[ˈmɪrər] image[ˈɪmɪdʒ] of the other[ˈʌðər]. And while nature[ˈneɪtʃər] almost[ˈɔːlmoʊst] exclusively[ɪkˈskluːsɪvli] produces[prəˈduːsɪz] the version[ˈvɜːrʒn] it requires[rɪˈkwaɪərz] to function[ˈfʌŋkʃn], chemical[ˈkemɪkl] reactions[riˈækʃnz] in a lab[læb] usually[ˈjuːʒuəli] create[kriˈeɪt] a 50-50 mix[mɪks] of both left- and right-handed[ˈhændɪd] molecules[ˈmɑːlɪkjuːlz]. When it comes to making[ˈmeɪkɪŋ] drugs[drʌɡz], this is particularly[pərˈtɪkjələrli] significant[sɪɡˈnɪfɪkənt], because each version[ˈvɜːrʒn] behaves[bɪˈheɪvz] differently[ˈdɪfrəntli] when it interacts[ˌɪntərˈækts] with our bodies[ˈbɑːdiz]. So, one might have disease-fighting[dɪˈziːzˌfaɪtɪŋ] properties[ˈprɑːpərtiz], while the other version[ˈvɜːrʒn] does nothing[ˈnʌθɪŋ] or even causes[ˈkɔːzɪz] harm[hɑːrm]. The development[dɪˈveləpmənt] of the Thalidomide[θəˈlɪdəmaɪd] drug[drʌɡ] is an example[ɪɡˈzæmpl] of this. In the 1950s it was prescribed[prɪˈskraɪbd] to pregnant[ˈpreɡnənt] women[ˈwɪmɪn] suffering[ˈsʌfərɪŋ] with morning[ˈmɔːrnɪŋ] sickness[ˈsɪknəs]. But it is a chiral[ˈkaɪrəl] molecule[ˈmɑːlɪkjuːl] - the right-handed[ˌraɪtˈhændɪd] version[ˈvɜːrʒn] is an effective[ɪˈfektɪv] treatment[ˈtriːtmənt], but the left-hand[ˌleftˈhænd] is toxic[ˈtɑːksɪk].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>Nobel Prize in Chemistry：诺贝尔化学奖</span></li><li><span>provide a solution to：为……提供解决方案</span></li><li><span>the correct version of a molecule：分子的正确版本</span></li><li><span>rather than：而不是</span></li><li><span>mirror image：镜像</span></li><li><span>amino acid：氨基酸</span></li><li><span>the building blocks of：……的构建单元</span></li><li><span>living organisms：生命有机体</span></li><li><span>the Nobel laureates：诺贝尔奖得主</span></li><li><span>organic chemistry：有机化学</span></li><li><span>known as：被称为</span></li><li><span>chiral molecules：手性分子</span></li><li><span>left-handed / right-handed forms：左手型/右手型</span></li><li><span>a 50-50 mix：各占一半的混合物</span></li><li><span>when it comes to：说到、谈到</span></li><li><span>interact with：与……相互作用</span></li><li><span>disease-fighting properties：抗病特性</span></li><li><span>cause harm：造成伤害</span></li><li><span>be prescribed to：被开具给、被用于</span></li><li><span>pregnant women：孕妇</span></li><li><span>morning sickness：孕吐、妊娠晨吐</span></li><li><span>an effective treatment：有效疗法</span></li><li><span>be toxic：有毒的</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>诺贝尔化学奖已颁发给法国科学家亨利·B.卡根和日本科学家小杉谦三（Kenso Soai），因为他们为生命不对称性的化学之谜提供了解决方案。这两位研究者发现了大自然如何只制造分子的正确版本——而非其镜像。例如，作为蛋白质构建单元的氨基酸分子以两种互为镜像的形式存在。但地球上的生命有机体只使用其中一种形式来运转。这两位诺贝尔奖得主回答了这样一个问题：为什么生命只偏爱这些镜像分子中的一种，而不是另一种。在有机化学中，这一性质被称为&quot;手性&quot;，因此手性分子同时具有右手型和左手型两种形式。你可以把它们想象成我们的双手——并不完全相同，但彼此互为镜像。而且，尽管大自然几乎只制造它运转所需的那种版本，但实验室里的化学反应通常会同时生成左右两种分子各占一半的混合物。说到制药，这一点尤为重要，因为每种版本在与人体相互作用时表现不同。因此，一种可能具有抗病特性，而另一种则毫无作用，甚至造成伤害。沙利度胺（Thalidomide）药物的开发就是这样一个例子。20世纪50年代，它被开给患有孕吐的孕妇。但它是一种手性分子——右手型是有效的治疗手段，而左手型则是有毒的。</span></p><hr /><h2><a name="第-3-段" class="md-header-anchor"></a><span>第 3 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>The original[əˈrɪdʒənl] drug[drʌɡ] given[ˈɡɪvn] was a mixture[ˈmɪkstʃər] of the two, and it was later[ˈleɪtər] discovered[dɪˈskʌvərd] that the body[ˈbɑːdi] will convert[kənˈvɜːrt] between the two. The result[rɪˈzʌlt] was thousands[ˈθaʊzndz] of children[ˈtʃɪldrən], born[bɔːrn] to women[ˈwɪmɪn] who took[tʊk] the drug[drʌɡ], developed[dɪˈveləpt] severe[sɪˈvɪr] disabilities[ˌdɪsəˈbɪlətiz]. Speaking[ˈspiːkɪŋ] to the Nobel[noʊˈbel] Prize[praɪz] press[pres] conference[ˈkɑːnfərəns] this morning[ˈmɔːrnɪŋ] over the phone[foʊn], Kenso Soai said[sed]: &quot;This is one of the most exciting[ɪkˈsaɪtɪŋ] days[deɪz] of my life[laɪf].&quot; By solving[ˈsɑːlvɪŋ] the mystery[ˈmɪstəri] of chirality[kaɪˈræləti], Henri Kagan and Kenso Soai worked[wɜːrkt] out how to design[dɪˈzaɪn] chemical[ˈkemɪkl] reactions[riˈækʃnz] to produce[prəˈduːs] much more of the desired[dɪˈzaɪərd] version[ˈvɜːrʒn] of a molecule[ˈmɑːlɪkjuːl]. Heiner Linke, chair[tʃer] of the Nobel[noʊˈbel] Committee[kəˈmɪti] for Chemistry[ˈkemɪstri], explained[ɪkˈspleɪnd]: &quot;Henri Kagan and Kenso Soai have provided[prəˈvaɪdɪd] a solution[səˈluːʃn] to a chemical[ˈkemɪkl] mystery[ˈmɪstəri] that is over a century[ˈsentʃəri] old[oʊld]: how homochirality[ˌhoʊmoʊkaɪˈræləti] - the selective[sɪˈlektɪv] production[prəˈdʌkʃn] of the correct[kəˈrekt] version[ˈvɜːrʒn] of a molecule[ˈmɑːlɪkjuːl] - can emerge[ɪˈmɜːrdʒ] spontaneously[spɑːnˈteɪniəsli]. The chemical[ˈkemɪkl] reactions[riˈækʃnz] they have developed[dɪˈveləpt] are spectacular[spekˈtækjələr].&quot; Henri Kagan, who is at Université[ˌjuːnɪverˈsiːteɪ] Paris-Sud[ˈpærɪs sjuːd], first[fɜːrst] discovered[dɪˈskʌvərd] a new[nuː] way[weɪ] of manipulating[məˈnɪpjuleɪtɪŋ] chemical[ˈkemɪkl] reactions[riˈækʃnz] in 1986. This allowed[əˈlaʊd] him to create[kriˈeɪt] a greater[ˈɡreɪtər] excess[ɪkˈses] of one of the mirror[ˈmɪrər] images[ˈɪmɪdʒɪz] than had previously[ˈpriːviəsli] been thought[θɔːt] possible[ˈpɑːsəbl].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>a mixture of：……的混合物</span></li><li><span>convert between：在……之间转换</span></li><li><span>severe disabilities：严重残疾</span></li><li><span>press conference：新闻发布会</span></li><li><span>over the phone：通过电话</span></li><li><span>the most exciting days：最激动人心的日子</span></li><li><span>work out how：弄清楚如何</span></li><li><span>design chemical reactions：设计化学反应</span></li><li><span>the desired version：所需的版本</span></li><li><span>chair of the committee：委员会主席</span></li><li><span>over a century old：逾一个世纪之久</span></li><li><span>emerge spontaneously：自发地产生</span></li><li><span>manipulate chemical reactions：操控化学反应</span></li><li><span>a greater excess of：更大比例、更大量</span></li><li><span>previously been thought possible：此前被认为可能</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>最初投放的药物是两种版本的混合物，后来人们发现人体会在两者之间相互转化。结果是，服用了该药的妇女所生的数千名儿童出现了严重残疾。小杉谦三今早通过电话在诺贝尔奖新闻发布会上说：&quot;这是我一生中最激动人心的日子之一。&quot;通过解开手性之谜，亨利·卡根和小杉谦三弄清了如何设计化学反应，以产出远多于所需的分子版本。诺贝尔化学委员会主席海纳·林克解释说：&quot;亨利·卡根和小杉谦三为一个已有一百多年历史的化学之谜提供了解决方案：同手性——即选择性制造分子的正确版本——如何能够自发地产生。他们开发的化学反应令人惊叹。&quot;任职于巴黎南大学的亨利·卡根于1986年首次发现了一种操控化学反应的新方法。这使他能够制造出一种镜像成分的过量，其程度超出此前人们认为可能的范围。</span></p><hr /><h2><a name="第-4-段" class="md-header-anchor"></a><span>第 4 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Kenso Soai from Tokyo[ˈtoʊkioʊ] University[ˌjuːnɪˈvɜːrsəti] of Science[ˈsaɪəns] took[tʊk] the next[nekst] step[step] in 1995. He published[ˈpʌblɪʃt] a scientific[ˌsaɪənˈtɪfɪk] paper[ˈpeɪpər] in the journal[ˈdʒɜːrnl] Nature[ˈneɪtʃər] describing[dɪˈskraɪbɪŋ] the first[fɜːrst] ever chemical[ˈkemɪkl] reaction[riˈækʃn] that had the potential[pəˈtenʃl] to be homochiral[ˌhoʊmoʊˈkaɪrəl] - producing[prəˈduːsɪŋ] only the desired[dɪˈzaɪərd] version[ˈvɜːrʒn] of an organic[ɔːrˈɡænɪk] molecule[ˈmɑːlɪkjuːl]. In 2003, he finally[ˈfaɪnəli] succeeded[səkˈsiːdɪd] in controlling[kənˈtroʊlɪŋ] a reaction[riˈækʃn] in which only one of the two possible[ˈpɑːsəbl] mirror[ˈmɪrər] images[ˈɪmɪdʒɪz] was formed[fɔːrmd]. &quot;Other than life[laɪf] itself,&quot; the Nobel[noʊˈbel] Committee[kəˈmɪti] said[sed] in a statement[ˈsteɪtmənt], &quot;no one had previously[ˈpriːviəsli] achieved[əˈtʃiːvd] this feat[fiːt]&quot;. At the press[pres] conference[ˈkɑːnfərəns] on Wednesday[ˈwenzdeɪ], Kenso Soai praised[preɪzd] the &quot;many[ˈmeni], many[ˈmeni] excellent[ˈeksələnt] researchers[ˈriːsɜːrtʃərz]&quot; in this field[fiːld]. Professor[prəˈfesər] Robert Mokaya, president[ˈprezɪdənt] of the UK&#39;s Royal[ˈrɔɪəl] Society[səˈsaɪəti] of Chemistry[ˈkemɪstri] said[sed] it was a &quot;powerful[ˈpaʊərfl] example[ɪɡˈzæmpl] of how fundamental[ˌfʌndəˈmentl] chemistry[ˈkemɪstri] can underpin[ˌʌndərˈpɪn] solutions[səˈluːʃnz] to some of the biggest[ˈbɪɡɪst] challenges[ˈtʃælɪndʒɪz] facing[ˈfeɪsɪŋ] society[səˈsaɪəti]&quot;. &quot;Different[ˈdɪfrənt] isomers[ˈaɪsəmərz] (or versions[ˈvɜːrʒnz] of molecules[ˈmɑːlɪkjuːlz]) can have completely[kəmˈpliːtli] different[ˈdɪfrənt] biological[ˌbaɪəˈlɑːdʒɪkl] and physical[ˈfɪzɪkl] effects[ɪˈfekts], so they are crucial[ˈkruːʃl] in finding[ˈfaɪndɪŋ] effective[ɪˈfektɪv] medicines[ˈmedɪsnz] to treat[triːt] all sorts[sɔːrts] of illnesses[ˈɪlnəsɪz],&quot; he added[ˈædɪd]. Prof Angus Davison, from the University[ˌjuːnɪˈvɜːrsəti] of Nottingham[ˈnɑːtɪŋəm], studies[ˈstʌdiz] the biology[baɪˈɑːlədʒi] of chirality[kaɪˈræləti] and said[sed] that the Nobel-winning[noʊˈbelˌwɪnɪŋ] chemistry[ˈkemɪstri] could help[help] reveal[rɪˈviːl] how and why life[laɪf] favours[ˈfeɪvərz] &quot;one-handedness&quot;[ˌwʌnˈhændɪdnəs].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>take the next step：迈出下一步</span></li><li><span>publish a scientific paper：发表科学论文</span></li><li><span>the journal Nature：《自然》期刊</span></li><li><span>the first ever：有史以来第一次</span></li><li><span>have the potential to：有可能……</span></li><li><span>succeed in doing sth：成功做成某事</span></li><li><span>control a reaction：控制反应</span></li><li><span>other than：除了</span></li><li><span>in a statement：在一份声明中</span></li><li><span>achieve a feat：完成一项壮举</span></li><li><span>praise researchers：赞扬研究者</span></li><li><span>Royal Society of Chemistry：英国皇家化学学会</span></li><li><span>underpin solutions：支撑解决方案</span></li><li><span>fundamental chemistry：基础化学</span></li><li><span>isomers：同分异构体</span></li><li><span>biological and physical effects：生物和物理效应</span></li><li><span>treat all sorts of illnesses：治疗各种疾病</span></li><li><span>the biology of chirality：手性的生物学</span></li><li><span>Nobel-winning：获诺贝尔奖的</span></li><li><span>one-handedness：单侧手性</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>东京理科大学的小杉谦三于1995年迈出了下一步。他在《自然》期刊上发表了一篇科学论文，描述了有史以来第一个有可能具有同手性的化学反应——只制造有机分子所需的版本。2003年，他最终成功控制了一个反应，只生成两种可能镜像中的一种。&quot;除生命本身以外，&quot;诺贝尔委员会在一份声明中说，&quot;此前没有人完成过这一壮举。&quot;在周三的新闻发布会上，小杉谦三赞扬了该领域的&quot;许多、许多优秀的研究者&quot;。英国皇家化学学会主席罗伯特·莫卡亚教授表示，这是&quot;一个有力的例证，说明基础化学如何能够支撑起针对社会所面临的一些最大挑战的解决方案&quot;。&quot;不同的同分异构体（即分子的不同版本）可能具有完全不同的生物和物理效应，因此它们对寻找治疗各种疾病的有效药物至关重要，&quot;他补充说。诺丁汉大学的安格斯·戴维森教授研究手性的生物学，他说，这项获诺贝尔奖的化学成果或有助于揭示生命为何以及如何偏爱&quot;单侧手性&quot;。</span></p><hr /><h2><a name="第-5-段" class="md-header-anchor"></a><span>第 5 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>&quot;In ways[weɪz] that we don&#39;t yet[jet] quite[kwaɪt] understand[ˌʌndərˈstænd], the chirality[kaɪˈræləti] of the basic[ˈbeɪsɪk] building[ˈbɪldɪŋ] blocks[blɑːks] of life[laɪf] ends[endz] up making[ˈmeɪkɪŋ] bodies[ˈbɑːdiz] that are themselves also[ˈɔːlsoʊ] chiral[ˈkaɪrəl],&quot; he told[toʊld] BBC News[nuːz]. This was the foundation[faʊnˈdeɪʃn], he explained[ɪkˈspleɪnd], of our hearts[hɑːrts] being on left[left] hand[hænd] side[saɪd] of our bodies[ˈbɑːdiz] and snail[sneɪl] shells[ʃelz] that coil[kɔɪl] to the right[raɪt]. Peter Somfai, a member[ˈmembər] of the Nobel[noʊˈbel] Committee[kəˈmɪti] for Chemistry[ˈkemɪstri], said[sed] the research[ˈriːsɜːrtʃ] awarded[əˈwɔːrdɪd] this year&#39;s prize[praɪz] has become[bɪˈkʌm] part[pɑːrt] of &quot;our basic[ˈbeɪsɪk] understanding[ˌʌndərˈstændɪŋ] of how chemistry[ˈkemɪstri] functions[ˈfʌŋkʃnz]&quot;. He said[sed] showing[ˈʃoʊɪŋ] how a mirror[ˈmɪrər] image[ˈɪmɪdʒ] is created[kriˈeɪtɪd] is &quot;probably[ˈprɑːbəbli] the most fundamental[ˌfʌndəˈmentl] question[ˈkwestʃn] in life[laɪf] - because somehow[ˈsʌmhaʊ] that happened[ˈhæpənd] four billion[ˈbɪljən] years[jɪrz] ago[əˈɡoʊ] when life[laɪf] was created[kriˈeɪtɪd]. And now[naʊ] we have, for the first time[taɪm], mimicked[ˈmɪmɪkt] that in the lab[læb]&quot;.</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>in ways that：以……的方式</span></li><li><span>building blocks of life：生命的构建单元</span></li><li><span>end up doing sth：最终成为、结果……</span></li><li><span>the foundation of：……的基础</span></li><li><span>on the left hand side：在左手侧</span></li><li><span>snail shells：蜗牛壳</span></li><li><span>coil to the right：向右盘旋</span></li><li><span>a member of：……的成员</span></li><li><span>basic understanding：基本认识</span></li><li><span>the most fundamental question：最根本的问题</span></li><li><span>four billion years ago：四十亿年前</span></li><li><span>for the first time：首次</span></li><li><span>mimic sth in the lab：在实验室中模拟某事</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>&quot;在我们尚不完全理解的方面，生命基本构建单元的手性最终造就了本身也具有手性的躯体，&quot;他对 BBC 新闻说。他解释说，这正是我们的心脏位于身体左侧、蜗牛壳向右盘旋的基础。诺贝尔化学委员会成员彼得·索姆法伊说，今年获奖的研究已成为&quot;我们对化学如何运作的基本认识&quot;的一部分。他说，展示镜像如何产生&quot;或许是生命中最根本的问题——因为在40亿年前生命诞生之际，这一切就那样发生了。而现在，我们首次在实验室里模拟了它&quot;。</span></p><p>&nbsp;</p></div>
+</body>
+</html>
