@@ -1,0 +1,651 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>nce4_25_ruby</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="nce4-lesson-25-non-auditory-effects-of-noise" class="md-header-anchor"></a><span>NCE4 Lesson 25 Non-auditory effects of noise</span></h1><p>&nbsp;</p><style>
+  p { font-size: 20px;}
+  p rt { color: #AEADAE; font-size: 0.8em;}
+</style>
+<p>Non-<ruby>auditory<rt>ˌnɑːnˈɔːdətɔːri</rt></ruby> <ruby>effects<rt>ɪˈfekts</rt></ruby> of <ruby>noise<rt>nɔɪz</rt></ruby>.</p>
+<p>What <ruby>conclusion<rt>kənˈkluːʒn</rt></ruby> does the <ruby>author<rt>ˈɔːθər</rt></ruby> <ruby>draw<rt>drɔː</rt></ruby> about <ruby>noise<rt>nɔɪz</rt></ruby> and <ruby>health<rt>helθ</rt></ruby> in this <ruby>piece<rt>piːs</rt></ruby>? <ruby>Many<rt>ˈmeni</rt></ruby> <ruby>people<rt>ˈpiːpl</rt></ruby> in <ruby>industry<rt>ˈɪndəstri</rt></ruby> and the <ruby>Services<rt>ˈsɜːrvɪsɪz</rt></ruby>, who have <ruby>practical<rt>ˈpræktɪkl</rt></ruby> <ruby>experience<rt>ɪkˈspɪriəns</rt></ruby> of <ruby>noise<rt>nɔɪz</rt></ruby>, <ruby>regard<rt>rɪˈɡɑːrd</rt></ruby> any <ruby>investigation<rt>ɪnˌvestɪˈɡeɪʃn</rt></ruby> of this <ruby>question<rt>ˈkwestʃn</rt></ruby> as a <ruby>waste<rt>weɪst</rt></ruby> of <ruby>time<rt>taɪm</rt></ruby>; they are not <ruby>prepared<rt>prɪˈperd</rt></ruby> <ruby>even<rt>ˈiːvn</rt></ruby> to <ruby>admit<rt>ədˈmɪt</rt></ruby> the <ruby>possibility<rt>ˌpɑːsəˈbɪləti</rt></ruby> that <ruby>noise<rt>nɔɪz</rt></ruby> <ruby>affects<rt>əˈfekts</rt></ruby> <ruby>people<rt>ˈpiːpl</rt></ruby>. On the other hand, those who <ruby>dislike<rt>dɪsˈlaɪk</rt></ruby> <ruby>noise<rt>nɔɪz</rt></ruby> will <ruby>sometimes<rt>ˈsʌmtaɪmz</rt></ruby> <ruby>use<rt>juːz</rt></ruby> most <ruby>inadequate<rt>ɪnˈædɪkwət</rt></ruby> <ruby>evidence<rt>ˈevɪdəns</rt></ruby> to <ruby>support<rt>səˈpɔːrt</rt></ruby> their <ruby>pleas<rt>pliːz</rt></ruby> for a <ruby>quieter<rt>ˈkwaɪətər</rt></ruby> <ruby>society<rt>səˈsaɪəti</rt></ruby>. This is a <ruby>pity<rt>ˈpɪti</rt></ruby>, because <ruby>noise<rt>nɔɪz</rt></ruby> <ruby>abatement<rt>əˈbeɪtmənt</rt></ruby> <ruby>really<rt>ˈriːəli</rt></ruby> is a <ruby>good<rt>ɡʊd</rt></ruby> <ruby>cause<rt>kɔːz</rt></ruby>, and it is <ruby>likely<rt>ˈlaɪkli</rt></ruby> to be <ruby>discredited<rt>dɪsˈkredɪtɪd</rt></ruby> if it gets to be <ruby>associated<rt>əˈsoʊʃieɪtɪd</rt></ruby> with <ruby>bad<rt>bæd</rt></ruby> <ruby>science<rt>ˈsaɪəns</rt></ruby>.</p>
+<p>One <ruby>allegation<rt>ˌælɪˈɡeɪʃn</rt></ruby> <ruby>often<rt>ˈɔːfn</rt></ruby> <ruby>made<rt>meɪd</rt></ruby> is that <ruby>noise<rt>nɔɪz</rt></ruby> <ruby>produces<rt>prəˈduːsɪz</rt></ruby> <ruby>mental<rt>ˈmentl</rt></ruby> <ruby>illness<rt>ˈɪlnəs</rt></ruby>. A <ruby>recent<rt>ˈriːsnt</rt></ruby> <ruby>article<rt>ˈɑːrtɪkl</rt></ruby> in a <ruby>weekly<rt>ˈwiːkli</rt></ruby> <ruby>newspaper<rt>ˈnuːzpeɪpər</rt></ruby>, for instance, was <ruby>headed<rt>ˈhedɪd</rt></ruby> with a <ruby>striking<rt>ˈstraɪkɪŋ</rt></ruby> <ruby>illustration<rt>ˌɪləˈstreɪʃn</rt></ruby> of a <ruby>lady<rt>ˈleɪdi</rt></ruby> in a <ruby>state<rt>steɪt</rt></ruby> of <ruby>considerable<rt>kənˈsɪdərəbl</rt></ruby> <ruby>distress<rt>dɪˈstres</rt></ruby>, with the <ruby>caption<rt>ˈkæpʃn</rt></ruby> "She was yet <ruby>another<rt>əˈnʌðər</rt></ruby> <ruby>victim<rt>ˈvɪktɪm</rt></ruby>, <ruby>reduced<rt>rɪˈduːst</rt></ruby> to a <ruby>screaming<rt>ˈskriːmɪŋ</rt></ruby> <ruby>wreck<rt>rek</rt></ruby>". On <ruby>turning<rt>ˈtɜːrnɪŋ</rt></ruby> <ruby>eagerly<rt>ˈiːɡərli</rt></ruby> to the <ruby>text<rt>tekst</rt></ruby>, one <ruby>learns<rt>lɜːrnz</rt></ruby> that the <ruby>lady<rt>ˈleɪdi</rt></ruby> was a <ruby>typist<rt>ˈtaɪpɪst</rt></ruby> who <ruby>found<rt>faʊnd</rt></ruby> the <ruby>sound<rt>saʊnd</rt></ruby> of <ruby>office<rt>ˈɔːfɪs</rt></ruby> <ruby>typewriters<rt>ˈtaɪpraɪtərz</rt></ruby> <ruby>worried<rt>ˈwɜːrid</rt></ruby> her <ruby>more<rt>mɔːr</rt></ruby> and <ruby>more<rt>mɔːr</rt></ruby> until <ruby>eventually<rt>ɪˈventʃuəli</rt></ruby> she had to <ruby>go<rt>ɡoʊ</rt></ruby> into a <ruby>mental<rt>ˈmentl</rt></ruby> <ruby>hospital<rt>ˈhɑːspɪtl</rt></ruby>. Now the <ruby>snag<rt>snæɡ</rt></ruby> in this <ruby>sort<rt>sɔːrt</rt></ruby> of <ruby>anecdote<rt>ˈænɪkdoʊt</rt></ruby> is of course that one cannot <ruby>distinguish<rt>dɪˈstɪŋɡwɪʃ</rt></ruby> <ruby>cause<rt>kɔːz</rt></ruby> and <ruby>effect<rt>ɪˈfekt</rt></ruby>. Was the <ruby>noise<rt>nɔɪz</rt></ruby> a <ruby>cause<rt>kɔːz</rt></ruby> of the <ruby>illness<rt>ˈɪlnəs</rt></ruby>, or were the <ruby>complaints<rt>kəmˈpleɪnts</rt></ruby> about <ruby>noise<rt>nɔɪz</rt></ruby> <ruby>merely<rt>ˈmɪrli</rt></ruby> a <ruby>symptom<rt>ˈsɪmptəm</rt></ruby>? <ruby>Another<rt>əˈnʌðər</rt></ruby> <ruby>patient<rt>ˈpeɪʃnt</rt></ruby> might <ruby>equally<rt>ˈiːkwəli</rt></ruby> well <ruby>complain<rt>kəmˈpleɪn</rt></ruby> that her <ruby>neighbours<rt>ˈneɪbərz</rt></ruby> were <ruby>combining<rt>kəmˈbaɪnɪŋ</rt></ruby> to <ruby>slander<rt>ˈslændər</rt></ruby> her and <ruby>persecute<rt>ˈpɜːrsɪkjuːt</rt></ruby> her, and yet one might be <ruby>cautious<rt>ˈkɔːʃəs</rt></ruby> about <ruby>believing<rt>bɪˈliːvɪŋ</rt></ruby> this <ruby>statement<rt>ˈsteɪtmənt</rt></ruby>.</p>
+<p>What is <ruby>needed<rt>ˈniːdɪd</rt></ruby> in the <ruby>case<rt>keɪs</rt></ruby> of <ruby>noise<rt>nɔɪz</rt></ruby> is a <ruby>study<rt>ˈstʌdi</rt></ruby> of <ruby>large<rt>lɑːrdʒ</rt></ruby> <ruby>numbers<rt>ˈnʌmbərz</rt></ruby> of <ruby>people<rt>ˈpiːpl</rt></ruby> <ruby>living<rt>ˈlɪvɪŋ</rt></ruby> under <ruby>noisy<rt>ˈnɔɪzi</rt></ruby> <ruby>conditions<rt>kənˈdɪʃnz</rt></ruby>, to <ruby>discover<rt>dɪˈskʌvər</rt></ruby> whether they are <ruby>mentally<rt>ˈmentəli</rt></ruby> <ruby>ill<rt>ɪl</rt></ruby> more <ruby>often<rt>ˈɔːfn</rt></ruby> than <ruby>other<rt>ˈʌðər</rt></ruby> <ruby>people<rt>ˈpiːpl</rt></ruby> are. Some <ruby>time<rt>taɪm</rt></ruby> <ruby>ago<rt>əˈɡoʊ</rt></ruby> the <ruby>United<rt>juˈnaɪtɪd</rt></ruby> <ruby>States<rt>steɪts</rt></ruby> <ruby>Navy<rt>ˈneɪvi</rt></ruby>, for instance, <ruby>examined<rt>ɪɡˈzæmɪnd</rt></ruby> a <ruby>very<rt>ˈveri</rt></ruby> <ruby>large<rt>lɑːrdʒ</rt></ruby> <ruby>number<rt>ˈnʌmbər</rt></ruby> of <ruby>men<rt>men</rt></ruby> <ruby>working<rt>ˈwɜːrkɪŋ</rt></ruby> on <ruby>aircraft<rt>ˈerkræft</rt></ruby> <ruby>carriers<rt>ˈkæriərz</rt></ruby>: the <ruby>study<rt>ˈstʌdi</rt></ruby> was <ruby>known<rt>noʊn</rt></ruby> as Project Anehin. It can be <ruby>unpleasant<rt>ʌnˈpleznt</rt></ruby> to <ruby>live<rt>lɪv</rt></ruby> <ruby>even<rt>ˈiːvn</rt></ruby> <ruby>several<rt>ˈsevrəl</rt></ruby> <ruby>miles<rt>maɪlz</rt></ruby> from an <ruby>aerodrome<rt>ˈerədroʊm</rt></ruby>; if you <ruby>think<rt>θɪŋk</rt></ruby> what it must be like to <ruby>share<rt>ʃer</rt></ruby> the <ruby>deck<rt>dek</rt></ruby> of a <ruby>ship<rt>ʃɪp</rt></ruby> with <ruby>several<rt>ˈsevrəl</rt></ruby> <ruby>squadrons<rt>ˈskwɑːdrənz</rt></ruby> of <ruby>jet<rt>dʒet</rt></ruby> <ruby>aircraft<rt>ˈerkræft</rt></ruby>, you will <ruby>realize<rt>ˈriːəlaɪz</rt></ruby> that a <ruby>modern<rt>ˈmɑːdərn</rt></ruby> <ruby>navy<rt>ˈneɪvi</rt></ruby> is a <ruby>good<rt>ɡʊd</rt></ruby> <ruby>place<rt>pleɪs</rt></ruby> to <ruby>study<rt>ˈstʌdi</rt></ruby> <ruby>noise<rt>nɔɪz</rt></ruby>. But neither <ruby>psychiatric<rt>ˌsaɪkiˈætrɪk</rt></ruby> <ruby>interviews<rt>ˈɪntərvjuːz</rt></ruby> nor <ruby>objective<rt>əbˈdʒektɪv</rt></ruby> <ruby>tests<rt>tests</rt></ruby> were <ruby>able<rt>ˈeɪbl</rt></ruby> to <ruby>show<rt>ʃoʊ</rt></ruby> any <ruby>effects<rt>ɪˈfekts</rt></ruby> upon these <ruby>American<rt>əˈmerɪkən</rt></ruby> <ruby>sailors<rt>ˈseɪlərz</rt></ruby>. This <ruby>result<rt>rɪˈzʌlt</rt></ruby> <ruby>merely<rt>ˈmɪrli</rt></ruby> <ruby>confirms<rt>kənˈfɜːrmz</rt></ruby> <ruby>earlier<rt>ˈɜːrliər</rt></ruby> <ruby>American<rt>əˈmerɪkən</rt></ruby> and <ruby>British<rt>ˈbrɪtɪʃ</rt></ruby> <ruby>studies<rt>ˈstʌdiz</rt></ruby>: if there is any <ruby>effect<rt>ɪˈfekt</rt></ruby> of <ruby>noise<rt>nɔɪz</rt></ruby> upon <ruby>mental<rt>ˈmentl</rt></ruby> <ruby>health<rt>helθ</rt></ruby>, it must be so <ruby>small<rt>smɔːl</rt></ruby> that <ruby>present<rt>ˈpreznt</rt></ruby> <ruby>methods<rt>ˈmeθədz</rt></ruby> of <ruby>psychiatric<rt>ˌsaɪkiˈætrɪk</rt></ruby> <ruby>diagnosis<rt>ˌdaɪəɡˈnoʊsɪs</rt></ruby> cannot <ruby>find<rt>faɪnd</rt></ruby> it. That does not <ruby>prove<rt>pruːv</rt></ruby> that it does not <ruby>exist<rt>ɪɡˈzɪst</rt></ruby>; but it does <ruby>mean<rt>miːn</rt></ruby> that <ruby>noise<rt>nɔɪz</rt></ruby> is less <ruby>dangerous<rt>ˈdeɪndʒərəs</rt></ruby> than, say, being <ruby>brought<rt>brɔːt</rt></ruby> up in an <ruby>orphanage<rt>ˈɔːrfənɪdʒ</rt></ruby> - which <ruby>really<rt>ˈriːəli</rt></ruby> is a <ruby>mental<rt>ˈmentl</rt></ruby> <ruby>health<rt>helθ</rt></ruby> <ruby>hazard<rt>ˈhæzərd</rt></ruby>.</p><p><span> D.E.布罗德本特（D.E.Broadbent）的科普短文</span></p><hr /><h2><a name="标题句" class="md-header-anchor"></a><span>标题句</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>Non-auditory[ˌnɑːnˈɔːdətɔːri] effects[ɪˈfekts] of noise[nɔɪz].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>non-auditory effects：非听觉效应、非听力方面的影响</span></li><li><span>effects of noise：噪音的影响</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>噪音的非听觉效应。</span></p><hr /><h2><a name="第-2-段" class="md-header-anchor"></a><span>第 2 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>What conclusion[kənˈkluːʒn] does the author[ˈɔːθər] draw[drɔː] about noise[nɔɪz] and health[helθ] in this piece[piːs]? Many[ˈmeni] people[ˈpiːpl] in industry[ˈɪndəstri] and the Services[ˈsɜːrvɪsɪz], who have practical[ˈpræktɪkl] experience[ɪkˈspɪriəns] of noise[nɔɪz], regard[rɪˈɡɑːrd] any investigation[ɪnˌvestɪˈɡeɪʃn] of this question[ˈkwestʃn] as a waste[weɪst] of time[taɪm]; they are not prepared[prɪˈperd] even[ˈiːvn] to admit[ədˈmɪt] the possibility[ˌpɑːsəˈbɪləti] that noise[nɔɪz] affects[əˈfekts] people[ˈpiːpl]. On the other hand, those who dislike[dɪsˈlaɪk] noise[nɔɪz] will sometimes[ˈsʌmtaɪmz] use[juːz] most inadequate[ɪnˈædɪkwət] evidence[ˈevɪdəns] to support[səˈpɔːrt] their pleas[pliːz] for a quieter[ˈkwaɪətər] society[səˈsaɪəti]. This is a pity[ˈpɪti], because noise[nɔɪz] abatement[əˈbeɪtmənt] really[ˈriːəli] is a good[ɡʊd] cause[kɔːz], and it is likely[ˈlaɪkli] to be discredited[dɪsˈkredɪtɪd] if it gets to be associated[əˈsoʊʃieɪtɪd] with bad[bæd] science[ˈsaɪəns].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>draw a conclusion：得出结论</span></li><li><span>in industry and the Services：在工业界和军界（武装部队）</span></li><li><span>practical experience：实际经验</span></li><li><span>regard sth as：把……视为</span></li><li><span>a waste of time：浪费时间</span></li><li><span>be prepared to do sth：愿意、准备做某事</span></li><li><span>admit the possibility：承认可能性</span></li><li><span>on the other hand：另一方面</span></li><li><span>inadequate evidence：不充分的证据</span></li><li><span>support one&#39;s pleas：支持某人的诉求</span></li><li><span>noise abatement：噪音治理、降噪</span></li><li><span>a good cause：正当的事业、好事</span></li><li><span>be likely to：很可能</span></li><li><span>be discredited：名誉受损、遭质疑</span></li><li><span>be associated with：与……相关联</span></li><li><span>bad science：糟糕的、不严谨的科学</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>作者在这篇文章中就噪音与健康得出了什么结论？工业界和军界那些对噪音有实际经验的人，往往把对这一问题的任何研究都视为浪费时间；他们甚至不愿意承认噪音会影响人这一可能性。另一方面，那些厌恶噪音的人有时会用极不充分的证据来支持他们希望社会更安静的诉求。这很可惜，因为降噪确实是一项正当的事业，而如果它与不严谨的科学扯上关系，就很可能名誉受损。</span></p><hr /><h2><a name="第-3-段" class="md-header-anchor"></a><span>第 3 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>One allegation[ˌælɪˈɡeɪʃn] often[ˈɔːfn] made[meɪd] is that noise[nɔɪz] produces[prəˈduːsɪz] mental[ˈmentl] illness[ˈɪlnəs]. A recent[ˈriːsnt] article[ˈɑːrtɪkl] in a weekly[ˈwiːkli] newspaper[ˈnuːzpeɪpər], for instance, was headed[ˈhedɪd] with a striking[ˈstraɪkɪŋ] illustration[ˌɪləˈstreɪʃn] of a lady[ˈleɪdi] in a state[steɪt] of considerable[kənˈsɪdərəbl] distress[dɪˈstres], with the caption[ˈkæpʃn] &quot;She was yet another[əˈnʌðər] victim[ˈvɪktɪm], reduced[rɪˈduːst] to a screaming[ˈskriːmɪŋ] wreck[rek]&quot;. On turning[ˈtɜːrnɪŋ] eagerly[ˈiːɡərli] to the text[tekst], one learns[lɜːrnz] that the lady[ˈleɪdi] was a typist[ˈtaɪpɪst] who found[faʊnd] the sound[saʊnd] of office[ˈɔːfɪs] typewriters[ˈtaɪpraɪtərz] worried[ˈwɜːrid] her more[mɔːr] and more[mɔːr] until eventually[ɪˈventʃuəli] she had to go[ɡoʊ] into a mental[ˈmentl] hospital[ˈhɑːspɪtl]. Now the snag[snæɡ] in this sort[sɔːrt] of anecdote[ˈænɪkdoʊt] is of course that one cannot distinguish[dɪˈstɪŋɡwɪʃ] cause[kɔːz] and effect[ɪˈfekt]. Was the noise[nɔɪz] a cause[kɔːz] of the illness[ˈɪlnəs], or were the complaints[kəmˈpleɪnts] about noise[nɔɪz] merely[ˈmɪrli] a symptom[ˈsɪmptəm]? Another[əˈnʌðər] patient[ˈpeɪʃnt] might equally[ˈiːkwəli] well complain[kəmˈpleɪn] that her neighbours[ˈneɪbərz] were combining[kəmˈbaɪnɪŋ] to slander[ˈslændər] her and persecute[ˈpɜːrsɪkjuːt] her, and yet one might be cautious[ˈkɔːʃəs] about believing[bɪˈliːvɪŋ] this statement[ˈsteɪtmənt].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>mental illness：精神疾病</span></li><li><span>for instance：例如</span></li><li><span>a striking illustration：一幅醒目的插图</span></li><li><span>a state of considerable distress：处于极度痛苦的状态</span></li><li><span>reduced to a screaming wreck：沦为一个尖叫崩溃的人</span></li><li><span>turn eagerly to the text：急切地翻到正文</span></li><li><span>office typewriters：办公室打字机</span></li><li><span>more and more：越来越、日益</span></li><li><span>a mental hospital：精神病院</span></li><li><span>the snag in：……中的麻烦、症结</span></li><li><span>this sort of：这种</span></li><li><span>of course：当然</span></li><li><strong><span>distinguish cause and effect</span></strong><span>：区分因与果</span></li><li><strong><span>complaints about</span></strong><span>：关于……的抱怨</span></li><li><span>equally well：同样地、也完全可以</span></li><li><span>combine to do sth：联合起来做某事</span></li><li><span>slander sb：诽谤某人</span></li><li><span>persecute sb：迫害某人</span></li><li><span>be cautious about：对……持谨慎态度</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>一个常被提出的说法是：噪音会导致精神疾病。例如，某周刊报纸上最近一篇文章配了一幅醒目的插图，画中一位女士处于极度痛苦的状态，配文是&quot;她又一次成了受害者，沦为一个尖叫崩溃的人&quot;。人们急切地翻到正文，才知道这位女士是名打字员，她觉得办公室打字机的声音越来越令她烦扰，直到最终不得不住进精神病院。当然，这类轶事的症结在于，人们无法区分因与果。是噪音导致了疾病，还是对噪音的抱怨仅仅是一种症状？另一位病人同样可能抱怨邻居们联合起来诽谤、迫害她，但我们对此说法却会谨慎对待。</span></p><hr /><h2><a name="第-4-段" class="md-header-anchor"></a><span>第 4 段</span></h2><p><strong><span># 1. 带美音音标</span></strong>
+<span>What is needed[ˈniːdɪd] in the case[keɪs] of noise[nɔɪz] is a study[ˈstʌdi] of large[lɑːrdʒ] numbers[ˈnʌmbərz] of people[ˈpiːpl] living[ˈlɪvɪŋ] under noisy[ˈnɔɪzi] conditions[kənˈdɪʃnz], to discover[dɪˈskʌvər] whether they are mentally[ˈmentəli] ill[ɪl] more often[ˈɔːfn] than other[ˈʌðər] people[ˈpiːpl] are. Some time[taɪm] ago[əˈɡoʊ] the United[juˈnaɪtɪd] States[steɪts] Navy[ˈneɪvi], for instance, examined[ɪɡˈzæmɪnd] a very[ˈveri] large[lɑːrdʒ] number[ˈnʌmbər] of men[men] working[ˈwɜːrkɪŋ] on aircraft[ˈerkræft] carriers[ˈkæriərz]: the study[ˈstʌdi] was known[noʊn] as Project Anehin. It can be unpleasant[ʌnˈpleznt] to live[lɪv] even[ˈiːvn] several[ˈsevrəl] miles[maɪlz] from an aerodrome[ˈerədroʊm]; if you think[θɪŋk] what it must be like to share[ʃer] the deck[dek] of a ship[ʃɪp] with several[ˈsevrəl] squadrons[ˈskwɑːdrənz] of jet[dʒet] aircraft[ˈerkræft], you will realize[ˈriːəlaɪz] that a modern[ˈmɑːdərn] navy[ˈneɪvi] is a good[ɡʊd] place[pleɪs] to study[ˈstʌdi] noise[nɔɪz]. But neither psychiatric[ˌsaɪkiˈætrɪk] interviews[ˈɪntərvjuːz] nor objective[əbˈdʒektɪv] tests[tests] were able[ˈeɪbl] to show[ʃoʊ] any effects[ɪˈfekts] upon these American[əˈmerɪkən] sailors[ˈseɪlərz]. This result[rɪˈzʌlt] merely[ˈmɪrli] confirms[kənˈfɜːrmz] earlier[ˈɜːrliər] American[əˈmerɪkən] and British[ˈbrɪtɪʃ] studies[ˈstʌdiz]: if there is any effect[ɪˈfekt] of noise[nɔɪz] upon mental[ˈmentl] health[helθ], it must be so small[smɔːl] that present[ˈpreznt] methods[ˈmeθədz] of psychiatric[ˌsaɪkiˈætrɪk] diagnosis[ˌdaɪəɡˈnoʊsɪs] cannot find[faɪnd] it. That does not prove[pruːv] that it does not exist[ɪɡˈzɪst]; but it does mean[miːn] that noise[nɔɪz] is less dangerous[ˈdeɪndʒərəs] than, say, being brought[brɔːt] up in an orphanage[ˈɔːrfənɪdʒ] - which really[ˈriːəli] is a mental[ˈmentl] health[helθ] hazard[ˈhæzərd].</span></p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>in the case of：就……而言</span></li><li><span>large numbers of：大量的</span></li><li><span>live under noisy conditions：生活在嘈杂环境中</span></li><li><span>mentally ill：精神患病</span></li><li><span>the United States Navy：美国海军</span></li><li><span>examine a large number of：考察大量……</span></li><li><span>aircraft carriers：航空母舰</span></li><li><span>known as：被称为</span></li><li><span>share the deck of a ship：同处一艘船的甲板</span></li><li><span>jet aircraft：喷气式飞机</span></li><li><span>a modern navy：现代海军</span></li><li><span>neither … nor …：既不……也不……</span></li><li><span>psychiatric interviews：精神科访谈</span></li><li><span>objective tests：客观测试</span></li><li><span>be able to show：能够显示</span></li><li><span>confirm earlier studies：印证此前的多项研究</span></li><li><span>present methods：现行方法</span></li><li><span>psychiatric diagnosis：精神科诊断</span></li><li><strong><span>prove that it does not exist</span></strong><span>：证明其并不存在</span></li><li><span>less dangerous than：比……危险性小</span></li><li><span>brought up in an orphanage：在孤儿院长大</span></li><li><span>mental health hazard：心理健康危害</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>就噪音而言，所需要的是对大量生活在嘈杂环境中的人进行研究，以查明他们是否比其他人更容易患精神疾病。例如，一段时间前，美国海军考察了在航空母舰上工作的极大量人员：这项研究被称为&quot;Anchin（原文 Anehin）计划&quot;。即便住在距离机场数英里之外也可能令人不快；如果你想想同一艘船的甲板上要容纳几个喷气式飞机中队是什么感受，你就会明白现代海军是研究噪音的好场所。但无论是精神科访谈还是客观测试，都无法显示这些美国水兵受到了任何影响。这一结果只是印证了美英两国的早期研究：即便噪音对心理健康有影响，它也一定小到现行的精神科诊断方法无法察觉。这并不能证明这种影响确实不存在；但它确实意味着，噪音的危害小于——比如说——在孤儿院长大，而那才真正是心理健康的危害。</span></p><hr /><h2><a name="来源署名" class="md-header-anchor"></a><span>来源署名</span></h2><p><strong><span>D.E. Broadbent, </span><em><span>Non-auditory effects of noise</span></em><span>, from </span><em><span>Science Survey</span></em><span>（科学纵览）</span></strong></p><h2><a name="备注" class="md-header-anchor"></a><span>备注</span></h2><ul><li><span>原文 </span><code>Project Anehin</code><span> 很可能为 </span><code>Project Anchin</code><span> 之误（也常写作 &quot;Project Anchin&quot;），音标行未标注该专名音标，译文按常见译名处理。</span></li></ul></div>
+</body>
+</html>
