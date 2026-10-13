@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>nce4_26_section</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h2><a name="地球的远古生命errol-white选自discovery）" class="md-header-anchor"></a><span>《地球的远古生命》（Errol White，选自《Discovery》）</span></h2><h2><a name="标题句" class="md-header-anchor"></a><span>标题句</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><style>
+    p { font-size: 20px;}
+    p rt { color: #AEADAE; font-size: 0.8em;}
+  </style>
+<p>The <ruby>past<rt>pæst</rt></ruby> <ruby>life<rt>laɪf</rt></ruby> of the <ruby>earth<rt>ɜːrθ</rt></ruby>.</p><p><strong><span># 3. 整句中文释义</span></strong>
+<span>地球的远古生命。</span></p><hr /><h2><a name="第-2-段" class="md-header-anchor"></a><span>第 2 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>What is the <ruby>main<rt>meɪn</rt></ruby> <ruby>condition<rt>kənˈdɪʃn</rt></ruby> for the <ruby>preservation<rt>ˌprezərˈveɪʃn</rt></ruby> of the <ruby>remains<rt>rɪˈmeɪnz</rt></ruby> of any <ruby>living<rt>ˈlɪvɪŋ</rt></ruby> <ruby>creature<rt>ˈkriːtʃər</rt></ruby>? It is <ruby>animals<rt>ˈænɪmlz</rt></ruby> and <ruby>plants<rt>plænts</rt></ruby> which <ruby>lived<rt>lɪvd</rt></ruby> in or near <ruby>water<rt>ˈwɔːtər</rt></ruby> whose <ruby>remains<rt>rɪˈmeɪnz</rt></ruby> are most <ruby>likely<rt>ˈlaɪkli</rt></ruby> to be <ruby>preserved<rt>prɪˈzɜːrvd</rt></ruby>, for one of the <ruby>necessary<rt>ˈnesəseri</rt></ruby> <ruby>conditions<rt>kənˈdɪʃnz</rt></ruby> of <ruby>preservation<rt>ˌprezərˈveɪʃn</rt></ruby> is <ruby>quick<rt>kwɪk</rt></ruby> <ruby>burial<rt>ˈberiəl</rt></ruby>, and it is only in the <ruby>seas<rt>siːz</rt></ruby> and <ruby>rivers<rt>ˈrɪvərz</rt></ruby>, and <ruby>sometimes<rt>ˈsʌmtaɪmz</rt></ruby> <ruby>lakes<rt>leɪks</rt></ruby>, where <ruby>mud<rt>mʌd</rt></ruby> and <ruby>silt<rt>sɪlt</rt></ruby> have been <ruby>continuously<rt>kənˈtɪnjuəsli</rt></ruby> <ruby>deposited<rt>dɪˈpɑːzɪtɪd</rt></ruby>, that <ruby>bodies<rt>ˈbɑːdiz</rt></ruby> and the like can be <ruby>rapidly<rt>ˈræpɪdli</rt></ruby> <ruby>covered<rt>ˈkʌvərd</rt></ruby> over and <ruby>preserved<rt>prɪˈzɜːrvd</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>the preservation of：……的保存</span></li><li><span>the remains of：……的遗骸/遗存</span></li><li><span>living creature：生物、活体</span></li><li><span>most likely to：最有可能</span></li><li><span>quick burial：快速掩埋</span></li><li><span>continuously deposited：不断沉积</span></li><li><span>bodies and the like：尸体等（之类的东西）</span></li><li><span>covered over：被覆盖</span></li><li><span>main condition：主要条件</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>保存任何生物遗骸的主要条件是什么？最有可能被保存下来的是生活在水里或水边的动植物遗骸，因为保存的必要条件之一是快速掩埋，而只有在海洋、河流、有时还有湖泊中，泥沙持续沉积，尸体之类的东西才能被迅速覆盖并保存下来。</span></p><hr /><h2><a name="第-3-段" class="md-header-anchor"></a><span>第 3 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>But <ruby>even<rt>ˈiːvn</rt></ruby> in the most <ruby>favourable<rt>ˈfeɪvərəbl</rt></ruby> <ruby>circumstances<rt>ˈsɜːrkəmstænsɪz</rt></ruby> only a <ruby>small<rt>smɔːl</rt></ruby> <ruby>fraction<rt>ˈfrækʃn</rt></ruby> of the <ruby>creatures<rt>ˈkriːtʃərz</rt></ruby> that <ruby>die<rt>daɪ</rt></ruby> are <ruby>preserved<rt>prɪˈzɜːrvd</rt></ruby> in this <ruby>way<rt>weɪ</rt></ruby> before <ruby>decay<rt>dɪˈkeɪ</rt></ruby> <ruby>sets<rt>sets</rt></ruby> in or, even more <ruby>likely<rt>ˈlaɪkli</rt></ruby>, before <ruby>scavengers<rt>ˈskævɪndʒərz</rt></ruby> <ruby>eat<rt>iːt</rt></ruby> them. After all, all <ruby>living<rt>ˈlɪvɪŋ</rt></ruby> <ruby>creatures<rt>ˈkriːtʃərz</rt></ruby> <ruby>live<rt>lɪv</rt></ruby> by <ruby>feeding<rt>ˈfiːdɪŋ</rt></ruby> on <ruby>something<rt>ˈsʌmθɪŋ</rt></ruby> <ruby>else<rt>els</rt></ruby>, whether it be <ruby>plant<rt>plænt</rt></ruby> or <ruby>animal<rt>ˈænɪml</rt></ruby>, <ruby>dead<rt>ded</rt></ruby> or <ruby>alive<rt>əˈlaɪv</rt></ruby>, and it is only by <ruby>chance<rt>tʃæns</rt></ruby> that such a <ruby>fate<rt>feɪt</rt></ruby> is <ruby>avoided<rt>əˈvɔɪdɪd</rt></ruby>. The <ruby>remains<rt>rɪˈmeɪnz</rt></ruby> of <ruby>plants<rt>plænts</rt></ruby> and <ruby>animals<rt>ˈænɪmlz</rt></ruby> that <ruby>lived<rt>lɪvd</rt></ruby> on <ruby>land<rt>lænd</rt></ruby> are much more <ruby>rarely<rt>ˈrerli</rt></ruby> <ruby>preserved<rt>prɪˈzɜːrvd</rt></ruby>, for there is <ruby>seldom<rt>ˈseldəm</rt></ruby> anything to <ruby>cover<rt>ˈkʌvər</rt></ruby> them over. When you <ruby>think<rt>θɪŋk</rt></ruby> of the <ruby>innumerable<rt>ɪˈnuːmərəbl</rt></ruby> <ruby>birds<rt>bɜːrdz</rt></ruby> that one <ruby>sees<rt>siːz</rt></ruby> <ruby>flying<rt>ˈflaɪɪŋ</rt></ruby> about, not to mention the <ruby>equally<rt>ˈiːkwəli</rt></ruby> <ruby>numerous<rt>ˈnuːmərəs</rt></ruby> <ruby>small<rt>smɔːl</rt></ruby> <ruby>animals<rt>ˈænɪmlz</rt></ruby> like <ruby>field<rt>fiːld</rt></ruby> <ruby>mice<rt>maɪs</rt></ruby> and <ruby>voles<rt>voʊlz</rt></ruby> which you do not <ruby>see<rt>siː</rt></ruby>, it is very <ruby>rarely<rt>ˈrerli</rt></ruby> that one <ruby>comes<rt>kʌmz</rt></ruby> across a <ruby>dead<rt>ded</rt></ruby> <ruby>body<rt>ˈbɑːdi</rt></ruby>, except, of course, on the <ruby>roads<rt>roʊdz</rt></ruby>. They <ruby>decompose<rt>ˌdiːkəmˈpoʊz</rt></ruby> and are <ruby>quickly<rt>ˈkwɪkli</rt></ruby> <ruby>destroyed<rt>dɪˈstrɔɪd</rt></ruby> by the <ruby>weather<rt>ˈweðər</rt></ruby> or <ruby>eaten<rt>ˈiːtn</rt></ruby> by some <ruby>other<rt>ˈʌðər</rt></ruby> <ruby>creature<rt>ˈkriːtʃər</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>favourable circumstances：有利的环境/条件</span></li><li><span>a small fraction of：一小部分</span></li><li><span>decay sets in：腐烂开始、开始分解</span></li><li><span>scavengers：食腐动物</span></li><li><span>after all：毕竟</span></li><li><span>feed on：以……为食</span></li><li><span>dead or alive：死的或活的</span></li><li><span>by chance：偶然、碰巧</span></li><li><span>such a fate is avoided：这种命运得以避免</span></li><li><span>live on land：生活在陆地上</span></li><li><span>rarely preserved：很少被保存</span></li><li><span>innumerable birds：数不清的鸟</span></li><li><span>flying about：四处飞翔</span></li><li><span>not to mention：更不用说</span></li><li><span>field mice：田鼠</span></li><li><span>voles：鼩鼱类、田鼠类小动物</span></li><li><span>come across：偶然遇到</span></li><li><span>dead body：尸体</span></li><li><span>decompose：腐烂分解</span></li><li><span>destroyed by the weather：被风雨破坏</span></li><li><span>eaten by some other creature：被其他生物吃掉</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>但即便在最有利的条件下，也只有在腐烂开始之前——或更可能的是，在食腐动物吃掉它们之前——死亡生物中只有一小部分能以这种方式保存下来。毕竟，所有生物都以捕食其他生物为生，无论对方是植物还是动物、死的还是活的；而避免这种命运纯属偶然。生活在陆地上的动植物遗骸要罕见得多，因为很少有东西能把它们覆盖。想想你看到四处飞翔的数不清的鸟，更不用说那些你看不到的同样数量众多的田鼠、鼩鼱等小动物，你极少会遇到一具尸体——当然，除非在公路上。它们会腐烂，迅速被风雨破坏，或被其他生物吃掉。</span></p><hr /><h2><a name="第-4-段" class="md-header-anchor"></a><span>第 4 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>It is <ruby>almost<rt>ˈɔːlmoʊst</rt></ruby> <ruby>always<rt>ˈɔːlweɪz</rt></ruby> due to some <ruby>very<rt>ˈveri</rt></ruby> <ruby>special<rt>ˈspeʃl</rt></ruby> <ruby>circumstances<rt>ˈsɜːrkəmstænsɪz</rt></ruby> that <ruby>traces<rt>ˈtreɪsɪz</rt></ruby> of <ruby>land<rt>lænd</rt></ruby> <ruby>animals<rt>ˈænɪmlz</rt></ruby> <ruby>survive<rt>sərˈvaɪv</rt></ruby>, as by <ruby>falling<rt>ˈfɔːlɪŋ</rt></ruby> into <ruby>inaccessible<rt>ˌɪnækˈsesəbl</rt></ruby> <ruby>caves<rt>keɪvz</rt></ruby>, or into an <ruby>ice<rt>aɪs</rt></ruby> <ruby>crevasse<rt>krəˈvæs</rt></ruby>, like the <ruby>Siberian<rt>saɪˈbɪriən</rt></ruby> <ruby>mammoths<rt>ˈmæməθs</rt></ruby>, when the <ruby>whole<rt>hoʊl</rt></ruby> <ruby>animal<rt>ˈænɪml</rt></ruby> is <ruby>sometimes<rt>ˈsʌmtaɪmz</rt></ruby> <ruby>preserved<rt>prɪˈzɜːrvd</rt></ruby>, as in a <ruby>refrigerator<rt>rɪˈfrɪdʒəreɪtər</rt></ruby>. This is what <ruby>happened<rt>ˈhæpənd</rt></ruby> to the <ruby>famous<rt>ˈfeɪməs</rt></ruby> <ruby>Beresovka<rt>ˌberɪˈsɒvkə</rt></ruby> <ruby>mammoth<rt>ˈmæməθ</rt></ruby> which was <ruby>found<rt>faʊnd</rt></ruby> <ruby>preserved<rt>prɪˈzɜːrvd</rt></ruby> and in <ruby>good<rt>ɡʊd</rt></ruby> <ruby>condition<rt>kənˈdɪʃn</rt></ruby>. In his <ruby>mouth<rt>maʊθ</rt></ruby> were the <ruby>remains<rt>rɪˈmeɪnz</rt></ruby> of <ruby>fir<rt>fɜːr</rt></ruby> <ruby>trees<rt>triːz</rt></ruby> - the <ruby>last<rt>læst</rt></ruby> <ruby>meal<rt>miːl</rt></ruby> that he had before he <ruby>fell<rt>fel</rt></ruby> into the <ruby>crevasse<rt>krəˈvæs</rt></ruby> and <ruby>broke<rt>broʊk</rt></ruby> his <ruby>back<rt>bæk</rt></ruby>. The <ruby>mammoth<rt>ˈmæməθ</rt></ruby> has now been <ruby>restored<rt>rɪˈstɔːrd</rt></ruby> in the <ruby>Palaeontological<rt>ˌpæliˌɒntəˈlɒdʒɪkl</rt></ruby> <ruby>Museum<rt>mjuˈziːəm</rt></ruby> in St. Petersburg. <ruby>Other<rt>ˈʌðər</rt></ruby> <ruby>animals<rt>ˈænɪmlz</rt></ruby> were <ruby>trapped<rt>træpt</rt></ruby> in <ruby>tar<rt>tɑːr</rt></ruby> <ruby>pits<rt>pɪts</rt></ruby>, like the <ruby>elephants<rt>ˈelɪfənts</rt></ruby>, sabre-<ruby>toothed<rt>ˌseɪbərˈtuːθt</rt></ruby> <ruby>cats<rt>kæts</rt></ruby>, and <ruby>numerous<rt>ˈnuːmərəs</rt></ruby> <ruby>other<rt>ˈʌðər</rt></ruby> <ruby>creatures<rt>ˈkriːtʃərz</rt></ruby> that are <ruby>found<rt>faʊnd</rt></ruby> at <ruby>Rancho<rt>ˈræntʃoʊ</rt></ruby> la <ruby>Brea<rt>lɑː ˈbreɪə</rt></ruby>, which is now just a <ruby>suburb<rt>ˈsʌbɜːrb</rt></ruby> of Los <ruby>Angeles<rt>lɔːs ˈændʒələs</rt></ruby>. <ruby>Apparently<rt>əˈpærəntli</rt></ruby> what <ruby>happened<rt>ˈhæpənd</rt></ruby> was that <ruby>water<rt>ˈwɔːtər</rt></ruby> <ruby>collected<rt>kəˈlektɪd</rt></ruby> on these <ruby>tar<rt>tɑːr</rt></ruby> <ruby>pits<rt>pɪts</rt></ruby>, and the <ruby>bigger<rt>ˈbɪɡər</rt></ruby> <ruby>animals<rt>ˈænɪmlz</rt></ruby> like the <ruby>elephants<rt>ˈelɪfənts</rt></ruby> <ruby>ventured<rt>ˈventʃərd</rt></ruby> out on to the <ruby>apparently<rt>əˈpærəntli</rt></ruby> <ruby>firm<rt>fɜːrm</rt></ruby> <ruby>surface<rt>ˈsɜːrfɪs</rt></ruby> to <ruby>drink<rt>drɪŋk</rt></ruby>, and were <ruby>promptly<rt>ˈprɑːmptli</rt></ruby> <ruby>bogged<rt>bɑːɡd</rt></ruby> in the <ruby>tar<rt>tɑːr</rt></ruby>. And then, when they were <ruby>dead<rt>ded</rt></ruby>, the <ruby>carnivores<rt>ˈkɑːrnɪvɔːrz</rt></ruby>, like the sabre-<ruby>toothed<rt>ˌseɪbərˈtuːθt</rt></ruby> <ruby>cats<rt>kæts</rt></ruby> and the <ruby>giant<rt>ˈdʒaɪənt</rt></ruby> <ruby>wolves<rt>wʊlvz</rt></ruby>, <ruby>came<rt>keɪm</rt></ruby> out to <ruby>feed<rt>fiːd</rt></ruby> and <ruby>suffered<rt>ˈsʌfərd</rt></ruby> <ruby>exactly<rt>ɪɡˈzæktli</rt></ruby> the <ruby>same<rt>seɪm</rt></ruby> <ruby>fate<rt>feɪt</rt></ruby>. There are <ruby>also<rt>ˈɔːlsoʊ</rt></ruby> <ruby>endless<rt>ˈendləs</rt></ruby> <ruby>numbers<rt>ˈnʌmbərz</rt></ruby> of <ruby>birds<rt>bɜːrdz</rt></ruby> in the <ruby>tar<rt>tɑːr</rt></ruby> as well.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>due to：由于</span></li><li><span>traces of：……的痕迹/踪迹</span></li><li><span>land animals：陆地动物</span></li><li><span>inaccessible caves：难以到达的洞穴</span></li><li><span>ice crevasse：冰川裂隙</span></li><li><span>Siberian mammoths：西伯利亚猛犸象</span></li><li><span>in a refrigerator：如同在冰箱里</span></li><li><span>in good condition：保存状况良好</span></li><li><span>fir trees：冷杉树</span></li><li><span>the last meal：最后一餐</span></li><li><span>fell into the crevasse：掉进裂隙</span></li><li><span>broke his back：摔断了脊背</span></li><li><span>restored in the museum：在博物馆中被复原</span></li><li><span>Palaeontological Museum：古生物学博物馆</span></li><li><span>St. Petersburg：圣彼得堡</span></li><li><span>tar pits：沥青坑、焦油坑</span></li><li><span>sabre-toothed cats：剑齿虎</span></li><li><span>numerous other creatures：许多其他生物</span></li><li><span>a suburb of：……的郊区</span></li><li><span>Los Angeles：洛杉矶</span></li><li><span>venture out：冒险出去</span></li><li><span>a firm surface：坚硬的表面</span></li><li><span>promptly bogged in the tar：立即陷入焦油中</span></li><li><span>carnivores：食肉动物</span></li><li><span>giant wolves：巨型狼</span></li><li><span>suffered the same fate：遭遇同样的命运</span></li><li><span>endless numbers of：无数的</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>几乎总是由于某些非常特殊的处境，陆地动物的踪迹才能幸存下来——比如掉进难以到达的洞穴，或掉进冰川裂隙，就像西伯利亚猛犸象那样，有时整头动物像放在冰箱里一样被保存下来。著名的别廖佐夫卡猛犸象（Beresovka mammoth）就是这样，被发现时保存完好、状况良好。它的嘴里还有冷杉树的残枝——那是它掉进裂隙、摔断脊背前的最后一餐。这头猛犸象如今已在圣彼得堡的古生物学博物馆中被复原。其他动物则被困在焦油坑中，比如在兰乔拉布雷亚（Rancho la Brea，如今只是洛杉矶的一个郊区）发现的大象、剑齿虎和许多其他生物。显然当时的情况是：这些焦油坑上积了水，较大的动物如大象冒险踏上看似坚硬的表面去喝水，随即陷入焦油中被困。而当它们死后，剑齿虎、巨型狼之类的食肉动物出来觅食，也同样遭遇了相同的命运。焦油中还有数不清的鸟。</span></p><hr /><h2><a name="来源署名" class="md-header-anchor"></a><span>来源署名</span></h2><p><strong><span>Errol White（埃罗尔·怀特），《地球的远古生命》，选自《发现》（Discovery）</span></strong></p></div>
+</body>
+</html>
