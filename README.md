@@ -20,4 +20,6 @@
 - [x_bbc_ChemistryNobelawarded_ruby.html](x_bbc_ChemistryNobelawarded_ruby.html)
 - [nce4_25_ruby](nce4_25_ruby.html)
 - [nce4_26_section](nce4_26_section.html)
-- [nce4_27_section](nce4_27_section.html)nce4_27_section
+- [nce4_27_section](nce4_27_section.html)
+- [newscientist_ai_section.html](newscientist_ai_section.html.html)
+- [newscientist_OpenAImistranslatedmathematics_section](newscientist_OpenAImistranslatedmathematics_section.html)

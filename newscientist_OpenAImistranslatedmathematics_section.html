@@ -1,0 +1,637 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>newscientist_OpenAImistranslatedmathematics_section</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  	font-size: 1.5rem;
+ 	top: 0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><p><span>OpenAImistranslatedmathematics</span></p><h1><a name="1-带美音音标原文" class="md-header-anchor"></a><span>1. 带美音音标原文</span></h1><style>
+    p { font-size: 20px;}
+    p rt { color: #b45309; font-size: 0.8em;}
+  </style>
+<p>OpenAI <ruby>mistranslated<rt>ˌmɪstrænzˈleɪtɪd</rt></ruby> <ruby>mathematics<rt>ˌmæθəˈmætɪks</rt></ruby> into <ruby>code<rt>koʊd</rt></ruby> for its Navier-<ruby>Stokes<rt>nævˈjeɪ stoʊks</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby></p>
+<p>OpenAI <ruby>appears<rt>əˈpɪrz</rt></ruby> to have <ruby>made<rt>meɪd</rt></ruby> a <ruby>subtle<rt>ˈsʌtl</rt></ruby> <ruby>error<rt>ˈerər</rt></ruby> when <ruby>publishing<rt>ˈpʌblɪʃɪŋ</rt></ruby> its <ruby>proofs<rt>pruːfs</rt></ruby> of the Navier-<ruby>Stokes<rt>nævˈjeɪ stoʊks</rt></ruby> <ruby>problem<rt>ˈprɑːbləm</rt></ruby>, a <ruby>team<rt>tiːm</rt></ruby> of <ruby>mathematicians<rt>ˌmæθəməˈtɪʃnz</rt></ruby> has <ruby>claimed<rt>kleɪmd</rt></ruby>. The <ruby>error<rt>ˈerər</rt></ruby> doesn't mean that the <ruby>proofs<rt>pruːfs</rt></ruby> are <ruby>incorrect<rt>ˌɪnkəˈrekt</rt></ruby> or that OpenAI hasn't <ruby>correctly<rt>kəˈrektli</rt></ruby> <ruby>solved<rt>sɑːlvd</rt></ruby> the <ruby>problem<rt>ˈprɑːbləm</rt></ruby>, but it does <ruby>call<rt>kɔːl</rt></ruby> into <ruby>question<rt>ˈkwestʃən</rt></ruby> whether <ruby>mathematical<rt>ˌmæθəˈmætɪkl</rt></ruby> <ruby>results<rt>rɪˈzʌlts</rt></ruby> <ruby>generated<rt>ˈdʒenəreɪtɪd</rt></ruby> by AI <ruby>models<rt>ˈmɑːdlz</rt></ruby> can <ruby>always<rt>ˈɔːlweɪz</rt></ruby> be <ruby>relied<rt>rɪˈlaɪd</rt></ruby> on.</p>
+<p>"What has to be <ruby>done<rt>dʌn</rt></ruby> with all of these <ruby>large<rt>lɑːrdʒ</rt></ruby> <ruby>language<rt>ˈlæŋɡwɪdʒ</rt></ruby> model-generated <ruby>proofs<rt>pruːfs</rt></ruby> is that they will have to be <ruby>read<rt>red</rt></ruby> by <ruby>humans<rt>ˈhjuːmənz</rt></ruby>, and this <ruby>creates<rt>kriˈeɪts</rt></ruby> an <ruby>enormous<rt>ɪˈnɔːrməs</rt></ruby> <ruby>extra<rt>ˈekstrə</rt></ruby> <ruby>burden<rt>ˈbɜːrdn</rt></ruby> on <ruby>mathematicians<rt>ˌmæθəməˈtɪʃnz</rt></ruby>," says Anders Hansen at the <ruby>University<rt>ˌjuːnɪˈvɜːrsəti</rt></ruby> of <ruby>Cambridge<rt>ˈkeɪmbrɪdʒ</rt></ruby>.</p>
+<p>On 8 <ruby>September<rt>sepˈtembər</rt></ruby>, OpenAI <ruby>announced<rt>əˈnaʊnst</rt></ruby> that it had <ruby>found<rt>faʊnd</rt></ruby> a <ruby>solution<rt>səˈluːʃn</rt></ruby> to the Navier-<ruby>Stokes<rt>nævˈjeɪ stoʊks</rt></ruby> <ruby>problem<rt>ˈprɑːbləm</rt></ruby>, one of the most <ruby>famous<rt>ˈfeɪməs</rt></ruby> <ruby>open<rt>ˈoʊpən</rt></ruby> <ruby>problems<rt>ˈprɑːbləmz</rt></ruby> in <ruby>mathematics<rt>ˌmæθəˈmætɪks</rt></ruby>. It <ruby>published<rt>ˈpʌblɪʃt</rt></ruby> the <ruby>proof<rt>pruːf</rt></ruby> in two <ruby>versions<rt>ˈvɜːrʒnz</rt></ruby> – one <ruby>written<rt>ˈrɪtn</rt></ruby> in "<ruby>natural<rt>ˈnætʃrəl</rt></ruby> <ruby>language<rt>ˈlæŋɡwɪdʒ</rt></ruby>", <ruby>meaning<rt>ˈmiːnɪŋ</rt></ruby> a <ruby>combination<rt>ˌkɑːmbɪˈneɪʃn</rt></ruby> of <ruby>English<rt>ˈɪŋɡlɪʃ</rt></ruby> and <ruby>mathematical<rt>ˌmæθəˈmætɪkl</rt></ruby> <ruby>symbols<rt>ˈsɪmblz</rt></ruby>, as a <ruby>human<rt>ˈhjuːmən</rt></ruby> <ruby>mathematician<rt>ˌmæθəməˈtɪʃn</rt></ruby> would <ruby>write<rt>raɪt</rt></ruby>, and another <ruby>written<rt>ˈrɪtn</rt></ruby> in the <ruby>computer<rt>kəmˈpjuːtər</rt></ruby> <ruby>code<rt>koʊd</rt></ruby> <ruby>Lean<rt>liːn</rt></ruby>. The <ruby>Lean<rt>liːn</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby> is meant to be a <ruby>formalisation<rt>ˌfɔːrmələˈzeɪʃn</rt></ruby> of the natural-<ruby>language<rt>ˈnætʃrəl ˈlæŋɡwɪdʒ</rt></ruby> <ruby>version<rt>ˈvɜːrʒn</rt></ruby>, <ruby>allowing<rt>əˈlaʊɪŋ</rt></ruby> a <ruby>computer<rt>kəmˈpjuːtər</rt></ruby> to <ruby>mechanically<rt>məˈkænɪkli</rt></ruby> <ruby>verify<rt>ˈverɪfaɪ</rt></ruby> that all of its <ruby>logical<rt>ˈlɑːdʒɪkl</rt></ruby> <ruby>statements<rt>ˈsteɪtmənts</rt></ruby> are <ruby>true<rt>truː</rt></ruby>. The <ruby>problem<rt>ˈprɑːbləm</rt></ruby> is, say Hansen and his <ruby>team<rt>tiːm</rt></ruby>, that they don't <ruby>match<rt>mætʃ</rt></ruby>.</p>
+<p>"This <ruby>formalisation<rt>ˌfɔːrmələˈzeɪʃn</rt></ruby> <ruby>process<rt>ˈprɑːses</rt></ruby> is <ruby>trying<rt>ˈtraɪɪŋ</rt></ruby> to <ruby>replace<rt>rɪˈpleɪs</rt></ruby> <ruby>peer<rt>pɪr</rt></ruby> <ruby>review<rt>rɪˈvjuː</rt></ruby>," says <ruby>team<rt>tiːm</rt></ruby> <ruby>member<rt>ˈmembər</rt></ruby> Fabian Circelli, also at the <ruby>University<rt>ˌjuːnɪˈvɜːrsəti</rt></ruby> of <ruby>Cambridge<rt>ˈkeɪmbrɪdʒ</rt></ruby>. "<ruby>Peer<rt>pɪr</rt></ruby> <ruby>review<rt>rɪˈvjuː</rt></ruby> would mean that <ruby>human<rt>ˈhjuːmən</rt></ruby> <ruby>eyes<rt>aɪz</rt></ruby> <ruby>look<rt>lʊk</rt></ruby> at the <ruby>proofs<rt>pruːfs</rt></ruby>. But what we've <ruby>shown<rt>ʃoʊn</rt></ruby> in this <ruby>paper<rt>ˈpeɪpər</rt></ruby> is that <ruby>using<rt>ˈjuːzɪŋ</rt></ruby> this <ruby>type<rt>taɪp</rt></ruby> of AI auto-<ruby>formalisation<rt>ˌɔːtoʊ ˌfɔːrmələˈzeɪʃn</rt></ruby> can't <ruby>serve<rt>sɜːrv</rt></ruby> the same <ruby>purpose<rt>ˈpɜːrpəs</rt></ruby>."</p>
+<p>**The most <ruby>interesting<rt>ˈɪntrəstɪŋ</rt></ruby> <ruby>mathematical<rt>ˌmæθəˈmætɪkl</rt></ruby> <ruby>discoveries<rt>dɪˈskʌvəriz</rt></ruby> in OpenAI's 722 <ruby>new<rt>nuː</rt></ruby> <ruby>papers<rt>ˈpeɪpərz</rt></ruby>**</p>
+<p>To be <ruby>clear<rt>klɪr</rt></ruby>, the <ruby>researchers<rt>rɪˈsɜːrtʃərz</rt></ruby> aren't <ruby>saying<rt>ˈseɪɪŋ</rt></ruby> that OpenAI has <ruby>failed<rt>feɪld</rt></ruby> to <ruby>solve<rt>sɑːlv</rt></ruby> the Navier-<ruby>Stokes<rt>nævˈjeɪ stoʊks</rt></ruby> <ruby>problem<rt>ˈprɑːbləm</rt></ruby>. It is <ruby>entirely<rt>ɪnˈtaɪərli</rt></ruby> <ruby>possible<rt>ˈpɑːsəbl</rt></ruby> that both the natural-<ruby>language<rt>ˈnætʃrəl ˈlæŋɡwɪdʒ</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby> and the <ruby>Lean<rt>liːn</rt></ruby> one <ruby>provide<rt>prəˈvaɪd</rt></ruby> a <ruby>solution<rt>səˈluːʃn</rt></ruby>, just as there are <ruby>hundreds<rt>ˈhʌndrədz</rt></ruby> of <ruby>valid<rt>ˈvælɪd</rt></ruby> <ruby>proofs<rt>pruːfs</rt></ruby> of Pythagoras<ruby>'s<rt>pɪˈθæɡərəsɪz</rt></ruby> <ruby>theorem<rt>ˈθɪrəm</rt></ruby>. <ruby>Instead<rt>ɪnˈsted</rt></ruby>, their <ruby>point<rt>pɔɪnt</rt></ruby> is a more <ruby>subtle<rt>ˈsʌtl</rt></ruby> one: that OpenAI's <ruby>model<rt>ˈmɑːdl</rt></ruby> has "mistranslated"[ˌmɪstrænzˈleɪtɪd] when <ruby>converting<rt>kənˈvɜːrtɪŋ</rt></ruby> into <ruby>Lean<rt>liːn</rt></ruby>.</p>
+<p>"We are not <ruby>saying<rt>ˈseɪɪŋ</rt></ruby> that the natural-<ruby>language<rt>ˈnætʃrəl ˈlæŋɡwɪdʒ</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby> is <ruby>wrong<rt>rɔːŋ</rt></ruby>," says Hansen. "Nor do we <ruby>say<rt>seɪ</rt></ruby> that it is <ruby>correct<rt>kəˈrekt</rt></ruby>." The <ruby>issue<rt>ˈɪʃuː</rt></ruby> is that OpenAI <ruby>presents<rt>prɪˈvents</rt></ruby> the two <ruby>proofs<rt>pruːfs</rt></ruby> as <ruby>identical<rt>aɪˈdentɪkl</rt></ruby>, <ruby>stating<rt>ˈsteɪtɪŋ</rt></ruby> on <ruby>Github<rt>ˈɡɪthʌb</rt></ruby> that "This <ruby>repository<rt>rɪˈpɑːzətɔːri</rt></ruby> <ruby>contains<rt>kənˈteɪnz</rt></ruby> <ruby>Lean<rt>liːn</rt></ruby> 4 <ruby>formalizations<rt>ˌfɔːrmələˈzeɪʃnz</rt></ruby> of the <ruby>results<rt>rɪˈzʌlts</rt></ruby> <ruby>presented<rt>prɪˈzentɪd</rt></ruby> in [the <ruby>paper<rt>ˈpeɪpər</rt></ruby>] <ruby>'Finite<rt>ˈfaɪnaɪt</rt></ruby> <ruby>time<rt>taɪm</rt></ruby> <ruby>blowup<rt>ˈbloʊʌp</rt></ruby> for Navier–<ruby>Stokes<rt>nævˈjeɪ stoʊks</rt></ruby>'".</p>
+<p>This <ruby>mistranslation<rt>ˌmɪstrænzˈleɪʃn</rt></ruby> <ruby>occurs<rt>əˈkɜːrz</rt></ruby> because the AI has to <ruby>produce<rt>prəˈduːs</rt></ruby> a <ruby>Lean<rt>liːn</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby> that "<ruby>compiles<rt>kəmˈpaɪlz</rt></ruby>", <ruby>meaning<rt>ˈmiːnɪŋ</rt></ruby> that the <ruby>computer<rt>kəmˈpjuːtər</rt></ruby> <ruby>code<rt>koʊd</rt></ruby> is <ruby>fully<rt>ˈfʊli</rt></ruby> self-<ruby>consistent<rt>ˌself kənˈsɪstənt</rt></ruby> and doesn't <ruby>produce<rt>prəˈduːs</rt></ruby> an <ruby>error<rt>ˈerər</rt></ruby>, says Hansen. If, in the <ruby>process<rt>ˈprɑːses</rt></ruby> of auto-<ruby>formalisation<rt>ˌɔːtoʊ ˌfɔːrmələˈzeɪʃn</rt></ruby>, the AI <ruby>finds<rt>faɪndz</rt></ruby> a <ruby>section<rt>ˈsekʃn</rt></ruby> of the <ruby>proof<rt>pruːf</rt></ruby> that doesn't <ruby>compile<rt>kəmˈpaɪl</rt></ruby>, it will <ruby>attempt<rt>əˈtempt</rt></ruby> to <ruby>find<rt>faɪnd</rt></ruby> a <ruby>workaround<rt>ˈwɜːrkəraʊnd</rt></ruby> even if it means <ruby>diverging<rt>daɪˈvɜːrdʒɪŋ</rt></ruby> from the <ruby>proof<rt>pruːf</rt></ruby> as <ruby>written<rt>ˈrɪtn</rt></ruby> in <ruby>natural<rt>ˈnætʃrəl</rt></ruby> <ruby>language<rt>ˈlæŋɡwɪdʒ</rt></ruby>.</p>
+<p>**OpenAI has <ruby>dumped<rt>dʌmpt</rt></ruby> 722 <ruby>maths<rt>mæθs</rt></ruby> <ruby>papers<rt>ˈpeɪpərz</rt></ruby> – now it must <ruby>clean<rt>kliːn</rt></ruby> up the <ruby>mess<rt>mes</rt></ruby>**</p>
+<p>The team's <ruby>specific<rt>spəˈsɪfɪk</rt></ruby> <ruby>claim<rt>kleɪm</rt></ruby> <ruby>hinges<rt>ˈhɪndʒɪz</rt></ruby> on <ruby>part<rt>pɑːrt</rt></ruby> of the <ruby>proofs<rt>pruːfs</rt></ruby> <ruby>called<rt>kɔːld</rt></ruby> <ruby>Lemma<rt>ˈlemə</rt></ruby> 8.6. In the natural-<ruby>language<rt>ˈnætʃrəl ˈlæŋɡwɪdʒ</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby>, an <ruby>equation<rt>ɪˈkweɪʒn</rt></ruby> in this <ruby>part<rt>pɑːrt</rt></ruby> <ruby>requires<rt>rɪˈkwaɪərz</rt></ruby> that a <ruby>certain<rt>ˈsɜːrtn</rt></ruby> <ruby>value<rt>ˈvæljuː</rt></ruby> be <ruby>below<rt>bɪˈloʊ</rt></ruby> m + 4, where m is a <ruby>whole<rt>hoʊl</rt></ruby> <ruby>number<rt>ˈnʌmbər</rt></ruby>. In the <ruby>Lean<rt>liːn</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby>, the <ruby>equivalent<rt>ɪˈkwɪvələnt</rt></ruby> <ruby>value<rt>ˈvæljuː</rt></ruby> is <ruby>required<rt>rɪˈkwaɪərd</rt></ruby> to be <ruby>below<rt>bɪˈloʊ</rt></ruby> m + 5, which is <ruby>mathematically<rt>ˌmæθəˈmætɪkli</rt></ruby> <ruby>weaker<rt>ˈwiːkər</rt></ruby>.</p>
+<p>To <ruby>understand<rt>ˌʌndərˈstænd</rt></ruby> why, <ruby>imagine<rt>ɪˈmædʒɪn</rt></ruby> being <ruby>asked<rt>æskt</rt></ruby> to <ruby>solve<rt>sɑːlv</rt></ruby> the <ruby>equation<rt>ɪˈkweɪʒn</rt></ruby> x + 3 = 6, to which the <ruby>answer<rt>ˈænsər</rt></ruby> is x = 3. It is <ruby>possible<rt>ˈpɑːsəbl</rt></ruby> to <ruby>write<rt>raɪt</rt></ruby> a <ruby>proof<rt>pruːf</rt></ruby> that x must be <ruby>less<rt>les</rt></ruby> than 4, and also that x must be <ruby>less<rt>les</rt></ruby> than 5. Both of these are <ruby>perfectly<rt>ˈpɜːrfɪktli</rt></ruby> <ruby>true<rt>truː</rt></ruby> <ruby>mathematical<rt>ˌmæθəˈmætɪkl</rt></ruby> <ruby>statements<rt>ˈsteɪtmənts</rt></ruby>, but they <ruby>say<rt>seɪ</rt></ruby> <ruby>different<rt>ˈdɪfrənt</rt></ruby> <ruby>things<rt>θɪŋz</rt></ruby>. The <ruby>latter<rt>ˈlætər</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby> <ruby>allows<rt>əˈlaʊz</rt></ruby> more <ruby>possible<rt>ˈpɑːsəbl</rt></ruby> <ruby>answers<rt>ˈænsərz</rt></ruby> for x, <ruby>making<rt>ˈmeɪkɪŋ</rt></ruby> it <ruby>mathematically<rt>ˌmæθəˈmætɪkli</rt></ruby> <ruby>weaker<rt>ˈwiːkər</rt></ruby>.</p>
+<p>OpenAI <ruby>told<rt>toʊld</rt></ruby> <ruby>New<rt>nuː</rt></ruby> <ruby>Scientist<rt>ˈsaɪəntɪst</rt></ruby> that it is <ruby>aware<rt>əˈwer</rt></ruby> of the <ruby>mismatch<rt>mɪsˈmætʃ</rt></ruby> between the natural-<ruby>language<rt>ˈnætʃrəl ˈlæŋɡwɪdʒ</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby> and the <ruby>Lean<rt>liːn</rt></ruby> <ruby>code<rt>koʊd</rt></ruby>, and that this doesn't mean that <ruby>either<rt>ˈiːðər</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby> is <ruby>invalid<rt>ɪnˈvælɪd</rt></ruby>. It <ruby>says<rt>sez</rt></ruby> it will <ruby>rectify<rt>ˈrektɪfaɪ</rt></ruby> any <ruby>errors<rt>ˈerərz</rt></ruby> in the natural-<ruby>language<rt>ˈnætʃrəl ˈlæŋɡwɪdʒ</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby> as they are <ruby>found<rt>faʊnd</rt></ruby>, and will also <ruby>continue<rt>kənˈtɪnjuː</rt></ruby> the <ruby>process<rt>ˈprɑːses</rt></ruby> of <ruby>formalising<rt>ˈfɔːrməlaɪzɪŋ</rt></ruby> the 722 <ruby>maths<rt>mæθs</rt></ruby> <ruby>papers<rt>ˈpeɪpərz</rt></ruby> the <ruby>firm<rt>fɜːrm</rt></ruby> <ruby>released<rt>rɪˈliːst</rt></ruby> this <ruby>week<rt>wiːk</rt></ruby>, only some of which are <ruby>accompanied<rt>əˈkʌmpənid</rt></ruby> by <ruby>Lean<rt>liːn</rt></ruby> <ruby>proofs<rt>pruːfs</rt></ruby>, which themselves haven't been <ruby>checked<rt>tʃekt</rt></ruby> by <ruby>hand<rt>hænd</rt></ruby>.</p>
+<p><ruby>Finding<rt>ˈfaɪndɪŋ</rt></ruby> the <ruby>divergence<rt>daɪˈvɜːrdʒəns</rt></ruby> <ruby>involved<rt>ɪnˈvɑːlvd</rt></ruby> a <ruby>slightly<rt>ˈslaɪtli</rt></ruby> <ruby>surreal<rt>səˈriːəl</rt></ruby> <ruby>process<rt>ˈprɑːses</rt></ruby> of <ruby>asking<rt>ˈæskɪŋ</rt></ruby> ChatGPT to <ruby>look<rt>lʊk</rt></ruby> for <ruby>potential<rt>pəˈtenʃl</rt></ruby> <ruby>discrepancies<rt>dɪˈskrepənsiz</rt></ruby> between the natural-<ruby>language<rt>ˈnætʃrəl ˈlæŋɡwɪdʒ</rt></ruby> and <ruby>Lean<rt>liːn</rt></ruby> <ruby>proofs<rt>pruːfs</rt></ruby>, then <ruby>checking<rt>ˈtʃekɪŋ</rt></ruby> them by <ruby>hand<rt>hænd</rt></ruby>. Many of the <ruby>discrepancies<rt>dɪˈskrepənsiz</rt></ruby> <ruby>suggested<rt>səˈdʒestɪd</rt></ruby> by ChatGPT <ruby>turned<rt>tɜːrnd</rt></ruby> out, on <ruby>inspection<rt>ɪnˈspekʃn</rt></ruby>, to be <ruby>consistent<rt>kənˈsɪstənt</rt></ruby> after all. "<ruby>Going<rt>ˈɡoʊɪŋ</rt></ruby> through all of these <ruby>things<rt>θɪŋz</rt></ruby> <ruby>manually<rt>ˈmænjuəli</rt></ruby> was a <ruby>nightmare<rt>ˈnaɪtmer</rt></ruby>," says Hansen.</p>
+<p>In all, it <ruby>took<rt>tʊk</rt></ruby> the <ruby>team<rt>tiːm</rt></ruby> about two <ruby>weeks<rt>wiːks</rt></ruby> to <ruby>identify<rt>aɪˈdentɪfaɪ</rt></ruby> a <ruby>true<rt>truː</rt></ruby> <ruby>discrepancy<rt>dɪˈskrepənsi</rt></ruby>, <ruby>compared<rt>kəmˈperd</rt></ruby> with the 88 <ruby>hours<rt>ˈaʊərz</rt></ruby> OpenAI <ruby>said<rt>sed</rt></ruby> its <ruby>agents<rt>ˈeɪdʒənts</rt></ruby> <ruby>spent<rt>spent</rt></ruby> <ruby>generating<rt>ˈdʒenəreɪtɪŋ</rt></ruby> the <ruby>proofs<rt>pruːfs</rt></ruby>. "OpenAI <ruby>boast<rt>boʊst</rt></ruby> about how <ruby>quickly<rt>ˈkwɪkli</rt></ruby> they were <ruby>able<rt>ˈeɪbl</rt></ruby> to <ruby>generate<rt>ˈdʒenəreɪt</rt></ruby> this <ruby>result<rt>rɪˈzʌlt</rt></ruby>, but that's only <ruby>part<rt>pɑːrt</rt></ruby> of the <ruby>process<rt>ˈprɑːses</rt></ruby>," says <ruby>team<rt>tiːm</rt></ruby> <ruby>member<rt>ˈmembər</rt></ruby> Alexander Bastounis at King<ruby>'s<rt>kɪŋz</rt></ruby> <ruby>College<rt>ˈkɑːlɪdʒ</rt></ruby> <ruby>London<rt>ˈlʌndən</rt></ruby>.</p>
+<p><ruby>Answering<rt>ˈænsərɪŋ</rt></ruby> the <ruby>question<rt>ˈkwestʃən</rt></ruby> of whether AI <ruby>models<rt>ˈmɑːdlz</rt></ruby> can <ruby>accurately<rt>ˈækjərətli</rt></ruby> auto-<ruby>formalise<rt>ˌɔːtoʊ ˈfɔːrməlaɪz</rt></ruby> <ruby>mathematics<rt>ˌmæθəˈmætɪks</rt></ruby> is <ruby>essential<rt>ɪˈsenʃl</rt></ruby> if <ruby>mathematicians<rt>ˌmæθəməˈtɪʃnz</rt></ruby> are to <ruby>trust<rt>trʌst</rt></ruby> these <ruby>results<rt>rɪˈzʌlts</rt></ruby>. Anders and his <ruby>team<rt>tiːm</rt></ruby> have <ruby>demonstrated<rt>ˈdemənstreɪtɪd</rt></ruby> that it is <ruby>possible<rt>ˈpɑːsəbl</rt></ruby> for ChatGPT to <ruby>produce<rt>prəˈduːs</rt></ruby> a <ruby>Lean<rt>liːn</rt></ruby> <ruby>version<rt>ˈvɜːrʒn</rt></ruby> of a <ruby>proof<rt>pruːf</rt></ruby> that doesn't <ruby>match<rt>mætʃ</rt></ruby> the <ruby>original<rt>əˈrɪdʒənl</rt></ruby> <ruby>natural<rt>ˈnætʃrəl</rt></ruby> <ruby>language<rt>ˈlæŋɡwɪdʒ</rt></ruby> one, with the AI <ruby>silently<rt>ˈsaɪləntli</rt></ruby> <ruby>altering<rt>ˈɔːltərɪŋ</rt></ruby> the <ruby>logical<rt>ˈlɑːdʒɪkl</rt></ruby> <ruby>argument<rt>ˈɑːrɡjumənt</rt></ruby> in the <ruby>process<rt>ˈprɑːses</rt></ruby> to <ruby>cover<rt>ˈkʌvər</rt></ruby> up any <ruby>errors<rt>ˈerərz</rt></ruby>. "It is <ruby>trying<rt>ˈtraɪɪŋ</rt></ruby> to <ruby>help<rt>help</rt></ruby> me, but by doing that, it is not <ruby>helping<rt>ˈhelpɪŋ</rt></ruby>," says Hansen.</p>
+<p>**Subscriber-<ruby>only<rt>səbˈskraɪbər ˈoʊnli</rt></ruby> <ruby>newsletter<rt>ˈnuːzletər</rt></ruby>**</p>
+<p>If this were to <ruby>happen<rt>ˈhæpən</rt></ruby> for a <ruby>long<rt>lɔːŋ</rt></ruby> and <ruby>complicated<rt>ˈkɑːmplɪkeɪtɪd</rt></ruby> <ruby>proof<rt>pruːf</rt></ruby>, it would be very <ruby>difficult<rt>ˈdɪfɪkəlt</rt></ruby> for <ruby>anyone<rt>ˈeniwʌn</rt></ruby> to <ruby>notice<rt>ˈnoʊtɪs</rt></ruby> without <ruby>inspecting<rt>ɪnˈspektɪŋ</rt></ruby> both <ruby>versions<rt>ˈvɜːrʒnz</rt></ruby> in <ruby>detail<rt>ˈdiːteɪl</rt></ruby>. This <ruby>issue<rt>ˈɪʃuː</rt></ruby> is only more <ruby>pressing<rt>ˈpresɪŋ</rt></ruby> because of the <ruby>batch<rt>bætʃ</rt></ruby> of 722 <ruby>papers<rt>ˈpeɪpərz</rt></ruby> OpenAI just <ruby>released<rt>rɪˈliːst</rt></ruby>. If we think "all of this is now true, the only thing we need to do now is read the paper", then that is <ruby>dangerous<rt>ˈdeɪndʒərəs</rt></ruby>, says Hansen. "The <ruby>purpose<rt>ˈpɜːrpəs</rt></ruby> of doing <ruby>science<rt>ˈsaɪəns</rt></ruby> is that <ruby>mankind<rt>ˈmænkaɪnd</rt></ruby> should have an <ruby>understanding<rt>ˌʌndərˈstændɪŋ</rt></ruby> of how the <ruby>world<rt>wɜːrld</rt></ruby> <ruby>works<rt>wɜːrks</rt></ruby> so we can make <ruby>educated<rt>ˈedʒukeɪtɪd</rt></ruby> <ruby>decisions<rt>dɪˈsɪʒnz</rt></ruby>. If we <ruby>lose<rt>luːz</rt></ruby> that <ruby>understanding<rt>ˌʌndərˈstændɪŋ</rt></ruby>, what are we doing?"</p>
+<p>Kevin Buzzard at <ruby>Imperial<rt>ɪmˈpɪriəl</rt></ruby> <ruby>College<rt>ˈkɑːlɪdʒ</rt></ruby> <ruby>London<rt>ˈlʌndən</rt></ruby> <ruby>notes<rt>noʊts</rt></ruby> that in <ruby>discussions<rt>dɪˈskʌʃnz</rt></ruby> like these, it is <ruby>important<rt>ɪmˈpɔːrtnt</rt></ruby> to <ruby>distinguish<rt>dɪˈstɪŋɡwɪʃ</rt></ruby> between the <ruby>statement<rt>ˈsteɪtmənt</rt></ruby> of a <ruby>theorem<rt>ˈθɪrəm</rt></ruby> and its <ruby>proof<rt>pruːf</rt></ruby>. For <ruby>example<rt>ɪɡˈzæmpl</rt></ruby>, the <ruby>statement<rt>ˈsteɪtmənt</rt></ruby> of the <ruby>famous<rt>ˈfeɪməs</rt></ruby> Fermat<ruby>'s<rt>ferˈmɑːz</rt></ruby> <ruby>last<rt>læst</rt></ruby> <ruby>theorem<rt>ˈθɪrəm</rt></ruby> is that for <ruby>positive<rt>ˈpɑːzətɪv</rt></ruby> <ruby>whole<rt>hoʊl</rt></ruby> <ruby>number<rt>ˈnʌmbər</rt></ruby> a, b, c and n, aⁿ + bⁿ = cⁿ only if n is 1 or 2. This is <ruby>easy<rt>ˈiːzi</rt></ruby> to <ruby>convert<rt>kənˈvɜːrt</rt></ruby> into <ruby>Lean<rt>liːn</rt></ruby> and can <ruby>easily<rt>ˈiːzɪli</rt></ruby> be <ruby>checked<rt>tʃekt</rt></ruby>. Once you are <ruby>happy<rt>ˈhæpi</rt></ruby> that a <ruby>statement<rt>ˈsteɪtmənt</rt></ruby> in <ruby>Lean<rt>liːn</rt></ruby> is <ruby>correct<rt>kəˈrekt</rt></ruby>, if the <ruby>proof<rt>pruːf</rt></ruby> of that <ruby>statement<rt>ˈsteɪtmənt</rt></ruby> <ruby>compiles<rt>kəmˈpaɪlz</rt></ruby>, you can be <ruby>confident<rt>ˈkɑːnfɪdənt</rt></ruby> the <ruby>proof<rt>pruːf</rt></ruby> is <ruby>true<rt>truː</rt></ruby>.</p>
+<p>The <ruby>issue<rt>ˈɪʃuː</rt></ruby>, as Hansen and his <ruby>team<rt>tiːm</rt></ruby> have <ruby>pointed<rt>ˈpɔɪntɪd</rt></ruby> out, is that this <ruby>tells<rt>telz</rt></ruby> you <ruby>nothing<rt>ˈnʌθɪŋ</rt></ruby> about the natural-<ruby>language<rt>ˈnætʃrəl ˈlæŋɡwɪdʒ</rt></ruby> <ruby>version<rt>ˈvɜːrʒn</rt></ruby> of a <ruby>proof<rt>pruːf</rt></ruby> <ruby>published<rt>ˈpʌblɪʃt</rt></ruby> as a PDF <ruby>document<rt>ˈdɑːkjumənt</rt></ruby>. "I am <ruby>confident<rt>ˈkɑːnfɪdənt</rt></ruby> that the Navier-<ruby>Stokes<rt>nævˈjeɪ stoʊks</rt></ruby> <ruby>problem<rt>ˈprɑːbləm</rt></ruby> has been <ruby>correctly<rt>kəˈrektli</rt></ruby> <ruby>resolved<rt>rɪˈzɑːlvd</rt></ruby>," says Buzzard. "I am <ruby>far<rt>fɑːr</rt></ruby> <ruby>less<rt>les</rt></ruby> <ruby>confident<rt>ˈkɑːnfɪdənt</rt></ruby> that the <ruby>proof<rt>pruːf</rt></ruby> <ruby>described<rt>dɪˈskraɪbd</rt></ruby> in the PDF is <ruby>correct<rt>kəˈrekt</rt></ruby>."</p>
+<p>Hansen <ruby>says<rt>sez</rt></ruby> he <ruby>hopes<rt>hoʊps</rt></ruby> OpenAI will <ruby>take<rt>teɪk</rt></ruby> the team's <ruby>work<rt>wɜːrk</rt></ruby> "<ruby>very<rt>ˈveri</rt></ruby> <ruby>seriously<rt>ˈsɪriəsli</rt></ruby>" and that more <ruby>work<rt>wɜːrk</rt></ruby> must be <ruby>done<rt>dʌn</rt></ruby> on <ruby>developing<rt>dɪˈveləpɪŋ</rt></ruby> <ruby>robust<rt>roʊˈbʌst</rt></ruby> auto-<ruby>formalisation<rt>ˌɔːtoʊ ˌfɔːrmələˈzeɪʃn</rt></ruby> <ruby>techniques<rt>tekˈniːks</rt></ruby>. "Do we have the <ruby>solution<rt>səˈluːʃn</rt></ruby>? Not <ruby>yet<rt>jet</rt></ruby>. Is it <ruby>possible<rt>ˈpɑːsəbl</rt></ruby> to do this in a <ruby>controlled<rt>kənˈtroʊld</rt></ruby> <ruby>way<rt>weɪ</rt></ruby>? Yes, it will be, but the <ruby>optimal<rt>ˈɑːptɪməl</rt></ruby> and the <ruby>ultimate<rt>ˈʌltɪmət</rt></ruby> <ruby>way<rt>weɪ</rt></ruby> of doing this is <ruby>completely<rt>kəmˈpliːtli</rt></ruby> <ruby>unknown<rt>ˌʌnˈnoʊn</rt></ruby>."</p><hr /><h1><a name="2-固定搭配--短语释义" class="md-header-anchor"></a><span>2. 固定搭配 &amp; 短语释义</span></h1><ol start='' ><li><strong><span>call into question</span></strong><span> — 使人们对……产生怀疑、质疑</span></li><li><strong><span>large language model (LLM)</span></strong><span> — 大语言模型</span></li><li><strong><span>rely on</span></strong><span> — 依赖、依靠</span></li><li><strong><span>natural language</span></strong><span> — 自然语言（指人类语言，与形式化代码相对）</span></li><li><strong><span>formalisation / formalization</span></strong><span> — 形式化（将数学证明用计算机可验证的逻辑语言重写）</span></li><li><strong><span>peer review</span></strong><span> — 同行评审</span></li><li><strong><span>open problem</span></strong><span> — 未解难题、公开问题</span></li><li><strong><span>Pythagoras&#39;s theorem</span></strong><span> — 毕达哥拉斯定理（勾股定理）</span></li><li><strong><span>auto-formalisation</span></strong><span> — 自动形式化（由AI自动将自然语言证明转为形式化代码）</span></li><li><strong><span>compile</span></strong><span> —（计算机代码）编译通过、无错误运行</span></li><li><strong><span>self-consistent</span></strong><span> — 自洽的、逻辑一致的</span></li><li><strong><span>diverge from</span></strong><span> — 偏离、背离（原文）</span></li><li><strong><span>workaround</span></strong><span> — 变通方法、权宜之计</span></li><li><strong><span>hinge on</span></strong><span> — 取决于、以……为关键</span></li><li><strong><span>whole number</span></strong><span> — 整数</span></li><li><strong><span>turn out</span></strong><span> — 结果是、证明是</span></li><li><strong><span>on inspection</span></strong><span> — 经检查后</span></li><li><strong><span>after all</span></strong><span> — 毕竟、终究</span></li><li><strong><span>clean up the mess</span></strong><span> — 收拾烂摊子</span></li><li><strong><span>boast about</span></strong><span> — 吹嘘、夸耀</span></li><li><strong><span>cover up</span></strong><span> — 掩盖</span></li><li><strong><span>point out</span></strong><span> — 指出</span></li><li><strong><span>Fermat&#39;s last theorem</span></strong><span> — 费马大定理</span></li><li><strong><span>positive whole number</span></strong><span> — 正整数</span></li><li><strong><span>take seriously</span></strong><span> — 认真对待</span></li><li><strong><span>look for</span></strong><span> — 寻找</span></li><li><strong><span>turn out (to be)</span></strong><span> — 结果证明为</span></li><li><strong><span>rectify errors</span></strong><span> — 纠正错误</span></li></ol><hr /><h1><a name="3-整句中文释义" class="md-header-anchor"></a><span>3. 整句中文释义</span></h1><p><strong><span>OpenAI 在其纳维-斯托克斯方程证明中将数学&quot;误译&quot;成了代码</span></strong></p><p><span>一个数学家团队声称，OpenAI 在发布纳维-斯托克斯问题的证明时似乎犯了一个细微的错误。这个错误并不意味着证明本身有误，也不意味着 OpenAI 没有正确解决该问题，但它确实让人们不得不质疑：AI 模型生成的数学结果是否总能信赖？</span></p><p><span>剑桥大学的安德斯·汉森表示：&quot;所有这些大语言模型生成的证明，最终都必须由人来阅读，这给数学家带来了巨大的额外负担。&quot;</span></p><p><span>9月8日，OpenAI 宣布它找到了纳维-斯托克斯问题的解决方案——这是数学界最著名的未解难题之一。该公司发布了两个版本的证明：一个用&quot;自然语言&quot;撰写，即英语与数学符号的结合，如同人类数学家所写的那样；另一个用计算机代码 Lean 编写。Lean 证明旨在作为自然语言版本的形式化，让计算机能够机械地验证其所有逻辑命题是否成立。但汉森及其团队表示，问题在于：这两个版本并不一致。</span></p><p><span>该团队成员、同样来自剑桥大学的法比安·塞尔切利说：&quot;这个形式化过程试图取代同行评审。同行评审意味着有人亲自审阅证明。但我们在这篇论文中表明，使用这种 AI 自动形式化无法起到同样的作用。&quot;</span></p><p><strong><span>OpenAI 722 篇新论文中最有趣的数学发现</span></strong></p><p><span>需要明确的是，研究人员并不是说 OpenAI 未能解决纳维-斯托克斯问题。自然语言证明和 Lean 证明完全有可能都给出了正确解答，正如勾股定理已有数百种有效证明一样。相反，他们指出的问题更为微妙：OpenAI 的模型在转换为 Lean 时发生了&quot;误译&quot;。</span></p><p><span>汉森说：&quot;我们并不是说自然语言证明是错的，我们也没有说它是对的。&quot;问题在于，OpenAI 将两个证明呈现为完全相同的版本，并在 Github 上声明：&quot;本仓库包含[论文]《纳维-斯托克斯方程的有限时间爆破》中所述结果的 Lean 4 形式化。&quot;</span></p><p><span>汉森解释说，这种误译的产生是因为 AI 必须生成一个能够&quot;编译通过&quot;的 Lean 证明，即计算机代码完全自洽、不报错。如果在自动形式化过程中，AI 发现某段证明无法编译，它就会试图寻找变通方案，哪怕这意味着偏离自然语言版本的原文。</span></p><p><strong><span>OpenAI 甩出 722 篇数学论文——现在它必须收拾这个烂摊子</span></strong></p><p><span>该团队的具体指控集中在证明中一个名为&quot;引理 8.6&quot;的部分。在自然语言证明中，这一部分的某个方程要求某一数值小于 m+4，其中 m 为整数。而在 Lean 证明中，对应的值被要求小于 m+5，这在数学上更弱。</span></p><p><span>要理解原因，想象一下被要求解方程 x+3=6，答案是 x=3。你可以写一个证明说明 x 必须小于 4，也可以写一个证明说明 x 必须小于 5。这两个都是完全正确的数学命题，但它们说的是不同的事情。后一个证明允许 x 有更多可能的取值，因此在数学上更弱。</span></p><p><span>OpenAI 向《新科学家》表示，它已注意到自然语言证明与 Lean 代码之间存在不一致，但这并不意味着任何一个证明无效。公司表示，将在发现错误时纠正自然语言证明中的任何问题，并将继续对本周发布的 722 篇数学论文进行形式化工作——其中只有一部分配有 Lean 证明，而这些 Lean 证明本身也尚未经过人工检查。</span></p><p><span>发现这一分歧的过程颇为超现实：团队让 ChatGPT 寻找自然语言证明与 Lean 证明之间可能存在的差异，然后再人工核查。ChatGPT 提出的许多差异经检查后结果是一致的。汉森说：&quot;手动排查所有这些东西简直是一场噩梦。&quot;</span></p><p><span>整个团队花了大约两周时间才确认了一处真正的差异，而 OpenAI 称其智能体仅用了 88 小时就生成了这些证明。伦敦国王学院的团队成员亚历山大·巴斯图尼斯说：&quot;OpenAI 吹嘘他们能多快出结果，但那只是整个过程的一部分。&quot;</span></p><p><span>要让数学家信任这些结果，回答&quot;AI 模型能否准确地自动形式化数学&quot;这一问题至关重要。汉森及其团队已经证明，ChatGPT 完全可能生成一个与原始自然语言证明不匹配的 Lean 版本，而 AI 在此过程中悄然改变了逻辑论证以掩盖错误。汉森说：&quot;它是在想帮我，但这么做反而帮了倒忙。&quot;</span></p><p><strong><span>订阅者专属通讯</span></strong></p><p><span>如果这种情况发生在一个冗长复杂的证明上，任何人若不详细对比两个版本，都很难发现。而 OpenAI 刚发布的这批 722 篇论文，让这个问题变得更加紧迫。汉森说：&quot;如果我们以为&#39;这些现在都是对的了，我们要做的就是读论文&#39;，那就危险了。做科学的意义在于让人类理解世界是如何运作的，这样我们才能做出有依据的决策。如果失去了这种理解，我们还在做什么？&quot;</span></p><p><span>伦敦帝国理工学院的凯文·巴扎德指出，在这类讨论中，区分定理的陈述和它的证明非常重要。例如，著名的费马大定理的陈述是：对于正整数 a、b、c 和 n，只有当 n 为 1 或 2 时，aⁿ+bⁿ=cⁿ 才成立。这个陈述很容易转换为 Lean 并轻松验证。一旦你确信 Lean 中的陈述是正确的，且该陈述的证明编译通过，你就可以确信证明是真的。</span></p><p><span>但正如汉森及其团队指出的那样，这完全不能说明以 PDF 文档形式发布的自然语言证明是否正确。巴扎德说：&quot;我相信纳维-斯托克斯问题已经得到了正确的解决，但我远没有那么确信 PDF 中描述的证明是正确的。&quot;</span></p><p><span>汉森表示，他希望 OpenAI 能&quot;非常认真地&quot;对待该团队的工作，并在开发可靠的自动形式化技术方面做出更多努力。&quot;我们有解决方案了吗？还没有。有可能以可控的方式做到这一点吗？会有的，但最佳和最终的方法目前完全未知。&quot;</span></p></div>
+</body>
+</html>
