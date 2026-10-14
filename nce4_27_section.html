@@ -1,0 +1,646 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>nce4_27_section</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h2><a name="瓦萨号roy-sauders选自the-listener）" class="md-header-anchor"></a><span>《&quot;瓦萨&quot;号》（Roy Sauders，选自《The Listener》）</span></h2><h2><a name="标题句" class="md-header-anchor"></a><span>标题句</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><style>
+    p { font-size: 20px;}
+    p rt { color: #b45309; font-size: 0.8em;}
+  </style>
+<p>The <ruby>Vasa<rt>ˈvɑːsə</rt></ruby>.</p><p><strong><span># 3. 整句中文释义</span></strong>
+<span>&quot;瓦萨&quot;号。</span></p><hr /><h2><a name="第-2-段" class="md-header-anchor"></a><span>第 2 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>What <ruby>happened<rt>ˈhæpənd</rt></ruby> to the 'Vasa'[ˈvɑːsə] <ruby>almost<rt>ˈɔːlmoʊst</rt></ruby> <ruby>immediately<rt>ɪˈmiːdiətli</rt></ruby> after she was <ruby>launched<rt>lɔːntʃt</rt></ruby>? From the <ruby>seventeenth<rt>ˌsevnˈtiːnθ</rt></ruby> <ruby>century<rt>ˈsentʃəri</rt></ruby> <ruby>empire<rt>ˈempaɪər</rt></ruby> of <ruby>Sweden<rt>ˈswiːdn</rt></ruby>, the <ruby>story<rt>ˈstɔːri</rt></ruby> of a <ruby>galleon<rt>ˈɡæliən</rt></ruby> that <ruby>sank<rt>sæŋk</rt></ruby> at the <ruby>start<rt>stɑːrt</rt></ruby> of her <ruby>maiden<rt>ˈmeɪdn</rt></ruby> <ruby>voyage<rt>ˈvɔɪɪdʒ</rt></ruby> in 1628 must be one of the <ruby>strangest<rt>ˈstreɪndʒɪst</rt></ruby> <ruby>tales<rt>teɪlz</rt></ruby> of the <ruby>sea<rt>siː</rt></ruby>. For <ruby>nearly<rt>ˈnɪrli</rt></ruby> three and a half <ruby>centuries<rt>ˈsentʃəriz</rt></ruby> she <ruby>lay<rt>leɪ</rt></ruby> at the <ruby>bottom<rt>ˈbɑːtəm</rt></ruby> of <ruby>Stockholm<rt>ˈstɑːkhoʊm</rt></ruby> <ruby>harbour<rt>ˈhɑːrbər</rt></ruby> until her <ruby>discovery<rt>dɪˈskʌvəri</rt></ruby> in 1956. This was the <ruby>Vasa<rt>ˈvɑːsə</rt></ruby>, <ruby>royal<rt>ˈrɔɪəl</rt></ruby> <ruby>flagship<rt>ˈflæɡʃɪp</rt></ruby> of the <ruby>great<rt>ɡreɪt</rt></ruby> <ruby>imperial<rt>ɪmˈpɪriəl</rt></ruby> <ruby>fleet<rt>fliːt</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>maiden voyage：处女航、首航</span></li><li><span>the strangest tales of the sea：海上最离奇的传说</span></li><li><span>three and a half centuries：三个半世纪</span></li><li><span>lay at the bottom of：沉在……底部</span></li><li><span>royal flagship：皇家旗舰</span></li><li><span>imperial fleet：帝国舰队</span></li><li><span>at the start of：在……的开头</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>&quot;瓦萨&quot;号在刚下水之后几乎立刻就遭遇了什么？在十七世纪的瑞典帝国，这艘在其1628年处女航开始时便沉没的帆船的故事，必定是海上最离奇的传说之一。近三个半世纪以来，它一直躺在斯德哥尔摩港的海底，直到1956年才被发现。这就是&quot;瓦萨&quot;号，伟大帝国舰队的皇家旗舰。</span></p><hr /><h2><a name="第-3-段" class="md-header-anchor"></a><span>第 3 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p><ruby>King<rt>ˈkɪŋ</rt></ruby> Gustavus Adolphus, 'The <ruby>Northern<rt>ˈnɔːrðərn</rt></ruby> <ruby>Hurricane<rt>ˈhɜːrɪkeɪn</rt></ruby>', then at the <ruby>height<rt>haɪt</rt></ruby> of his <ruby>military<rt>ˈmɪləteri</rt></ruby> <ruby>success<rt>səkˈses</rt></ruby> in the <ruby>Thirty<rt>ˈθɜːrti</rt></ruby> Years'[jɪrz] <ruby>War<rt>wɔːr</rt></ruby>, had <ruby>dictated<rt>ˈdɪkteɪtɪd</rt></ruby> her <ruby>measurements<rt>ˈmeʒərmənts</rt></ruby> and <ruby>armament<rt>ˈɑːrməmənt</rt></ruby>. <ruby>Triple<rt>ˈtrɪpl</rt></ruby> gun-<ruby>decks<rt>ˈɡʌn deks</rt></ruby> <ruby>mounted<rt>ˈmaʊntɪd</rt></ruby> sixty-four <ruby>bronze<rt>brɑːnz</rt></ruby> <ruby>cannon<rt>ˈkænən</rt></ruby>. She was <ruby>intended<rt>ɪnˈtendɪd</rt></ruby> to <ruby>play<rt>pleɪ</rt></ruby> a <ruby>leading<rt>ˈliːdɪŋ</rt></ruby> <ruby>role<rt>roʊl</rt></ruby> in the <ruby>growing<rt>ˈɡroʊɪŋ</rt></ruby> <ruby>might<rt>maɪt</rt></ruby> of <ruby>Sweden<rt>ˈswiːdn</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>at the height of：在……的鼎盛时期</span></li><li><span>military success：军事成就</span></li><li><span>the Thirty Years&#39; War：三十年战争</span></li><li><span>dictate measurements and armament：亲自规定（其）尺寸与武器装备</span></li><li><span>triple gun-decks：三层火炮甲板</span></li><li><span>bronze cannon：青铜火炮</span></li><li><span>be intended to：打算、意在</span></li><li><span>play a leading role：扮演领军角色</span></li><li><span>the growing might：日益增长的威力</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>国王古斯塔夫·阿道夫二世（Gustavus Adolphus），人称&quot;北方飓风&quot;，当时正值他在三十年战争中军事成就的鼎盛时期，亲自规定了这艘船的尺寸和武器装备。三层火炮甲板上装有六十四门青铜炮。它被寄望于在瑞典日益强盛的国力中扮演领军角色。</span></p><hr /><h2><a name="第-4-段" class="md-header-anchor"></a><span>第 4 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>As she was <ruby>prepared<rt>prɪˈperd</rt></ruby> for her <ruby>maiden<rt>ˈmeɪdn</rt></ruby> <ruby>voyage<rt>ˈvɔɪɪdʒ</rt></ruby> on August 10, 1628, <ruby>Stockholm<rt>ˈstɑːkhoʊm</rt></ruby> was in a <ruby>ferment<rt>ˈfɜːrment</rt></ruby>. From the Skeppsbron and <ruby>surrounding<rt>səˈraʊndɪŋ</rt></ruby> <ruby>islands<rt>ˈaɪləndz</rt></ruby> the <ruby>people<rt>ˈpiːpl</rt></ruby> <ruby>watched<rt>wɑːtʃt</rt></ruby> this <ruby>thing<rt>θɪŋ</rt></ruby> of <ruby>beauty<rt>ˈbjuːti</rt></ruby> <ruby>begin<rt>bɪˈɡɪn</rt></ruby> to <ruby>spread<rt>spred</rt></ruby> her <ruby>sails<rt>seɪlz</rt></ruby> and <ruby>catch<rt>kætʃ</rt></ruby> the <ruby>wind<rt>wɪnd</rt></ruby>. They had <ruby>laboured<rt>ˈleɪbərd</rt></ruby> for three <ruby>years<rt>jɪrz</rt></ruby> to <ruby>produce<rt>prəˈduːs</rt></ruby> this <ruby>floating<rt>ˈfloʊtɪŋ</rt></ruby> <ruby>work<rt>wɜːrk</rt></ruby> of <ruby>art<rt>ɑːrt</rt></ruby>; she was more <ruby>richly<rt>ˈrɪtʃli</rt></ruby> <ruby>carved<rt>kɑːrvd</rt></ruby> and <ruby>ornamented<rt>ˈɔːrnəmentɪd</rt></ruby> than any <ruby>previous<rt>ˈpriːviəs</rt></ruby> <ruby>ship<rt>ʃɪp</rt></ruby>. The <ruby>high<rt>haɪ</rt></ruby> <ruby>stern<rt>stɜːrn</rt></ruby> <ruby>castle<rt>ˈkæsl</rt></ruby> was a <ruby>riot<rt>ˈraɪət</rt></ruby> of <ruby>carved<rt>kɑːrvd</rt></ruby> <ruby>gods<rt>ɡɑːdz</rt></ruby>, <ruby>demons<rt>ˈdiːmənz</rt></ruby>, <ruby>knights<rt>naɪts</rt></ruby>, <ruby>kings<rt>kɪŋz</rt></ruby>, <ruby>warriors<rt>ˈwɔːriərz</rt></ruby>, <ruby>mermaids<rt>ˈmɜːrmeɪdz</rt></ruby>, <ruby>cherubs<rt>ˈtʃerəbz</rt></ruby>; and <ruby>zoomorphic<rt>ˌzoʊəˈmɔːrfɪk</rt></ruby> <ruby>animal<rt>ˈænɪml</rt></ruby> <ruby>shapes<rt>ʃeɪps</rt></ruby> <ruby>ablaze<rt>əˈbleɪz</rt></ruby> with <ruby>red<rt>red</rt></ruby> and <ruby>gold<rt>ɡoʊld</rt></ruby> and <ruby>blue<rt>bluː</rt></ruby>, <ruby>symbols<rt>ˈsɪmblz</rt></ruby> of <ruby>courage<rt>ˈkɜːrɪdʒ</rt></ruby>, <ruby>power<rt>ˈpaʊər</rt></ruby>, and <ruby>cruelty<rt>ˈkruːəlti</rt></ruby>, were <ruby>portrayed<rt>pɔːrˈtreɪd</rt></ruby> to <ruby>stir<rt>stɜːr</rt></ruby> the <ruby>imaginations<rt>ɪˌmædʒɪˈneɪʃnz</rt></ruby> of the <ruby>superstitious<rt>ˌsuːpərˈstɪʃəs</rt></ruby> <ruby>sailors<rt>ˈseɪlərz</rt></ruby> of the <ruby>day<rt>deɪ</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>in a ferment：处于骚动、沸腾之中</span></li><li><span>spread her sails：张开船帆</span></li><li><span>catch the wind：迎风、借风而行</span></li><li><span>labour for three years：辛苦劳作三年</span></li><li><span>floating work of art：漂浮的艺术品</span></li><li><span>richly carved and ornamented：雕刻精美、装饰华丽</span></li><li><span>a high stern castle：高耸的船尾楼</span></li><li><span>a riot of：琳琅满目、令人眼花缭乱</span></li><li><span>zoomorphic animal shapes：动物形纹样</span></li><li><span>ablaze with：闪耀着、被……点燃</span></li><li><span>symbols of courage, power and cruelty：勇气、力量与残暴的象征</span></li><li><span>stir the imaginations：激发想象</span></li><li><span>superstitious sailors：迷信的水手</span></li><li><span>of the day：那个时代的</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>当它于1628年8月10日准备首航时，斯德哥尔摩一片欢腾。从斯凯普斯布伦（Skeppsbron）码头和周围的岛屿上，人们注视着这件美丽之物开始张开船帆、迎风起航。他们辛劳三年才造就了这件漂浮的艺术品；它的雕刻之精美、装饰之华丽，超过此前任何一艘船。高耸的船尾楼上布满雕刻的神祇、恶魔、骑士、国王、战士、美人鱼、小天使，令人眼花缭乱；还有以红、金、蓝三色为基调、燃烧般绚烂的动物形纹样——勇气、力量与残暴的象征，意在激发那个时代迷信水手们的想象。</span></p><hr /><h2><a name="第-5-段" class="md-header-anchor"></a><span>第 5 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>Then the <ruby>cannons<rt>ˈkænənz</rt></ruby> of the <ruby>anchored<rt>ˈæŋkərd</rt></ruby> <ruby>warships<rt>ˈwɔːrʃɪps</rt></ruby> <ruby>thundered<rt>ˈθʌndərd</rt></ruby> a <ruby>salute<rt>səˈluːt</rt></ruby> to which the <ruby>Vasa<rt>ˈvɑːsə</rt></ruby> <ruby>fired<rt>ˈfaɪərd</rt></ruby> in <ruby>reply<rt>rɪˈplaɪ</rt></ruby>. As she <ruby>emerged<rt>iˈmɜːrdʒd</rt></ruby> from her <ruby>drifting<rt>ˈdrɪftɪŋ</rt></ruby> <ruby>cloud<rt>klaʊd</rt></ruby> of <ruby>gun<rt>ɡʌn</rt></ruby> <ruby>smoke<rt>smoʊk</rt></ruby> with the <ruby>water<rt>ˈwɔːtər</rt></ruby> <ruby>churned<rt>tʃɜːrnd</rt></ruby> to <ruby>foam<rt>foʊm</rt></ruby> beneath her <ruby>bow<rt>baʊ</rt></ruby>, her <ruby>flags<rt>flæɡz</rt></ruby> <ruby>flying<rt>ˈflaɪɪŋ</rt></ruby>, <ruby>pennants<rt>ˈpenənts</rt></ruby> <ruby>waving<rt>ˈweɪvɪŋ</rt></ruby>, <ruby>sails<rt>seɪlz</rt></ruby> <ruby>filling<rt>ˈfɪlɪŋ</rt></ruby> in the <ruby>breeze<rt>briːz</rt></ruby>, and the <ruby>red<rt>red</rt></ruby> and <ruby>gold<rt>ɡoʊld</rt></ruby> of her <ruby>superstructure<rt>ˈsuːpərstrʌktʃər</rt></ruby> <ruby>ablaze<rt>əˈbleɪz</rt></ruby> with <ruby>colour<rt>ˈkʌlər</rt></ruby>, she <ruby>presented<rt>prɪˈzentɪd</rt></ruby> a more <ruby>majestic<rt>məˈdʒestɪk</rt></ruby> <ruby>spectacle<rt>ˈspektəkl</rt></ruby> than <ruby>Stockholmers<rt>ˈstɑːkhoʊlmərz</rt></ruby> had ever <ruby>seen<rt>siːn</rt></ruby> before. All gun-<ruby>ports<rt>ˈɡʌn pɔːrts</rt></ruby> were <ruby>open<rt>ˈoʊpən</rt></ruby> and the <ruby>muzzles<rt>ˈmʌzlz</rt></ruby> <ruby>peeped<rt>piːpt</rt></ruby> <ruby>wickedly<rt>ˈwɪkɪdli</rt></ruby> from them.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>anchored warships：停泊中的战舰</span></li><li><span>thunder a salute：鸣放礼炮</span></li><li><span>fire in reply：开炮回礼</span></li><li><span>emerge from：从……中出现</span></li><li><span>a drifting cloud of gun smoke：一片飘散的炮烟</span></li><li><span>churned to foam：搅成白色泡沫</span></li><li><span>beneath her bow：在她的船首之下</span></li><li><span>flags flying, pennants waving：旗帜飘扬、燕尾旗招展</span></li><li><span>sails filling in the breeze：风帆在微风中鼓满</span></li><li><span>superstructure ablaze with colour：上层建筑色彩绚烂</span></li><li><span>a majestic spectacle：壮丽的景象</span></li><li><span>gun-ports：炮门</span></li><li><span>the muzzles peeped wickedly：炮口阴森地探出</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>这时，停泊中的战舰鸣炮致敬，&quot;瓦萨&quot;号开炮回礼。当它从飘散的炮烟中驶出，船首下海水翻搅成白色泡沫，旗帜飘扬，燕尾旗招展，风帆在微风中鼓满，上层建筑的红金两色绚烂夺目时，它所展现出的壮观景象，是斯德哥尔摩人前所未见的。所有炮门都敞开着，炮口阴森地从门中探出。</span></p><hr /><h2><a name="第-6-段" class="md-header-anchor"></a><span>第 6 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>As the <ruby>wind<rt>wɪnd</rt></ruby> <ruby>freshened<rt>ˈfreʃnd</rt></ruby> there came a <ruby>sudden<rt>ˈsʌdn</rt></ruby> <ruby>squall<rt>skwɔːl</rt></ruby> and the <ruby>ship<rt>ʃɪp</rt></ruby> made a <ruby>strange<rt>streɪndʒ</rt></ruby> <ruby>movement<rt>ˈmuːvmənt</rt></ruby>, <ruby>listing<rt>ˈlɪstɪŋ</rt></ruby> to <ruby>port<rt>pɔːrt</rt></ruby>. The <ruby>Ordnance<rt>ˈɔːrdnəns</rt></ruby> <ruby>Officer<rt>ˈɔːfɪsər</rt></ruby> <ruby>ordered<rt>ˈɔːrdərd</rt></ruby> all the <ruby>port<rt>pɔːrt</rt></ruby> <ruby>cannon<rt>ˈkænən</rt></ruby> to be <ruby>heaved<rt>hiːvd</rt></ruby> to <ruby>starboard<rt>ˈstɑːrbərd</rt></ruby> to <ruby>counteract<rt>ˌkaʊntərˈækt</rt></ruby> the <ruby>list<rt>lɪst</rt></ruby>, but the <ruby>steepening<rt>ˈstiːpənɪŋ</rt></ruby> <ruby>angle<rt>ˈæŋɡl</rt></ruby> of the <ruby>decks<rt>deks</rt></ruby> <ruby>increased<rt>ɪnˈkriːst</rt></ruby>. Then the <ruby>sound<rt>saʊnd</rt></ruby> of <ruby>rumbling<rt>ˈrʌmblɪŋ</rt></ruby> <ruby>thunder<rt>ˈθʌndər</rt></ruby> <ruby>reached<rt>riːtʃt</rt></ruby> the <ruby>watchers<rt>ˈwɑːtʃərz</rt></ruby> on the <ruby>shore<rt>ʃɔːr</rt></ruby>, as <ruby>cargo<rt>ˈkɑːrɡoʊ</rt></ruby>, <ruby>ballast<rt>ˈbæləst</rt></ruby>, <ruby>ammunition<rt>ˌæmjəˈnɪʃn</rt></ruby> and 400 <ruby>people<rt>ˈpiːpl</rt></ruby> went <ruby>sliding<rt>ˈslaɪdɪŋ</rt></ruby> and <ruby>crashing<rt>ˈkræʃɪŋ</rt></ruby> down to the <ruby>port<rt>pɔːrt</rt></ruby> <ruby>side<rt>saɪd</rt></ruby> of the <ruby>steeply<rt>ˈstiːpli</rt></ruby> <ruby>listing<rt>ˈlɪstɪŋ</rt></ruby> <ruby>ship<rt>ʃɪp</rt></ruby>. The <ruby>lower<rt>ˈloʊər</rt></ruby> gun-<ruby>ports<rt>ˈɡʌn pɔːrts</rt></ruby> were now below <ruby>water<rt>ˈwɔːtər</rt></ruby> and the <ruby>inrush<rt>ˈɪnrʌʃ</rt></ruby> <ruby>sealed<rt>siːld</rt></ruby> the ship's <ruby>fate<rt>feɪt</rt></ruby>. In that <ruby>first<rt>fɜːrst</rt></ruby> <ruby>glorious<rt>ˈɡlɔːriəs</rt></ruby> <ruby>hour<rt>ˈaʊər</rt></ruby>, the <ruby>mighty<rt>ˈmaɪti</rt></ruby> <ruby>Vasa<rt>ˈvɑːsə</rt></ruby>, which was <ruby>intended<rt>ɪnˈtendɪd</rt></ruby> to <ruby>rule<rt>ruːl</rt></ruby> the <ruby>Baltic<rt>ˈbɔːltɪk</rt></ruby>, <ruby>sank<rt>sæŋk</rt></ruby> with all <ruby>flags<rt>flæɡz</rt></ruby> <ruby>flying<rt>ˈflaɪɪŋ</rt></ruby> in the <ruby>harbour<rt>ˈhɑːrbər</rt></ruby> of her <ruby>birth<rt>bɜːrθ</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>the wind freshened：风力增强</span></li><li><span>a sudden squall：一阵突来的暴风、飑</span></li><li><span>list to port：向左舷倾斜</span></li><li><span>the Ordnance Officer：军械长</span></li><li><span>be heaved to starboard：被移到右舷</span></li><li><span>counteract the list：抵消（纠正）倾斜</span></li><li><span>the steepening angle of the decks：甲板倾斜角度不断加大</span></li><li><span>rumbling thunder：隆隆的雷鸣</span></li><li><span>the watchers on the shore：岸上的观看者</span></li><li><span>cargo, ballast, ammunition：货物、压舱物、弹药</span></li><li><span>go sliding and crashing down：滑落、轰然跌落</span></li><li><span>the port side：左舷一侧</span></li><li><span>the steeply listing ship：剧烈倾斜的船</span></li><li><span>below water：没入水面以下</span></li><li><span>the inrush sealed the ship&#39;s fate：涌入的海水注定了船的命运</span></li><li><span>in that first glorious hour：在那最初的光荣时刻</span></li><li><span>rule the Baltic：称霸（统治）波罗的海</span></li><li><span>in the harbour of her birth：在她诞生的港口</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>当风力增强时，突然袭来一阵暴风，船做出一个反常的动作，向左舷倾斜。军械长下令把所有左舷炮移到右舷以抵消倾斜，但甲板的倾斜角度却不断加大。接着，隆隆的雷鸣声传到岸上观看者的耳中——货物、压舱物、弹药和四百人一起滑落、轰然跌向这艘剧烈倾斜的船的左舷。下层炮门此刻已没入水下，涌入的海水注定了这艘船的命运。就在那最初的光荣时刻，这艘本欲称霸波罗的海的强大&quot;瓦萨&quot;号，带着所有飘扬的旗帜，沉没在它诞生的港口里。</span></p><hr /><h2><a name="来源署名" class="md-header-anchor"></a><span>来源署名</span></h2><p><strong><span>Roy Saunders，</span><em><span>The Raising of the &#39;Vasa&#39;</span></em><span>（《&quot;瓦萨&quot;号的打捞》），选自 </span><em><span>The Listener</span></em><span>（《听众》）</span></strong></p></div>
+</body>
+</html>
