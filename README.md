@@ -23,3 +23,4 @@
 - [nce4_27_section](nce4_27_section.html)
 - [newscientist_ai_section.html](newscientist_ai_section.html.html)
 - [newscientist_OpenAImistranslatedmathematics_section](newscientist_OpenAImistranslatedmathematics_section.html)
+- [x_bbc_rogue_ambassadors_section](x_bbc_rogue_ambassadors_section.html)

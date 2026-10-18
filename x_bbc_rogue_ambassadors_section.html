@@ -1,0 +1,645 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>x_bbc_rogue_ambassadors_section</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h2><a name="原文" class="md-header-anchor"></a><span>原文</span></h2><p><span>America’s rogue ambassadors.</span></p><p><span>A diplomat’s job is traditionally to represent their country’s interests while maintaining good relations with their host nation. But some of Donald Trump’s ambassadors are taking a different approach.</span></p><p><span>On Tuesday, Kimberly Guilfoyle resigned from her ambassadorship in Greece after serious allegations were raised about her conduct. According to reporting by the Wall Street Journal, the former fiancée of Donald Trump Jr. allegedly asked a Trump donor to pay off her $100,000 Amex bill — allegations she denies.</span></p><p><span>Guilfoyle is not the only ambassador to have caused a stir. US envoys around the world have sparked diplomatic rows, controversy and, in some cases, appeared to step beyond the traditional boundaries of their role.</span></p><p><span>What do Donald Trump’s ambassador picks, and their conduct, tell us about the new way that America does diplomacy?</span></p><p><span>Reuters’ senior White House correspondent, Humeyra Pamuk, breaks down how Trump’s ambassadors are breaking with tradition.</span></p><h2><a name="标题句" class="md-header-anchor"></a><span>标题句</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><style>
+    p { font-size: 20px;}
+    p rt { color: #b45309; font-size: 0.8em;}
+  </style>
+<p><ruby>America's<rt>əˈmerɪkəz</rt></ruby> <ruby>rogue<rt>roʊɡ</rt></ruby> <ruby>ambassadors<rt>æmˈbæsədərz</rt></ruby>.</p><p><strong><span># 3. 整句中文释义</span></strong>
+<span>美国的&quot;无赖&quot;大使们。</span></p><hr /><h2><a name="第-2-段" class="md-header-anchor"></a><span>第 2 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>A <ruby>diplomat's<rt>ˈdɪpləmæts</rt></ruby> <ruby>job<rt>dʒɑːb</rt></ruby> is <ruby>traditionally<rt>trəˈdɪʃənəli</rt></ruby> to <ruby>represent<rt>ˌreprɪˈzent</rt></ruby> their country<ruby>'s<rt>ˈkʌntriz</rt></ruby> <ruby>interests<rt>ˈɪntrəsts</rt></ruby> while <ruby>maintaining<rt>meɪnˈteɪnɪŋ</rt></ruby> <ruby>good<rt>ɡʊd</rt></ruby> <ruby>relations<rt>rɪˈleɪʃnz</rt></ruby> with their <ruby>host<rt>hoʊst</rt></ruby> <ruby>nation<rt>ˈneɪʃn</rt></ruby>. But some of Donald Trump's <ruby>ambassadors<rt>æmˈbæsədərz</rt></ruby> are <ruby>taking<rt>ˈteɪkɪŋ</rt></ruby> a <ruby>different<rt>ˈdɪfrənt</rt></ruby> <ruby>approach<rt>əˈproʊtʃ</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>a diplomat&#39;s job：外交官的职责</span></li><li><span>represent one&#39;s country&#39;s interests：代表本国的利益</span></li><li><span>maintain good relations with：与……保持良好关系</span></li><li><span>host nation：东道国</span></li><li><span>take a different approach：采取不同的做法</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>外交官的职责传统上是代表本国的利益，同时与东道国保持良好关系。但唐纳德·特朗普的一些大使却采取了不同的做法。</span></p><hr /><h2><a name="第-3-段" class="md-header-anchor"></a><span>第 3 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>On <ruby>Tuesday<rt>ˈtuːzdeɪ</rt></ruby>, Kimberly Guilfoyle <ruby>resigned<rt>rɪˈzaɪnd</rt></ruby> from her <ruby>ambassadorship<rt>æmˈbæsədərʃɪp</rt></ruby> in <ruby>Greece<rt>ɡriːs</rt></ruby> after <ruby>serious<rt>ˈsɪriəs</rt></ruby> <ruby>allegations<rt>ˌælɪˈɡeɪʃnz</rt></ruby> were <ruby>raised<rt>reɪzd</rt></ruby> about her <ruby>conduct<rt>ˈkɑːndʌkt</rt></ruby>. <ruby>According<rt>əˈkɔːrdɪŋ</rt></ruby> to <ruby>reporting<rt>rɪˈpɔːrtɪŋ</rt></ruby> by the <ruby>Wall<rt>wɔːl</rt></ruby> <ruby>Street<rt>striːt</rt></ruby> <ruby>Journal<rt>ˈdʒɜːrnl</rt></ruby>, the <ruby>former<rt>ˈfɔːrmər</rt></ruby> fiancé<ruby>e<rt>ˌfiːɑːnˈseɪ</rt></ruby> of Donald Trump Jr. <ruby>allegedly<rt>əˈledʒɪdli</rt></ruby> <ruby>asked<rt>æskt</rt></ruby> a Trump <ruby>donor<rt>ˈdoʊnər</rt></ruby> to <ruby>pay<rt>peɪ</rt></ruby> off her $100,000 <ruby>Amex<rt>ˈæmeks</rt></ruby> <ruby>bill<rt>bɪl</rt></ruby> — <ruby>allegations<rt>ˌælɪˈɡeɪʃnz</rt></ruby> she <ruby>denies<rt>dɪˈnaɪz</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>resign from：从……辞职</span></li><li><span>ambassadorship in：在……的大使职位</span></li><li><span>allegations were raised about：针对……提出指控</span></li><li><span>according to reporting by：据……的报道</span></li><li><span>the Wall Street Journal：《华尔街日报》</span></li><li><span>former fiancée：前未婚妻</span></li><li><span>pay off：还清（账单、债务）</span></li><li><span>Amex bill：美国运通（Amex）账单</span></li><li><span>allegations she denies：她否认的指控</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>周二，在针对金伯利·吉尔福伊尔（Kimberly Guilfoyle）行为的严重指控被提出后，她辞去了在希腊的大使职务。据《华尔街日报》报道，这位小唐纳德·特朗普（Donald Trump Jr.）的前未婚妻据称曾要求一位特朗普捐款人为她还清10万美元的美国运通账单——对于这些指控，她予以否认。</span></p><hr /><h2><a name="第-4-段" class="md-header-anchor"></a><span>第 4 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>Guilfoyle is not the only <ruby>ambassador<rt>æmˈbæsədər</rt></ruby> to have <ruby>caused<rt>kɔːzd</rt></ruby> a <ruby>stir<rt>stɜːr</rt></ruby>. <ruby>US<rt>ˌjuːˈes</rt></ruby> <ruby>envoys<rt>ˈenvɔɪz</rt></ruby> around the <ruby>world<rt>wɜːrld</rt></ruby> have <ruby>sparked<rt>spɑːrkt</rt></ruby> <ruby>diplomatic<rt>ˌdɪpləˈmætɪk</rt></ruby> <ruby>rows<rt>roʊz</rt></ruby>, <ruby>controversy<rt>ˈkɑːntrəvɜːrsi</rt></ruby> and, in some <ruby>cases<rt>ˈkeɪsɪz</rt></ruby>, <ruby>appeared<rt>əˈpɪrd</rt></ruby> to <ruby>step<rt>step</rt></ruby> beyond the <ruby>traditional<rt>trəˈdɪʃənl</rt></ruby> <ruby>boundaries<rt>ˈbaʊndəriz</rt></ruby> of their <ruby>role<rt>roʊl</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>cause a stir：引起轰动、引发骚动</span></li><li><span>US envoys：美国特使、美国使节</span></li><li><span>spark diplomatic rows：引发外交争端</span></li><li><span>in some cases：在某些情况下</span></li><li><span>step beyond：超越</span></li><li><span>the traditional boundaries of one&#39;s role：其职位的传统边界</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>吉尔福伊尔并不是唯一引起轰动的大使。美国在世界各地的使节们引发了外交争端和争议，在某些情况下，似乎还越过了其职位的传统边界。</span></p><hr /><h2><a name="第-5-段" class="md-header-anchor"></a><span>第 5 段</span></h2><p><strong><span># 1. 带美音音标</span></strong></p><p>What do Donald Trump's <ruby>ambassador<rt>æmˈbæsədər</rt></ruby> <ruby>picks<rt>pɪks</rt></ruby>, and their <ruby>conduct<rt>ˈkɑːndʌkt</rt></ruby>, <ruby>tell<rt>tel</rt></ruby> us about the <ruby>new<rt>nuː</rt></ruby> <ruby>way<rt>weɪ</rt></ruby> that <ruby>America<rt>əˈmerɪkə</rt></ruby> does <ruby>diplomacy<rt>dɪˈploʊməsi</rt></ruby>? <ruby>Reuters'<rt>ˈrɔɪtərz</rt></ruby> <ruby>senior<rt>ˈsiːniər</rt></ruby> <ruby>White<rt>waɪt</rt></ruby> <ruby>House<rt>haʊs</rt></ruby> <ruby>correspondent<rt>ˌkɔːrəˈspɑːndənt</rt></ruby>, Humeyra Pamuk, <ruby>breaks<rt>breɪks</rt></ruby> down how Trump's <ruby>ambassadors<rt>æmˈbæsədərz</rt></ruby> are <ruby>breaking<rt>ˈbreɪkɪŋ</rt></ruby> with <ruby>tradition<rt>trəˈdɪʃn</rt></ruby>.</p><p><strong><span># 2. 固定搭配 &amp; 短语释义</span></strong></p><ol start='' ><li><span>ambassador picks：选出的大使人选</span></li><li><span>the new way that America does diplomacy：美国开展外交的新方式</span></li><li><span>White House correspondent：白宫记者</span></li><li><span>break down：解读、剖析</span></li><li><span>break with tradition：打破传统、背离惯例</span></li></ol><p><strong><span># 3. 整句中文释义</span></strong>
+<span>唐纳德·特朗普的大使人选及其行为，告诉我们美国开展外交的新方式是什么样的？路透社白宫资深记者胡梅拉·帕穆克（Humeyra Pamuk）为你解读特朗普的大使们如何与传统决裂。</span></p></div>
+</body>
+</html>
