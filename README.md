@@ -24,3 +24,4 @@
 - [newscientist_ai_section.html](newscientist_ai_section.html.html)
 - [newscientist_OpenAImistranslatedmathematics_section](newscientist_OpenAImistranslatedmathematics_section.html)
 - [x_bbc_rogue_ambassadors_section](x_bbc_rogue_ambassadors_section.html)
+- [x_news_cbs_Federal_election_section](x_news_cbs_Federal_election_section.html)
