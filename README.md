@@ -27,3 +27,4 @@
 - [x_news_cbs_Federal_election_section](x_news_cbs_Federal_election_section.html)
 - [x_mila_ruby.html](x_mila_ruby.html)
 - [x_cbs_DOJtakesstepstocharge](x_cbs_DOJtakesstepstocharge.html)
+- [x_cbs_Israeli_election.html](x_cbs_Israeli_election.html)
