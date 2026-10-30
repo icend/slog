@@ -2,6 +2,7 @@
 
 # tool
 
+[静态内容分享网站模板](staticlogsite/index.html)
 [心算练习游戏](mental_arithmetic_practice_game.html)
 [superscript_phonetic_symbo](superscript_phonetic_symbol_1_1.html)
 
